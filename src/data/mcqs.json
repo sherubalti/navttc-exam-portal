@@ -1,0 +1,1216 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "category": "Machine Learning",
+      "question": "What is the primary goal of supervised learning?",
+      "options": [
+        "To find patterns in unlabeled data",
+        "To predict outcomes based on labeled data",
+        "To optimize resource allocation",
+        "To visualize complex datasets"
+      ],
+      "answer": "b",
+      "explanation": "Supervised learning uses labeled data to train models for prediction."
+    },
+    {
+      "id": 2,
+      "category": "Machine Learning",
+      "question": "Which algorithm is best suited for classification problems?",
+      "options": [
+        "Linear Regression",
+        "K-Means",
+        "Logistic Regression",
+        "PCA"
+      ],
+      "answer": "c",
+      "explanation": "Logistic Regression is specifically designed for classification problems."
+    },
+    {
+      "id": 3,
+      "category": "Machine Learning",
+      "question": "What is overfitting in machine learning?",
+      "options": [
+        "Model performs well on training data but poorly on test data",
+        "Model performs poorly on both training and test data",
+        "Model requires too much computational power",
+        "Model has too few parameters"
+      ],
+      "answer": "a",
+      "explanation": "Overfitting occurs when a model learns the training data too well, including noise, and fails to generalize to new data."
+    },
+    {
+      "id": 4,
+      "category": "Machine Learning",
+      "question": "What is the K in K-Nearest Neighbors?",
+      "options": [
+        "Kernel parameter",
+        "Number of neighbors to consider",
+        "K-fold cross validation",
+        "Knowledge parameter"
+      ],
+      "answer": "b",
+      "explanation": "K represents the number of nearest neighbors to consider for classification."
+    },
+    {
+      "id": 5,
+      "category": "Machine Learning",
+      "question": "What is cross-validation used for?",
+      "options": [
+        "Data cleaning",
+        "Model evaluation",
+        "Feature selection",
+        "Data visualization"
+      ],
+      "answer": "b",
+      "explanation": "Cross-validation is used to assess how the model will generalize to an independent dataset."
+    },
+    {
+      "id": 6,
+      "category": "Machine Learning",
+      "question": "What is the bias-variance tradeoff?",
+      "options": [
+        "Tradeoff between model complexity and accuracy",
+        "Tradeoff between training time and accuracy",
+        "Tradeoff between underfitting and overfitting",
+        "Tradeoff between features and samples"
+      ],
+      "answer": "c",
+      "explanation": "Bias-variance tradeoff balances underfitting (high bias) and overfitting (high variance)."
+    },
+    {
+      "id": 7,
+      "category": "Machine Learning",
+      "question": "What is ensemble learning?",
+      "options": [
+        "Using multiple models for better performance",
+        "Training on ensemble datasets",
+        "Combining features from multiple sources",
+        "Learning ensemble patterns"
+      ],
+      "answer": "a",
+      "explanation": "Ensemble learning combines multiple models to improve performance."
+    },
+    {
+      "id": 8,
+      "category": "Machine Learning",
+      "question": "What is precision in classification?",
+      "options": [
+        "TP / (TP + FP)",
+        "TP / (TP + FN)",
+        "(TP + TN) / total",
+        "TP / total"
+      ],
+      "answer": "a",
+      "explanation": "Precision = True Positives / (True Positives + False Positives)"
+    },
+    {
+      "id": 9,
+      "category": "Machine Learning",
+      "question": "What is SVM (Support Vector Machine)?",
+      "options": [
+        "Supervised learning algorithm",
+        "Unsupervised learning algorithm",
+        "Reinforcement learning",
+        "Deep learning architecture"
+      ],
+      "answer": "a",
+      "explanation": "SVM is a supervised learning algorithm used for classification and regression."
+    },
+    {
+      "id": 10,
+      "category": "Machine Learning",
+      "question": "What is regularization?",
+      "options": [
+        "Preventing overfitting",
+        "Increasing model complexity",
+        "Data normalization",
+        "Feature extraction"
+      ],
+      "answer": "a",
+      "explanation": "Regularization techniques prevent overfitting by adding penalty terms."
+    },
+    {
+      "id": 11,
+      "category": "Machine Learning",
+      "question": "What is clustering?",
+      "options": [
+        "Grouping similar data points",
+        "Classifying data with labels",
+        "Predicting continuous values",
+        "Reducing dimensionality"
+      ],
+      "answer": "a",
+      "explanation": "Clustering groups similar data points without predefined labels."
+    },
+    {
+      "id": 12,
+      "category": "Machine Learning",
+      "question": "What is random forest?",
+      "options": [
+        "Ensemble of decision trees",
+        "Random tree generator",
+        "Forest algorithm",
+        "Tree visualization"
+      ],
+      "answer": "a",
+      "explanation": "Random forest combines multiple decision trees for better performance."
+    },
+    {
+      "id": 13,
+      "category": "Machine Learning",
+      "question": "What is gradient boosting?",
+      "options": [
+        "Ensemble technique building sequential models",
+        "Gradient calculation method",
+        "Optimization algorithm",
+        "Learning rate technique"
+      ],
+      "answer": "a",
+      "explanation": "Gradient boosting builds models sequentially to correct previous errors."
+    },
+    {
+      "id": 14,
+      "category": "Machine Learning",
+      "question": "What is naive Bayes classifier?",
+      "options": [
+        "Classifier based on Bayes theorem",
+        "Simple Bayesian network",
+        "Naive probability model",
+        "Basic classifier"
+      ],
+      "answer": "a",
+      "explanation": "Naive Bayes applies Bayes theorem with strong independence assumptions."
+    },
+    {
+      "id": 15,
+      "category": "Machine Learning",
+      "question": "What is decision tree?",
+      "options": [
+        "Tree-like model for decisions",
+        "Data structure for storage",
+        "Algorithm for sorting",
+        "Visualization technique"
+      ],
+      "answer": "a",
+      "explanation": "Decision trees make decisions based on feature conditions in tree structure."
+    },
+    {
+      "id": 16,
+      "category": "Machine Learning",
+      "question": "What is PCA (Principal Component Analysis)?",
+      "options": [
+        "Dimensionality reduction technique",
+        "Classification algorithm",
+        "Clustering method",
+        "Regression technique"
+      ],
+      "answer": "a",
+      "explanation": "PCA reduces dimensionality while preserving variance."
+    },
+    {
+      "id": 17,
+      "category": "Machine Learning",
+      "question": "What is ROC curve?",
+      "options": [
+        "Receiver Operating Characteristic curve",
+        "Rate of Change curve",
+        "Regression Output Curve",
+        "Random Output Characteristic"
+      ],
+      "answer": "a",
+      "explanation": "ROC curve shows tradeoff between true positive and false positive rates."
+    },
+    {
+      "id": 18,
+      "category": "Machine Learning",
+      "question": "What is F1 score?",
+      "options": [
+        "Harmonic mean of precision and recall",
+        "Frequency score",
+        "Feature score",
+        "Function score"
+      ],
+      "answer": "a",
+      "explanation": "F1 score balances precision and recall: 2*(precision*recall)/(precision+recall)"
+    },
+    {
+      "id": 19,
+      "category": "Machine Learning",
+      "question": "What is hyperparameter tuning?",
+      "options": [
+        "Optimizing model parameters",
+        "Tuning hyper parameters",
+        "Parameter optimization",
+        "All of the above"
+      ],
+      "answer": "d",
+      "explanation": "Hyperparameter tuning finds optimal parameters for machine learning models."
+    },
+    {
+      "id": 20,
+      "category": "Machine Learning",
+      "question": "What is feature engineering?",
+      "options": [
+        "Creating new features from existing data",
+        "Engineering feature importance",
+        "Feature selection process",
+        "All of the above"
+      ],
+      "answer": "a",
+      "explanation": "Feature engineering involves creating new features to improve model performance."
+    },
+    {
+      "id": 21,
+      "category": "Deep Learning",
+      "question": "What is the purpose of activation functions in neural networks?",
+      "options": [
+        "To increase computation speed",
+        "To introduce non-linearity",
+        "To reduce memory usage",
+        "To normalize inputs"
+      ],
+      "answer": "b",
+      "explanation": "Activation functions introduce non-linearity, allowing neural networks to learn complex patterns."
+    },
+    {
+      "id": 22,
+      "category": "Deep Learning",
+      "question": "What is the purpose of dropout in neural networks?",
+      "options": [
+        "To increase model complexity",
+        "To prevent overfitting",
+        "To speed up training",
+        "To reduce model size"
+      ],
+      "answer": "b",
+      "explanation": "Dropout randomly ignores neurons during training to prevent overfitting."
+    },
+    {
+      "id": 23,
+      "category": "Deep Learning",
+      "question": "What is backpropagation?",
+      "options": [
+        "Forward pass through network",
+        "Weight initialization method",
+        "Gradient calculation from output to input",
+        "Data preprocessing technique"
+      ],
+      "answer": "c",
+      "explanation": "Backpropagation calculates gradients by propagating errors backward through the network."
+    },
+    {
+      "id": 24,
+      "category": "Deep Learning",
+      "question": "Which activation function is commonly used in output layer for binary classification?",
+      "options": ["ReLU", "Sigmoid", "Tanh", "Linear"],
+      "answer": "b",
+      "explanation": "Sigmoid function outputs values between 0 and 1, suitable for binary classification."
+    },
+    {
+      "id": 25,
+      "category": "Deep Learning",
+      "question": "What is CNN primarily used for?",
+      "options": [
+        "Time series data",
+        "Image data",
+        "Text data",
+        "Audio data"
+      ],
+      "answer": "b",
+      "explanation": "Convolutional Neural Networks are particularly effective for image data."
+    },
+    {
+      "id": 26,
+      "category": "Deep Learning",
+      "question": "What is ReLU activation function?",
+      "options": [
+        "f(x) = 1/(1+e^(-x))",
+        "f(x) = max(0,x)",
+        "f(x) = tanh(x)",
+        "f(x) = x"
+      ],
+      "answer": "b",
+      "explanation": "ReLU returns x if x>0, else 0."
+    },
+    {
+      "id": 27,
+      "category": "Deep Learning",
+      "question": "What is gradient descent?",
+      "options": [
+        "Optimization algorithm",
+        "Data normalization technique",
+        "Network architecture",
+        "Activation function"
+      ],
+      "answer": "a",
+      "explanation": "Gradient descent is an optimization algorithm used to minimize loss function."
+    },
+    {
+      "id": 28,
+      "category": "Deep Learning",
+      "question": "What is LSTM?",
+      "options": [
+        "Long Short-Term Memory network",
+        "Linear Statistical Time Model",
+        "Large Scale Training Method",
+        "Learning State Transition Model"
+      ],
+      "answer": "a",
+      "explanation": "LSTM is a type of recurrent neural network for sequence data."
+    },
+    {
+      "id": 29,
+      "category": "Deep Learning",
+      "question": "What is transfer learning?",
+      "options": [
+        "Using pre-trained models",
+        "Transferring data between servers",
+        "Learning transfer functions",
+        "Model compression technique"
+      ],
+      "answer": "a",
+      "explanation": "Transfer learning uses knowledge from pre-trained models on new tasks."
+    },
+    {
+      "id": 30,
+      "category": "Deep Learning",
+      "question": "What is batch normalization?",
+      "options": [
+        "Normalizing layer inputs",
+        "Batch processing data",
+        "Normalizing entire dataset",
+        "Batch size optimization"
+      ],
+      "answer": "a",
+      "explanation": "Batch normalization normalizes inputs to each layer to stabilize training."
+    },
+    {
+      "id": 31,
+      "category": "Deep Learning",
+      "question": "What is attention mechanism?",
+      "options": [
+        "Focusing on relevant parts of input",
+        "Memory attention system",
+        "Learning attention spans",
+        "Visual attention model"
+      ],
+      "answer": "a",
+      "explanation": "Attention mechanism allows models to focus on relevant input parts."
+    },
+    {
+      "id": 32,
+      "category": "Deep Learning",
+      "question": "What is autoencoder?",
+      "options": [
+        "Neural network for encoding-decoding",
+        "Automatic code generator",
+        "Self-learning encoder",
+        "Automated encoding system"
+      ],
+      "answer": "a",
+      "explanation": "Autoencoders learn efficient data encodings in unsupervised manner."
+    },
+    {
+      "id": 33,
+      "category": "Deep Learning",
+      "question": "What is GAN (Generative Adversarial Network)?",
+      "options": [
+        "Generator and discriminator network",
+        "General Adversarial Network",
+        "Gradient Adjustment Network",
+        "Generic Artificial Network"
+      ],
+      "answer": "a",
+      "explanation": "GAN consists of generator and discriminator networks competing against each other."
+    },
+    {
+      "id": 34,
+      "category": "Deep Learning",
+      "question": "What is transformer architecture?",
+      "options": [
+        "Attention-based architecture",
+        "Data transformer",
+        "Model converter",
+        "Architecture transformer"
+      ],
+      "answer": "a",
+      "explanation": "Transformers use self-attention mechanisms and are effective for sequence data."
+    },
+    {
+      "id": 35,
+      "category": "Deep Learning",
+      "question": "What is word embedding?",
+      "options": [
+        "Representing words as vectors",
+        "Word encoding technique",
+        "Text embedding",
+        "Vocabulary mapping"
+      ],
+      "answer": "a",
+      "explanation": "Word embeddings represent words as dense vectors in continuous space."
+    },
+    {
+      "id": 36,
+      "category": "Deep Learning",
+      "question": "What is batch size in training?",
+      "options": [
+        "Number of samples per gradient update",
+        "Batch processing size",
+        "Memory batch",
+        "Training batch"
+      ],
+      "answer": "a",
+      "explanation": "Batch size determines number of samples processed before model update."
+    },
+    {
+      "id": 37,
+      "category": "Deep Learning",
+      "question": "What is learning rate?",
+      "options": [
+        "Step size in gradient descent",
+        "Rate of learning",
+        "Training speed",
+        "Learning progress"
+      ],
+      "answer": "a",
+      "explanation": "Learning rate controls how much to update model weights during training."
+    },
+    {
+      "id": 38,
+      "category": "Python",
+      "question": "Which library is primarily used for numerical computations in Python?",
+      "options": ["Pandas", "NumPy", "Matplotlib", "Scikit-learn"],
+      "answer": "b",
+      "explanation": "NumPy is the fundamental package for numerical computation in Python."
+    },
+    {
+      "id": 39,
+      "category": "Python",
+      "question": "Which data structure is mutable in Python?",
+      "options": ["Tuple", "String", "List", "None of the above"],
+      "answer": "c",
+      "explanation": "Lists are mutable, meaning their elements can be changed after creation."
+    },
+    {
+      "id": 40,
+      "category": "Python",
+      "question": "What is the output of 'hello'[::-1]?",
+      "options": ["hello", "olleh", "Error", "hell"],
+      "answer": "b",
+      "explanation": "[::-1] reverses the string."
+    },
+    {
+      "id": 41,
+      "category": "Python",
+      "question": "Which keyword is used to define a class in Python?",
+      "options": ["class", "def", "struct", "object"],
+      "answer": "a",
+      "explanation": "The 'class' keyword is used to define a new class."
+    },
+    {
+      "id": 42,
+      "category": "Python",
+      "question": "What is a lambda function?",
+      "options": [
+        "Anonymous function",
+        "Function with multiple returns",
+        "Recursive function",
+        "Function with default parameters"
+      ],
+      "answer": "a",
+      "explanation": "Lambda functions are small anonymous functions defined with lambda keyword."
+    },
+    {
+      "id": 43,
+      "category": "Python",
+      "question": "What is list comprehension?",
+      "options": [
+        "Way to create lists concisely",
+        "Method to understand list contents",
+        "Algorithm for list sorting",
+        "Function for list manipulation"
+      ],
+      "answer": "a",
+      "explanation": "List comprehension provides concise way to create lists."
+    },
+    {
+      "id": 44,
+      "category": "Python",
+      "question": "What is the difference between list and tuple?",
+      "options": [
+        "List is mutable, tuple is immutable",
+        "Tuple is mutable, list is immutable",
+        "Both are mutable",
+        "Both are immutable"
+      ],
+      "answer": "a",
+      "explanation": "Lists can be modified after creation, tuples cannot."
+    },
+    {
+      "id": 45,
+      "category": "Python",
+      "question": "What is PEP 8?",
+      "options": [
+        "Python Enhancement Proposal for style guide",
+        "Python version 8",
+        "Package management system",
+        "Performance optimization tool"
+      ],
+      "answer": "a",
+      "explanation": "PEP 8 is Python's style guide for writing readable code."
+    },
+    {
+      "id": 46,
+      "category": "Python",
+      "question": "What is __init__ method in Python?",
+      "options": [
+        "Constructor method",
+        "Initialization method",
+        "Both a and b",
+        "Destructor method"
+      ],
+      "answer": "c",
+      "explanation": "__init__ is the constructor method that initializes new objects."
+    },
+    {
+      "id": 47,
+      "category": "Python",
+      "question": "What is generator in Python?",
+      "options": [
+        "Function that yields values",
+        "Data generator tool",
+        "Random number generator",
+        "Code generator"
+      ],
+      "answer": "a",
+      "explanation": "Generators are functions that yield values one at a time using yield."
+    },
+    {
+      "id": 48,
+      "category": "Pandas",
+      "question": "Which method is used to handle missing values in a DataFrame?",
+      "options": ["fillna()", "dropna()", "replace()", "Both a and b"],
+      "answer": "d",
+      "explanation": "Both fillna() and dropna() are used to handle missing values in Pandas."
+    },
+    {
+      "id": 49,
+      "category": "Pandas",
+      "question": "Which method is used to read a CSV file in Pandas?",
+      "options": ["read_csv()", "load_csv()", "import_csv()", "open_csv()"],
+      "answer": "a",
+      "explanation": "read_csv() is the Pandas function used to read CSV files."
+    },
+    {
+      "id": 50,
+      "category": "Pandas",
+      "question": "How do you select a column 'age' from DataFrame df?",
+      "options": ["df.age", "df['age']", "Both a and b", "df.select('age')"],
+      "answer": "c",
+      "explanation": "Both dot notation and bracket notation can be used to select columns."
+    },
+    
+
+    {
+      "id": 51,
+      "category": "Pandas",
+      "question": "What does df.describe() show?",
+      "options": [
+        "DataFrame structure",
+        "Statistical summary",
+        "Column names",
+        "Missing values"
+      ],
+      "answer": "b",
+      "explanation": "describe() provides statistical summary of numerical columns."
+    },
+    {
+      "id": 52,
+      "category": "Pandas",
+      "question": "How to merge two DataFrames in Pandas?",
+      "options": ["merge()", "join()", "concat()", "All of the above"],
+      "answer": "d",
+      "explanation": "Pandas provides multiple methods for combining DataFrames."
+    },
+    {
+      "id": 53,
+      "category": "Pandas",
+      "question": "How to handle categorical variables in Pandas?",
+      "options": [
+        "get_dummies()",
+        "to_categorical()",
+        "encode()",
+        "convert()"
+      ],
+      "answer": "a",
+      "explanation": "get_dummies() creates dummy variables for categorical data."
+    },
+    {
+      "id": 54,
+      "category": "Pandas",
+      "question": "How to group data in Pandas?",
+      "options": ["groupby()", "aggregate()", "cluster()", "categorize()"],
+      "answer": "a",
+      "explanation": "groupby() groups data based on specified columns."
+    },
+    {
+      "id": 55,
+      "category": "Pandas",
+      "question": "How to select rows based on condition in Pandas?",
+      "options": [
+        "Boolean indexing",
+        "Conditional selection",
+        "Filter method",
+        "All of the above"
+      ],
+      "answer": "d",
+      "explanation": "Multiple methods exist for conditional row selection in Pandas."
+    },
+    {
+      "id": 56,
+      "category": "Pandas",
+      "question": "How to pivot data in Pandas?",
+      "options": ["pivot_table()", "reshape()", "transform()", "convert()"],
+      "answer": "a",
+      "explanation": "pivot_table() creates spreadsheet-style pivot tables."
+    },
+    {
+      "id": 57,
+      "category": "Pandas",
+      "question": "How to apply function to DataFrame column?",
+      "options": ["apply()", "map()", "transform()", "All of the above"],
+      "answer": "d",
+      "explanation": "Multiple methods exist for applying functions to DataFrame columns."
+    },
+    {
+      "id": 58,
+      "category": "Pandas",
+      "question": "How to handle duplicate rows in Pandas?",
+      "options": ["drop_duplicates()", "remove_duplicates()", "unique()", "distinct()"],
+      "answer": "a",
+      "explanation": "drop_duplicates() removes duplicate rows from DataFrame."
+    },
+    {
+      "id": 59,
+      "category": "Pandas",
+      "question": "How to create DataFrame from dictionary?",
+      "options": ["pd.DataFrame()", "from_dict()", "create_df()", "dict_to_df()"],
+      "answer": "a",
+      "explanation": "pd.DataFrame() can create DataFrame from dictionary where keys become columns."
+    },
+    {
+      "id": 60,
+      "category": "Pandas",
+      "question": "How to rename columns in Pandas?",
+      "options": ["rename()", "change_columns()", "update_columns()", "modify_columns()"],
+      "answer": "a",
+      "explanation": "rename() method changes column names in DataFrame."
+    },
+    {
+      "id": 61,
+      "category": "NumPy",
+      "question": "What is the output of np.array([1,2,3]) * 2?",
+      "options": [
+        "[1,2,3,1,2,3]",
+        "[2,4,6]",
+        "Error",
+        "[1,2,3,2]"
+      ],
+      "answer": "b",
+      "explanation": "NumPy arrays support vectorized operations, so each element is multiplied by 2."
+    },
+    {
+      "id": 62,
+      "category": "NumPy",
+      "question": "What does np.zeros((3,3)) create?",
+      "options": [
+        "3x3 matrix of ones",
+        "3x3 matrix of zeros",
+        "3x3 identity matrix",
+        "3x3 random matrix"
+      ],
+      "answer": "b",
+      "explanation": "np.zeros() creates an array filled with zeros of specified shape."
+    },
+    {
+      "id": 63,
+      "category": "NumPy",
+      "question": "What is the shape of np.array([[1,2,3],[4,5,6]])?",
+      "options": ["(2,3)", "(3,2)", "(6,)", "(2,2)"],
+      "answer": "a",
+      "explanation": "The array has 2 rows and 3 columns."
+    },
+    {
+      "id": 64,
+      "category": "NumPy",
+      "question": "What does np.linspace(0, 10, 5) return?",
+      "options": [
+        "[0,2,4,6,8,10]",
+        "[0,2.5,5,7.5,10]",
+        "[0,10,20,30,40]",
+        "[0,1,2,3,4,5,6,7,8,9,10]"
+      ],
+      "answer": "b",
+      "explanation": "linspace returns evenly spaced numbers over a specified interval."
+    },
+    {
+      "id": 65,
+      "category": "NumPy",
+      "question": "What does np.random.seed(42) do?",
+      "options": [
+        "Generates 42 random numbers",
+        "Sets random seed for reproducibility",
+        "Creates 42x42 random matrix",
+        "Selects 42 random elements"
+      ],
+      "answer": "b",
+      "explanation": "Setting seed ensures reproducible random number generation."
+    },
+    {
+      "id": 66,
+      "category": "Statistics",
+      "question": "What does p-value represent in hypothesis testing?",
+      "options": [
+        "Probability of null hypothesis being true",
+        "Probability of alternative hypothesis being true",
+        "Probability of observing the data if null hypothesis is true",
+        "Confidence level of the test"
+      ],
+      "answer": "c",
+      "explanation": "p-value is the probability of obtaining test results at least as extreme as the observed results, assuming the null hypothesis is correct."
+    },
+    {
+      "id": 67,
+      "category": "Statistics",
+      "question": "What is the mean of the dataset: [10, 20, 30, 40, 50]?",
+      "options": ["25", "30", "35", "40"],
+      "answer": "b",
+      "explanation": "Mean = (10+20+30+40+50)/5 = 150/5 = 30"
+    },
+    {
+      "id": 68,
+      "category": "Statistics",
+      "question": "What is the standard deviation of [1,1,1,1,1]?",
+      "options": ["0", "1", "2", "Undefined"],
+      "answer": "a",
+      "explanation": "All values are identical, so standard deviation is 0."
+    },
+    {
+      "id": 69,
+      "category": "Statistics",
+      "question": "What does correlation coefficient measure?",
+      "options": [
+        "Causation between variables",
+        "Linear relationship between variables",
+        "Difference between means",
+        "Variance in data"
+      ],
+      "answer": "b",
+      "explanation": "Correlation measures the strength and direction of linear relationship between two variables."
+    },
+    {
+      "id": 70,
+      "category": "Statistics",
+      "question": "What is the median of [1,3,5,7,9]?",
+      "options": ["3", "5", "7", "4"],
+      "answer": "b",
+      "explanation": "Median is the middle value when sorted: 5."
+    },
+    {
+      "id": 71,
+      "category": "Machine Learning",
+      "question": "What is feature scaling used for?",
+      "options": [
+        "To reduce dataset size",
+        "To normalize feature ranges",
+        "To remove outliers",
+        "To add new features"
+      ],
+      "answer": "b",
+      "explanation": "Feature scaling normalizes the range of independent variables or features of data."
+    },
+    {
+      "id": 72,
+      "category": "Machine Learning",
+      "question": "Which evaluation metric is best for imbalanced datasets?",
+      "options": [
+        "Accuracy",
+        "F1-Score",
+        "R-squared",
+        "Mean Absolute Error"
+      ],
+      "answer": "b",
+      "explanation": "F1-Score is better for imbalanced datasets as it considers both precision and recall."
+    },
+    {
+      "id": 73,
+      "category": "Machine Learning",
+      "question": "What is the main advantage of XGBoost?",
+      "options": [
+        "High performance and speed",
+        "Simple implementation",
+        "No hyperparameter tuning needed",
+        "Works best on small datasets"
+      ],
+      "answer": "a",
+      "explanation": "XGBoost is known for its high performance, speed, and regularization to prevent overfitting."
+    },
+    {
+      "id": 74,
+      "category": "Machine Learning",
+      "question": "What is bagging in ensemble methods?",
+      "options": [
+        "Bootstrap aggregating",
+        "Bagging samples",
+        "Feature bagging",
+        "All of the above"
+      ],
+      "answer": "a",
+      "explanation": "Bagging (Bootstrap Aggregating) creates multiple models from different data subsets."
+    },
+    {
+      "id": 75,
+      "category": "Machine Learning",
+      "question": "What is the curse of dimensionality?",
+      "options": [
+        "Problems with high-dimensional data",
+        "Too many features causing issues",
+        "Data sparsity in high dimensions",
+        "All of the above"
+      ],
+      "answer": "d",
+      "explanation": "Curse of dimensionality refers to various issues that arise with high-dimensional data."
+    },
+    {
+      "id": 76,
+      "category": "Machine Learning",
+      "question": "What is one-hot encoding?",
+      "options": [
+        "Converting categorical to binary columns",
+        "Encoding numerical features",
+        "Feature scaling method",
+        "Outlier treatment"
+      ],
+      "answer": "a",
+      "explanation": "One-hot encoding converts categorical variables into binary columns."
+    },
+    {
+      "id": 77,
+      "category": "Machine Learning",
+      "question": "What is grid search used for?",
+      "options": [
+        "Hyperparameter tuning",
+        "Feature selection",
+        "Data cleaning",
+        "Model deployment"
+      ],
+      "answer": "a",
+      "explanation": "Grid search systematically works through multiple hyperparameter combinations."
+    },
+    {
+      "id": 78,
+      "category": "Machine Learning",
+      "question": "What is the difference between L1 and L2 regularization?",
+      "options": [
+        "L1 creates sparse models, L2 doesn't",
+        "L2 creates sparse models, L1 doesn't",
+        "Both create sparse models",
+        "Neither creates sparse models"
+      ],
+      "answer": "a",
+      "explanation": "L1 regularization can drive coefficients to zero, creating sparse models."
+    },
+    {
+      "id": 79,
+      "category": "Machine Learning",
+      "question": "What is stratified sampling?",
+      "options": [
+        "Maintaining class distribution in splits",
+        "Random sampling",
+        "Systematic sampling",
+        "Cluster sampling"
+      ],
+      "answer": "a",
+      "explanation": "Stratified sampling maintains the same class distribution in train/test splits."
+    },
+    {
+      "id": 80,
+      "category": "Machine Learning",
+      "question": "What is the purpose of learning curves?",
+      "options": [
+        "Diagnose bias and variance",
+        "Measure training speed",
+        "Track model complexity",
+        "Monitor computational cost"
+      ],
+      "answer": "a",
+      "explanation": "Learning curves help diagnose underfitting and overfitting by showing performance vs training size."
+    },
+    {
+      "id": 81,
+      "category": "Deep Learning",
+      "question": "What is the difference between CNN and RNN?",
+      "options": [
+        "CNN for spatial data, RNN for sequential data",
+        "RNN for images, CNN for text",
+        "Both are same",
+        "CNN is faster than RNN"
+      ],
+      "answer": "a",
+      "explanation": "CNNs are designed for spatial data (images), RNNs for sequential data (text, time series)."
+    },
+    {
+      "id": 82,
+      "category": "Deep Learning",
+      "question": "What is the purpose of padding in CNNs?",
+      "options": [
+        "Preserve spatial dimensions",
+        "Increase computation",
+        "Reduce parameters",
+        "All of the above"
+      ],
+      "answer": "a",
+      "explanation": "Padding helps preserve the spatial dimensions of the input after convolution."
+    },
+    {
+      "id": 83,
+      "category": "Deep Learning",
+      "question": "What is the vanishing gradient problem?",
+      "options": [
+        "Gradients become too small in deep networks",
+        "Gradients become too large",
+        "Gradients disappear",
+        "Gradients change direction"
+      ],
+      "answer": "a",
+      "explanation": "In deep networks, gradients can become extremely small, slowing down learning in early layers."
+    },
+    {
+      "id": 84,
+      "category": "Deep Learning",
+      "question": "What is the purpose of pooling layers?",
+      "options": [
+        "Reduce spatial dimensions",
+        "Increase model capacity",
+        "Add non-linearity",
+        "Normalize outputs"
+      ],
+      "answer": "a",
+      "explanation": "Pooling layers reduce spatial dimensions while retaining important features."
+    },
+    {
+      "id": 85,
+      "category": "Deep Learning",
+      "question": "What is the difference between batch, mini-batch and stochastic GD?",
+      "options": [
+        "Different numbers of samples per update",
+        "Different learning rates",
+        "Different optimization algorithms",
+        "Different activation functions"
+      ],
+      "answer": "a",
+      "explanation": "They differ in the number of samples used to compute gradients: all (batch), one (stochastic), subset (mini-batch)."
+    },
+    {
+      "id": 86,
+      "category": "Deep Learning",
+      "question": "What is the purpose of weight initialization?",
+      "options": [
+        "Prevent vanishing/exploding gradients",
+        "Speed up training",
+        "Both a and b",
+        "Reduce model size"
+      ],
+      "answer": "c",
+      "explanation": "Proper weight initialization helps with training stability and speed."
+    },
+    {
+      "id": 87,
+      "category": "Deep Learning",
+      "question": "What is the difference between supervised and unsupervised learning in DL?",
+      "options": [
+        "Labeled vs unlabeled data",
+        "Different network architectures",
+        "Different optimization methods",
+        "Different activation functions"
+      ],
+      "answer": "a",
+      "explanation": "Supervised learning uses labeled data, unsupervised learning finds patterns in unlabeled data."
+    },
+    {
+      "id": 88,
+      "category": "Deep Learning",
+      "question": "What is the purpose of the softmax function?",
+      "options": [
+        "Multi-class classification output",
+        "Binary classification",
+        "Regression tasks",
+        "Feature normalization"
+      ],
+      "answer": "a",
+      "explanation": "Softmax converts raw scores to probabilities for multi-class classification."
+    },
+    {
+      "id": 89,
+      "category": "Deep Learning",
+      "question": "What is the difference between training and inference?",
+      "options": [
+        "Learning vs prediction phase",
+        "Different data types",
+        "Different models",
+        "Different programming languages"
+      ],
+      "answer": "a",
+      "explanation": "Training is the learning phase, inference is using the trained model for predictions."
+    },
+    {
+      "id": 90,
+      "category": "Deep Learning",
+      "question": "What is transfer learning commonly used for?",
+      "options": [
+        "Leveraging pre-trained models",
+        "Transferring data",
+        "Model compression",
+        "Data augmentation"
+      ],
+      "answer": "a",
+      "explanation": "Transfer learning uses knowledge from pre-trained models on new related tasks."
+    },
+    {
+      "id": 91,
+      "category": "Machine Learning",
+      "question": "What is the main advantage of using ensemble methods?",
+      "options": [
+        "Improved generalization",
+        "Faster training",
+        "Simpler models",
+        "Less memory usage"
+      ],
+      "answer": "a",
+      "explanation": "Ensemble methods combine multiple models to improve overall performance and generalization."
+    },
+    {
+      "id": 92,
+      "category": "Machine Learning",
+      "question": "What is the purpose of feature selection?",
+      "options": [
+        "Improve model performance and reduce complexity",
+        "Increase dataset size",
+        "Add more features",
+        "All of the above"
+      ],
+      "answer": "a",
+      "explanation": "Feature selection removes irrelevant features to improve performance and reduce overfitting."
+    },
+    {
+      "id": 93,
+      "category": "Machine Learning",
+      "question": "What is the difference between parametric and non-parametric models?",
+      "options": [
+        "Fixed vs flexible number of parameters",
+        "Different training methods",
+        "Different evaluation metrics",
+        "Different programming approaches"
+      ],
+      "answer": "a",
+      "explanation": "Parametric models have fixed parameters, non-parametric models grow with data size."
+    },
+    {
+      "id": 94,
+      "category": "Machine Learning",
+      "question": "What is the purpose of confusion matrix?",
+      "options": [
+        "Detailed performance analysis",
+        "Model training",
+        "Feature engineering",
+        "Data preprocessing"
+      ],
+      "answer": "a",
+      "explanation": "Confusion matrix provides detailed breakdown of classification performance."
+    },
+    {
+      "id": 95,
+      "category": "Machine Learning",
+      "question": "What is the difference between micro and macro averaging in multi-class?",
+      "options": [
+        "Micro: global metrics, Macro: class-wise average",
+        "Macro: global metrics, Micro: class-wise average",
+        "Both are same",
+        "No difference"
+      ],
+      "answer": "a",
+      "explanation": "Micro-averaging aggregates contributions globally, macro-averaging averages per-class metrics."
+    },
+    {
+      "id": 96,
+      "category": "Deep Learning",
+      "question": "What is the purpose of data augmentation?",
+      "options": [
+        "Increase training data diversity",
+        "Reduce dataset size",
+        "Speed up training",
+        "Simplify models"
+      ],
+      "answer": "a",
+      "explanation": "Data augmentation creates variations of training data to improve model robustness."
+    },
+    {
+      "id": 97,
+      "category": "Deep Learning",
+      "question": "What is the difference between encoder and decoder in autoencoders?",
+      "options": [
+        "Encoder compresses, decoder reconstructs",
+        "Both do the same thing",
+        "Encoder classifies, decoder generates",
+        "No difference"
+      ],
+      "answer": "a",
+      "explanation": "Encoder compresses input to latent representation, decoder reconstructs from latent space."
+    },
+    {
+      "id": 98,
+      "category": "Deep Learning",
+      "question": "What is the purpose of skip connections in ResNet?",
+      "options": [
+        "Address vanishing gradient problem",
+        "Increase model depth",
+        "Reduce parameters",
+        "All of the above"
+      ],
+      "answer": "a",
+      "explanation": "Skip connections help gradients flow directly through networks, mitigating vanishing gradients."
+    },
+    {
+      "id": 99,
+      "category": "Deep Learning",
+      "question": "What is the difference between discriminative and generative models?",
+      "options": [
+        "Discriminative: P(Y|X), Generative: P(X,Y)",
+        "Generative: P(Y|X), Discriminative: P(X,Y)",
+        "Both are same",
+        "No practical difference"
+      ],
+      "answer": "a",
+      "explanation": "Discriminative models learn P(Y|X), generative models learn joint distribution P(X,Y)."
+    },
+    {
+      "id": 100,
+      "category": "Deep Learning",
+      "question": "What is the purpose of teacher forcing in RNN training?",
+      "options": [
+        "Use ground truth as next input during training",
+        "Force model to learn faster",
+        "Increase model capacity",
+        "Reduce overfitting"
+      ],
+      "answer": "a",
+      "explanation": "Teacher forcing uses actual previous outputs rather than predicted ones during training for stability."
+    }
+ 
+
+
+  ]
+}
+
+
