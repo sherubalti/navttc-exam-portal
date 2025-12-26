@@ -386,8 +386,8 @@ const Exam = ({ user }) => {
 
   // Fixed exam schedule
   const EXAM_SCHEDULE = {
-    startDate: new Date('2025-12-28T12:30:00'), // 28th Dec 2025, 12:30 PM
-    endDate: new Date('2025-12-28T13:30:00'),   // 28th Dec 2025, 1:30 PM
+    startDate: new Date('2025-12-26T20:26:00'), // 28th Dec 2025, 12:30 PM
+    endDate: new Date('2025-12-26T21:30:00'),   // 28th Dec 2025, 1:30 PM
     duration: 30 * 60 // 30 minutes in seconds
   };
 
@@ -893,4 +893,5 @@ const Exam = ({ user }) => {
 };
 
 export default Exam;
+
 
