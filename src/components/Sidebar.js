@@ -139,9 +139,9 @@ const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
       {/* Sidebar */}
       <div style={sidebarStyle}>
         <div style={sidebarHeaderStyle}>
-          <div style={logoStyle}>NAVTTC</div>
+          <div style={logoStyle}>BSL</div>
           <h3 style={{ margin: '10px 0', fontSize: '16px', opacity: 0.9 }}>
-            AI Course Portal
+            AI Course Port
           </h3>
           {currentUser && (
             <p style={{ 
@@ -241,5 +241,6 @@ const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
     </>
   );
 };
+
 
 export default Sidebar;
