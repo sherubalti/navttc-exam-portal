@@ -302,7 +302,7 @@ const Exam = ({ user }) => {
               <h2>⏰ Exam Not Started Yet</h2>
               <p>The exam is scheduled for:</p>
               <p><strong>{EXAM_SCHEDULE.startDate.toLocaleString()}</strong></p>
-              <p>Exam Window: 8:26 PM to 9:30 PM</p>
+              <p>Exam Window: 12:30 PM to 13:00 PM</p>
               <p>Exam Duration: 30 minutes</p>
               <div style={{ margin: '20px 0', padding: '15px', backgroundColor: '#f0f0f0', borderRadius: '5px' }}>
                 <h3>Time until exam starts:</h3>
@@ -557,4 +557,5 @@ const Exam = ({ user }) => {
 };
 
 export default Exam;
+
 
