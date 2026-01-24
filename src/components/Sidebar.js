@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
 
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
-    
+
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
@@ -122,7 +123,7 @@ const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
   return (
     <>
       {/* Mobile Menu Button */}
-      <button 
+      <button
         className="mobile-menu-btn"
         onClick={() => setIsOpen(!isOpen)}
         style={mobileMenuBtnStyle}
@@ -131,7 +132,7 @@ const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
       </button>
 
       {/* Overlay for mobile */}
-      <div 
+      <div
         style={overlayStyle}
         onClick={() => setIsOpen(false)}
       />
@@ -139,14 +140,12 @@ const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
       {/* Sidebar */}
       <div style={sidebarStyle}>
         <div style={sidebarHeaderStyle}>
-          <div style={logoStyle}>BSL</div>
-          <h3 style={{ margin: '10px 0', fontSize: '16px', opacity: 0.9 }}>
-            AI Course Port
-          </h3>
+          <img src={logo} alt="Baltistan Silicon Labs" style={{ maxWidth: '100%', height: 'auto', marginBottom: '10px' }} />
+          {/* Removed text logos */}
           {currentUser && (
-            <p style={{ 
-              marginTop: '10px', 
-              fontSize: '0.9rem', 
+            <p style={{
+              marginTop: '10px',
+              fontSize: '0.9rem',
               opacity: 0.8,
               background: 'rgba(255,255,255,0.1)',
               padding: '8px',
@@ -160,22 +159,22 @@ const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
         <nav style={sidebarNavStyle}>
           {!currentUser ? (
             <>
-              <Link 
-                to="/student-login" 
+              <Link
+                to="/student-login"
                 style={location.pathname === '/student-login' ? activeLinkStyle : linkStyle}
                 onClick={handleLinkClick}
               >
                 Student Login
               </Link>
-              <Link 
-                to="/student-register" 
+              <Link
+                to="/student-register"
                 style={location.pathname === '/student-register' ? activeLinkStyle : linkStyle}
                 onClick={handleLinkClick}
               >
                 Student Register
               </Link>
-              <Link 
-                to="/admin-login" 
+              <Link
+                to="/admin-login"
                 style={location.pathname === '/admin-login' ? activeLinkStyle : linkStyle}
                 onClick={handleLinkClick}
               >
@@ -184,14 +183,14 @@ const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
             </>
           ) : isAdmin ? (
             <>
-              <Link 
-                to="/admin-dashboard" 
+              <Link
+                to="/admin-dashboard"
                 style={location.pathname === '/admin-dashboard' ? activeLinkStyle : linkStyle}
                 onClick={handleLinkClick}
               >
                 Dashboard
               </Link>
-              <button 
+              <button
                 onClick={handleLogout}
                 style={linkStyle}
               >
@@ -200,35 +199,35 @@ const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
             </>
           ) : (
             <>
-              <Link 
-                to="/student-dashboard" 
+              <Link
+                to="/student-dashboard"
                 style={location.pathname === '/student-dashboard' ? activeLinkStyle : linkStyle}
                 onClick={handleLinkClick}
               >
                 Dashboard
               </Link>
-              <Link 
-                to="/exam" 
+              <Link
+                to="/exam"
                 style={location.pathname === '/exam' ? activeLinkStyle : linkStyle}
                 onClick={handleLinkClick}
               >
                 Take Exam
               </Link>
-              <Link 
-                to="/result" 
+              <Link
+                to="/result"
                 style={location.pathname === '/result' ? activeLinkStyle : linkStyle}
                 onClick={handleLinkClick}
               >
                 My Results
               </Link>
-              <Link 
-                to="/project-upload" 
+              <Link
+                to="/project-upload"
                 style={location.pathname === '/project-upload' ? activeLinkStyle : linkStyle}
                 onClick={handleLinkClick}
               >
                 Upload Project
               </Link>
-              <button 
+              <button
                 onClick={handleLogout}
                 style={linkStyle}
               >
@@ -237,10 +236,9 @@ const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
             </>
           )}
         </nav>
-      </div>
+      </div >
     </>
   );
 };
-
 
 export default Sidebar;
