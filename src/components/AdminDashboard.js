@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { exportResultsToExcel, exportProjectsToExcel } from '../utils/exportToExcel';
+import configSchedule from '../data/examSchedule';
 
 const AdminDashboard = () => {
   const [students, setStudents] = useState([]);
@@ -233,51 +234,32 @@ const AdminDashboard = () => {
       {activeTab === 'settings' && (
         <div className="card">
           <h2>Exam Settings</h2>
-          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-            <div className="form-group" style={{ marginBottom: '15px', textAlign: 'left' }}>
-              <label style={{ display: 'block', marginBottom: '5px' }}>Start Date & Time</label>
-              <input
-                type="datetime-local"
-                className="form-control"
-                name="startDate"
-                value={examSchedule.startDate}
-                onChange={handleScheduleChange}
-                style={{ width: '100%', padding: '8px', marginBottom: '10px' }}
-              />
+          <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'left' }}>
+            <div className="alert alert-info" style={{ backgroundColor: '#e7f3fe', padding: '15px', borderRadius: '5px', marginBottom: '20px' }}>
+              <strong>Note:</strong> The exam schedule is now managed via the configuration file to ensure synchronization across all devices.
+              To change settings, please edit <code>src/data/examSchedule.js</code> and redeploy.
             </div>
 
-            <div className="form-group" style={{ marginBottom: '15px', textAlign: 'left' }}>
-              <label style={{ display: 'block', marginBottom: '5px' }}>End Date & Time</label>
-              <input
-                type="datetime-local"
-                className="form-control"
-                name="endDate"
-                value={examSchedule.endDate}
-                onChange={handleScheduleChange}
-                style={{ width: '100%', padding: '8px', marginBottom: '10px' }}
-              />
+            <div className="form-group" style={{ marginBottom: '15px' }}>
+              <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Start Date & Time</label>
+              <div style={{ padding: '10px', background: '#f9f9f9', borderRadius: '4px' }}>
+                {new Date(configSchedule.startDate).toLocaleString()}
+              </div>
             </div>
 
-            <div className="form-group" style={{ marginBottom: '20px', textAlign: 'left' }}>
-              <label style={{ display: 'block', marginBottom: '5px' }}>Exam Duration (minutes)</label>
-              <input
-                type="number"
-                className="form-control"
-                name="duration"
-                value={examSchedule.duration}
-                onChange={handleScheduleChange}
-                min="1"
-                style={{ width: '100%', padding: '8px', marginBottom: '10px' }}
-              />
+            <div className="form-group" style={{ marginBottom: '15px' }}>
+              <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>End Date & Time</label>
+              <div style={{ padding: '10px', background: '#f9f9f9', borderRadius: '4px' }}>
+                {new Date(configSchedule.endDate).toLocaleString()}
+              </div>
             </div>
 
-            <button
-              className="btn btn-primary"
-              onClick={handleSaveSchedule}
-              style={{ width: '100%' }}
-            >
-              Save Schedule
-            </button>
+            <div className="form-group" style={{ marginBottom: '20px' }}>
+              <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Exam Duration</label>
+              <div style={{ padding: '10px', background: '#f9f9f9', borderRadius: '4px' }}>
+                {configSchedule.duration} minutes
+              </div>
+            </div>
           </div>
         </div>
       )}
