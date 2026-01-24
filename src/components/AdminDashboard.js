@@ -6,6 +6,11 @@ const AdminDashboard = () => {
   const [results, setResults] = useState([]);
   const [projects, setProjects] = useState([]);
   const [activeTab, setActiveTab] = useState('students');
+  const [examSchedule, setExamSchedule] = useState({
+    startDate: '',
+    endDate: '',
+    duration: 60
+  });
 
   useEffect(() => {
     // Load students
@@ -24,7 +29,41 @@ const AdminDashboard = () => {
     // Load projects
     const projectData = JSON.parse(localStorage.getItem('studentProjects')) || [];
     setProjects(projectData);
+
+    // Load schedule
+    const savedSchedule = JSON.parse(localStorage.getItem('examSchedule'));
+    if (savedSchedule) {
+      setExamSchedule(savedSchedule);
+    } else {
+      // Default to current time for start, and +1 hour for end
+      const now = new Date();
+      const oneHourLater = new Date(now.getTime() + 60 * 60 * 1000);
+
+      // Format for datetime-local input: YYYY-MM-DDThh:mm
+      const formatForInput = (date) => {
+        return date.toISOString().slice(0, 16);
+      };
+
+      setExamSchedule({
+        startDate: formatForInput(now),
+        endDate: formatForInput(oneHourLater),
+        duration: 60
+      });
+    }
   }, []);
+
+  const handleScheduleChange = (e) => {
+    const { name, value } = e.target;
+    setExamSchedule(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSaveSchedule = () => {
+    localStorage.setItem('examSchedule', JSON.stringify(examSchedule));
+    alert('Exam schedule saved successfully!');
+  };
 
   const handleExportResults = () => {
     exportResultsToExcel(results);
@@ -37,7 +76,7 @@ const AdminDashboard = () => {
   return (
     <div className="container">
       <h1>Admin Dashboard</h1>
-      
+
       <div style={{ marginBottom: '20px', borderBottom: '1px solid #ddd' }}>
         <button
           className={`btn ${activeTab === 'students' ? 'btn-primary' : ''}`}
@@ -56,8 +95,15 @@ const AdminDashboard = () => {
         <button
           className={`btn ${activeTab === 'projects' ? 'btn-primary' : ''}`}
           onClick={() => setActiveTab('projects')}
+          style={{ marginRight: '10px' }}
         >
           Projects
+        </button>
+        <button
+          className={`btn ${activeTab === 'settings' ? 'btn-primary' : ''}`}
+          onClick={() => setActiveTab('settings')}
+        >
+          Settings
         </button>
       </div>
 
@@ -75,7 +121,7 @@ const AdminDashboard = () => {
             </div>
             <div className="dashboard-card">
               <h3>
-                {students.length > 0 
+                {students.length > 0
                   ? Math.round(students.reduce((acc, s) => acc + s.averageScore, 0) / students.length)
                   : 0}%
               </h3>
@@ -181,6 +227,58 @@ const AdminDashboard = () => {
               ))}
             </tbody>
           </table>
+        </div>
+      )}
+
+      {activeTab === 'settings' && (
+        <div className="card">
+          <h2>Exam Settings</h2>
+          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+            <div className="form-group" style={{ marginBottom: '15px', textAlign: 'left' }}>
+              <label style={{ display: 'block', marginBottom: '5px' }}>Start Date & Time</label>
+              <input
+                type="datetime-local"
+                className="form-control"
+                name="startDate"
+                value={examSchedule.startDate}
+                onChange={handleScheduleChange}
+                style={{ width: '100%', padding: '8px', marginBottom: '10px' }}
+              />
+            </div>
+
+            <div className="form-group" style={{ marginBottom: '15px', textAlign: 'left' }}>
+              <label style={{ display: 'block', marginBottom: '5px' }}>End Date & Time</label>
+              <input
+                type="datetime-local"
+                className="form-control"
+                name="endDate"
+                value={examSchedule.endDate}
+                onChange={handleScheduleChange}
+                style={{ width: '100%', padding: '8px', marginBottom: '10px' }}
+              />
+            </div>
+
+            <div className="form-group" style={{ marginBottom: '20px', textAlign: 'left' }}>
+              <label style={{ display: 'block', marginBottom: '5px' }}>Exam Duration (minutes)</label>
+              <input
+                type="number"
+                className="form-control"
+                name="duration"
+                value={examSchedule.duration}
+                onChange={handleScheduleChange}
+                min="1"
+                style={{ width: '100%', padding: '8px', marginBottom: '10px' }}
+              />
+            </div>
+
+            <button
+              className="btn btn-primary"
+              onClick={handleSaveSchedule}
+              style={{ width: '100%' }}
+            >
+              Save Schedule
+            </button>
+          </div>
         </div>
       )}
     </div>
