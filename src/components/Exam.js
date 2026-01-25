@@ -1,195 +1,11 @@
-// import React, { useState, useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import mcqsData from '../data/mcqs.json';
 
-// const Exam = ({ user }) => {
-//   const navigate = useNavigate();
-//   const [questions, setQuestions] = useState([]);
-//   const [currentQuestion, setCurrentQuestion] = useState(0);
-//   const [answers, setAnswers] = useState({});
-//   const [timeLeft, setTimeLeft] = useState(60 * 60); // 60 minutes
-//   const [examStarted, setExamStarted] = useState(false);
-
-//   useEffect(() => {
-//     // Check if user has already attempted
-//     const results = JSON.parse(localStorage.getItem('examResults')) || {};
-//     if (results[user.email]) {
-//       alert('You have already attempted the exam.');
-//       navigate('/result');
-//       return;
-//     }
-
-//     // Shuffle questions for each student
-//     const shuffledQuestions = [...mcqsData.questions]
-//       .sort(() => Math.random() - 0.5)
-//       .slice(0, 10); // Take 10 random questions for demo
-
-//     setQuestions(shuffledQuestions);
-//   }, [user.email, navigate]);
-
-//   useEffect(() => {
-//     if (!examStarted) return;
-
-//     const timer = setInterval(() => {
-//       setTimeLeft(prevTime => {
-//         if (prevTime <= 1) {
-//           clearInterval(timer);
-//           handleSubmit();
-//           return 0;
-//         }
-//         return prevTime - 1;
-//       });
-//     }, 1000);
-
-//     return () => clearInterval(timer);
-//   }, [examStarted]);
-
-//   const handleAnswer = (questionIndex, answer) => {
-//     setAnswers(prev => ({
-//       ...prev,
-//       [questionIndex]: answer
-//     }));
-//   };
-
-//   const handleSubmit = () => {
-//     let score = 0;
-//     const results = [];
-
-//     questions.forEach((question, index) => {
-//       const isCorrect = answers[index] === question.answer;
-//       if (isCorrect) score++;
-
-//       results.push({
-//         question: question.question,
-//         userAnswer: answers[index],
-//         correctAnswer: question.answer,
-//         isCorrect: isCorrect,
-//         explanation: question.explanation
-//       });
-//     });
-
-//     // Save result
-//     const examResults = JSON.parse(localStorage.getItem('examResults')) || {};
-//     examResults[user.email] = {
-//       studentName: user.name,
-//       email: user.email,
-//       score: score,
-//       totalQuestions: questions.length,
-//       percentage: Math.round((score / questions.length) * 100),
-//       date: new Date().toLocaleDateString(),
-//       timeTaken: formatTime(60 * 60 - timeLeft),
-//       details: results
-//     };
-//     localStorage.setItem('examResults', JSON.stringify(examResults));
-
-//     // Update user's average score
-//     const users = JSON.parse(localStorage.getItem('students')) || {};
-//     if (users[user.email]) {
-//       users[user.email].averageScore = Math.round((score / questions.length) * 100);
-//       localStorage.setItem('students', JSON.stringify(users));
-//     }
-
-//     navigate('/result');
-//   };
-
-//   const formatTime = (seconds) => {
-//     const minutes = Math.floor(seconds / 60);
-//     const secs = seconds % 60;
-//     return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-//   };
-
-//   const startExam = () => {
-//     setExamStarted(true);
-//   };
-
-//   if (questions.length === 0) {
-//     return <div className="container">Loading questions...</div>;
-//   }
-
-//   if (!examStarted) {
-//     return (
-//       <div className="container">
-//         <div className="card">
-//           <h2>Exam Instructions</h2>
-//           <ul style={{ textAlign: 'left', margin: '20px 0' }}>
-//             <li>Total Questions: {questions.length}</li>
-//             <li>Time Allowed: 60 minutes</li>
-//             <li>Each question has 4 options</li>
-//             <li>You cannot go back once submitted</li>
-//             <li>Exam will auto-submit when time expires</li>
-//           </ul>
-//           <button className="btn btn-primary" onClick={startExam}>
-//             Start Exam
-//           </button>
-//         </div>
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <div className="container">
-//       <div className="card">
-//         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-//           <h2>Exam - Question {currentQuestion + 1} of {questions.length}</h2>
-//           <div className="timer">Time Left: {formatTime(timeLeft)}</div>
-//         </div>
-
-//         <div className="question-card">
-//           <h3>{questions[currentQuestion].question}</h3>
-//           <p><strong>Category:</strong> {questions[currentQuestion].category}</p>
-
-//           <div className="options">
-//             {questions[currentQuestion].options.map((option, index) => {
-//               const letter = String.fromCharCode(97 + index);
-//               return (
-//                 <label key={index}>
-//                   <input
-//                     type="radio"
-//                     name={`question-${currentQuestion}`}
-//                     value={letter}
-//                     checked={answers[currentQuestion] === letter}
-//                     onChange={() => handleAnswer(currentQuestion, letter)}
-//                   />
-//                   {letter.toUpperCase()}. {option}
-//                 </label>
-//               );
-//             })}
-//           </div>
-//         </div>
-
-//         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-//           <button
-//             className="btn"
-//             onClick={() => setCurrentQuestion(prev => Math.max(0, prev - 1))}
-//             disabled={currentQuestion === 0}
-//           >
-//             Previous
-//           </button>
-
-//           {currentQuestion === questions.length - 1 ? (
-//             <button className="btn btn-success" onClick={handleSubmit}>
-//               Submit Exam
-//             </button>
-//           ) : (
-//             <button
-//               className="btn btn-primary"
-//               onClick={() => setCurrentQuestion(prev => Math.min(questions.length - 1, prev + 1))}
-//             >
-//               Next
-//             </button>
-//           )}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Exam;
 
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import mcqsData from '../data/mcqs.json';
+import webMcqs from '../data/web_mcqs.json';
+import oldMcqs from '../data/old_mcqs.json';
+import pythonDsaMcqs from '../data/mcqs_python_dsa.json';
 import examSchedule from '../data/examSchedule';
 
 const Exam = ({ user }) => {
@@ -202,7 +18,15 @@ const Exam = ({ user }) => {
   const [violationCount, setViolationCount] = useState(0);
   const [showWarning, setShowWarning] = useState(false);
   const [scheduleStatus, setScheduleStatus] = useState('active'); // 'active', 'upcoming', 'ended'
-  const [scheduleInfo, setScheduleInfo] = useState(null);
+  const [activeSlot, setActiveSlot] = useState(null);
+  const [currentSchedule, setCurrentSchedule] = useState(examSchedule);
+
+  // Map exam type to data
+  const mcqModules = {
+    web: webMcqs,
+    new_ai: pythonDsaMcqs,
+    old_ai: oldMcqs
+  };
 
   // Function to shuffle array
   const shuffleArray = (array) => {
@@ -223,30 +47,60 @@ const Exam = ({ user }) => {
       return;
     }
 
-    // Check exam schedule from static config
-    if (examSchedule) {
+    // Check exam schedule from static config or localStorage
+    let schedule = examSchedule;
+    const savedSchedule = JSON.parse(localStorage.getItem('examSchedule'));
+    if (savedSchedule) {
+      schedule = savedSchedule;
+    }
+    setCurrentSchedule(schedule);
+
+    if (schedule && schedule.slots) {
       const now = new Date();
-      const startDate = new Date(examSchedule.startDate);
-      const endDate = new Date(examSchedule.endDate);
+      let currentStatus = 'upcoming';
+      let foundSlot = null;
 
-      setScheduleInfo({ startDate, endDate });
+      // Check all slots
+      const allStarts = schedule.slots.map(s => new Date(s.start));
+      const allEnds = schedule.slots.map(s => new Date(s.end));
 
-      if (now < startDate) {
-        setScheduleStatus('upcoming');
-      } else if (now > endDate) {
-        setScheduleStatus('ended');
+      const earliestStart = new Date(Math.min(...allStarts));
+      const latestEnd = new Date(Math.max(...allEnds));
+
+      if (now < earliestStart) {
+        currentStatus = 'upcoming';
+      } else if (now > latestEnd) {
+        currentStatus = 'ended';
       } else {
-        setScheduleStatus('active');
-        // Set duration from schedule if available
-        if (examSchedule.duration) {
-          setTimeLeft(examSchedule.duration * 60);
+        // We are within the overall timeframe, check for an active slot
+        foundSlot = schedule.slots.find(slot => {
+          const start = new Date(slot.start);
+          const end = new Date(slot.end);
+          return now >= start && now <= end;
+        });
+
+        if (foundSlot) {
+          currentStatus = 'active';
+        } else {
+          // Between slots
+          currentStatus = 'upcoming';
         }
       }
-    }
 
-    // Use all questions and shuffle them
-    const shuffledQuestions = shuffleArray(mcqsData.questions);
-    setQuestions(shuffledQuestions);
+      setScheduleStatus(currentStatus);
+      setActiveSlot(foundSlot);
+
+      if (currentStatus === 'active') {
+        const duration = schedule.duration || 60;
+        setTimeLeft(duration * 60);
+
+        // Load dynamic MCQs based on selection IN THE SLOT
+        const course = foundSlot.course || 'web';
+        const selectedMcqData = mcqModules[course] || mcqModules.web;
+        const shuffledQuestions = shuffleArray(selectedMcqData.questions);
+        setQuestions(shuffledQuestions);
+      }
+    }
   }, [user.email, navigate]);
 
   // Tab switching detection
@@ -402,19 +256,28 @@ const Exam = ({ user }) => {
     setExamStarted(true);
   };
 
-  if (questions.length === 0) {
-    return <div className="container">Loading questions...</div>;
-  }
-
   // Schedule Checks
   if (scheduleStatus === 'upcoming') {
     return (
       <div className="container">
         <div className="card">
-          <h2>Exam Has Not Started</h2>
-          <p>The exam is scheduled to start on:</p>
-          <h3>{scheduleInfo?.startDate.toLocaleString()}</h3>
-          <p>Please come back later.</p>
+          <h2>No Active Exam Slot</h2>
+          <p>There is no exam scheduled for the current time.</p>
+          <div style={{ margin: '20px 0', textAlign: 'left' }}>
+            <h4>Available Time Slots:</h4>
+            {currentSchedule.slots.map((slot, index) => (
+              <div key={index} style={{ padding: '12px', borderBottom: '1px solid #eee', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div>
+                  <strong>{new Date(slot.start).toLocaleString()}</strong><br />
+                  <small>to {new Date(slot.end).toLocaleString()}</small>
+                </div>
+                <div style={{ background: '#e3f2fd', padding: '4px 8px', borderRadius: '4px', textTransform: 'uppercase', fontSize: '12px', fontWeight: 'bold', color: '#1976d2' }}>
+                  {(slot.course || 'web').replace('_', ' ')}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p>Please come back during one of the scheduled times.</p>
           <button className="btn btn-primary" onClick={() => window.location.reload()}>
             Refresh Page
           </button>
@@ -427,19 +290,40 @@ const Exam = ({ user }) => {
     return (
       <div className="container">
         <div className="card">
-          <h2>Exam Has Ended</h2>
-          <p>The exam ended on:</p>
-          <h3>{scheduleInfo?.endDate.toLocaleString()}</h3>
+          <h2>Exam Schedule Has Ended</h2>
+          <p>All scheduled time slots for this exam have passed.</p>
+          <div style={{ margin: '20px 0', opacity: 0.7 }}>
+            <h4>Past Slots:</h4>
+            {currentSchedule.slots.map((slot, index) => (
+              <div key={index} style={{ textDecoration: 'line-through' }}>
+                {new Date(slot.start).toLocaleString()}
+              </div>
+            ))}
+          </div>
           <p>You can no longer attempt this exam.</p>
         </div>
       </div>
     );
   }
 
+  if (questions.length === 0) {
+    return <div className="container">Loading questions...</div>;
+  }
+
   if (!examStarted) {
+    const welcomeMessages = {
+      new_ai: "Welcome to BSL New AI Bench",
+      web: "Welcome to BSL Web Class",
+      old_ai: "Welcome to BSL Old AI Bench"
+    };
+    const course = activeSlot?.course || 'web';
+    const welcomeText = welcomeMessages[course] || "Welcome to BSL Exam Portal";
+
     return (
       <div className="container">
         <div className="card">
+          <h2 style={{ color: '#1976d2' }}>{welcomeText}</h2>
+          <hr style={{ margin: '20px 0', border: '0', borderTop: '1px solid #eee' }} />
           <h2>Exam Instructions</h2>
           <ul style={{ textAlign: 'left', margin: '20px 0' }}>
             <li>Total Questions: {questions.length}</li>
