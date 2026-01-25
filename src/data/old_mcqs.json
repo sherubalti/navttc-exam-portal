@@ -1,1 +1,1955 @@
 
+{
+ "questions": [
+  {
+   "id": 1,
+   "category": "Flask",
+   "question": "What is Flask?",
+   "options": [
+    "A full-stack web framework",
+    "A micro web framework for Python",
+    "A database management system",
+    "A JavaScript library"
+   ],
+   "answer": "b",
+   "explanation": "Flask is classified as a microframework because it does not require particular tools or libraries."
+  },
+  {
+   "id": 2,
+   "category": "Flask",
+   "question": "Which command is used to install Flask?",
+   "options": [
+    "install flask",
+    "npm install flask",
+    "pip install Flask",
+    "get flask"
+   ],
+   "answer": "c",
+   "explanation": "Flask is a Python package, so pip is used for installation."
+  },
+  {
+   "id": 3,
+   "category": "Flask",
+   "question": "Which decorator is used to tie a function to a URL?",
+   "options": [
+    "@app.link()",
+    "@app.route()",
+    "@app.url()",
+    "@app.path()"
+   ],
+   "answer": "b",
+   "explanation": "The @app.route() decorator is used to bind a URL to a view function."
+  },
+  {
+   "id": 4,
+   "category": "Flask",
+   "question": "What is the default port for a Flask application?",
+   "options": [
+    "8080",
+    "3000",
+    "5000",
+    "80"
+   ],
+   "answer": "c",
+   "explanation": "By default, Flask runs on port 5000."
+  },
+  {
+   "id": 5,
+   "category": "Flask",
+   "question": "Which template engine does Flask use by default?",
+   "options": [
+    "Mako",
+    "Jinja2",
+    "Cheetah",
+    "Genshi"
+   ],
+   "answer": "b",
+   "explanation": "Flask uses the Jinja2 template engine."
+  },
+  {
+   "id": 6,
+   "category": "Flask",
+   "question": "How do you access form data sent via POST request?",
+   "options": [
+    "request.args",
+    "request.form",
+    "request.data",
+    "request.values"
+   ],
+   "answer": "b",
+   "explanation": "request.form contains the key-value pairs of form data sent in a POST request."
+  },
+  {
+   "id": 7,
+   "category": "Flask",
+   "question": "Which function is used to render an HTML template?",
+   "options": [
+    "render()",
+    "show_template()",
+    "render_template()",
+    "display_html()"
+   ],
+   "answer": "c",
+   "explanation": "render_template() is used to render templates from the 'templates' folder."
+  },
+  {
+   "id": 8,
+   "category": "Flask",
+   "question": "What does the 'jsonify()' function do?",
+   "options": [
+    "Converts a string to JSON",
+    "Wraps data in a JSON response object",
+    "Validates JSON data",
+    "Parses an incoming JSON request"
+   ],
+   "answer": "b",
+   "explanation": "jsonify() takes data and returns a Response object with application/json mimetype."
+  },
+  {
+   "id": 9,
+   "category": "Flask",
+   "question": "Which object is used to store data across multiple requests for a single user?",
+   "options": [
+    "g",
+    "request",
+    "session",
+    "cookie"
+   ],
+   "answer": "c",
+   "explanation": "The 'session' object is used to store information specific to a user from one request to the next."
+  },
+  {
+   "id": 10,
+   "category": "Flask",
+   "question": "How do you specify that a route accepts only POST requests?",
+   "options": [
+    "@app.route('/', type='POST')",
+    "@app.route('/', methods=['POST'])",
+    "@app.post('/')",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "Both methods=['POST'] and the shorthand @app.post() are valid in recent Flask versions."
+  },
+  {
+   "id": 11,
+   "category": "Flask",
+   "question": "What is 'g' in Flask?",
+   "options": [
+    "A global variable for all users",
+    "An object for storing data during a single request",
+    "A database connector",
+    "The main application object"
+   ],
+   "answer": "b",
+   "explanation": "Flask.g is a global namespace for holding data during a request."
+  },
+  {
+   "id": 12,
+   "category": "Flask",
+   "question": "How do you create a redirect in Flask?",
+   "options": [
+    "return redirect(url_for('login'))",
+    "return move_to('login')",
+    "return jump('login')",
+    "return response.redirect('/login')"
+   ],
+   "answer": "a",
+   "explanation": "The redirect() function sends the user to a different URL."
+  },
+  {
+   "id": 13,
+   "category": "Flask",
+   "question": "What is the purpose of 'url_for()'?",
+   "options": [
+    "To download a file",
+    "To dynamically generate a URL for a specific function",
+    "To validate a URL structure",
+    "To check if a web server is up"
+   ],
+   "answer": "b",
+   "explanation": "url_for() generates a URL to the function name given."
+  },
+  {
+   "id": 14,
+   "category": "Flask",
+   "question": "Where should HTML files be placed in a standard Flask project?",
+   "options": [
+    "/static",
+    "/views",
+    "/templates",
+    "/html"
+   ],
+   "answer": "c",
+   "explanation": "Flask looks for Jinja2 templates in the 'templates' folder."
+  },
+  {
+   "id": 15,
+   "category": "Flask",
+   "question": "Where should CSS and JavaScript files be placed?",
+   "options": [
+    "/static",
+    "/assets",
+    "/public",
+    "/templates"
+   ],
+   "answer": "a",
+   "explanation": "Static files are served from the 'static' directory by default."
+  },
+  {
+   "id": 16,
+   "category": "Flask",
+   "question": "How do you get a dynamic variable from a URL like '/user/<name>'?",
+   "options": [
+    "Through request.args",
+    "As an argument to the decorated function",
+    "Using session['name']",
+    "By parsing request.path"
+   ],
+   "answer": "b",
+   "explanation": "Variables in <> are passed as keyword arguments to the view function."
+  },
+  {
+   "id": 17,
+   "category": "Flask",
+   "question": "Which Flask extension is commonly used for database integration (ORM)?",
+   "options": [
+    "Flask-DB",
+    "Flask-SQLAlchemy",
+    "Flask-ORM",
+    "Flask-Data"
+   ],
+   "answer": "b",
+   "explanation": "Flask-SQLAlchemy is the most popular ORM extension for Flask."
+  },
+  {
+   "id": 18,
+   "category": "Flask",
+   "question": "What is a 'Blueprint' in Flask?",
+   "options": [
+    "A CSS framework",
+    "A way to organize an application into smaller, reusable components",
+    "A database schema",
+    "A deployment script"
+   ],
+   "answer": "b",
+   "explanation": "Blueprints are used to modularize large Flask applications."
+  },
+  {
+   "id": 19,
+   "category": "Flask",
+   "question": "How do you access query parameters (like ?id=1) in a GET request?",
+   "options": [
+    "request.form",
+    "request.args",
+    "request.params",
+    "request.query"
+   ],
+   "answer": "b",
+   "explanation": "request.args contains the parsed query string arguments."
+  },
+  {
+   "id": 20,
+   "category": "Flask",
+   "question": "Which status code represents a 'Not Found' error?",
+   "options": [
+    "400",
+    "403",
+    "404",
+    "500"
+   ],
+   "answer": "c",
+   "explanation": "404 is the standard HTTP response code for page not found."
+  },
+  {
+   "id": 21,
+   "category": "Flask",
+   "question": "What is the result of returning a tuple like ('Hello', 201) from a route?",
+   "options": [
+    "An error",
+    "A response with body 'Hello' and status code 201",
+    "A response with 201 characters",
+    "A JSON array"
+   ],
+   "answer": "b",
+   "explanation": "Flask allows returning (response, status) tuples."
+  },
+  {
+   "id": 22,
+   "category": "Flask",
+   "question": "What is WSGI?",
+   "options": [
+    "A web server for Flask",
+    "A specification for communication between web servers and Python apps",
+    "A database engine",
+    "A Python package manager"
+   ],
+   "answer": "b",
+   "explanation": "Web Server Gateway Interface (WSGI) is the standard for web servers to talk to Python applications."
+  },
+  {
+   "id": 23,
+   "category": "Flask",
+   "question": "Which function allows you to abort a request with an error code?",
+   "options": [
+    "fail()",
+    "stop()",
+    "abort()",
+    "exit()"
+   ],
+   "answer": "c",
+   "explanation": "abort() immediately ends a request with a specific HTTP error code."
+  },
+  {
+   "id": 24,
+   "category": "Flask",
+   "question": "How do you define a constant secret key for sessions?",
+   "options": [
+    "app.key = 'secret'",
+    "app.secret_key = 'secret'",
+    "app.config['SECRET_KEY'] = 'secret'",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "Both app.secret_key and the config dictionary are used to set the secret key."
+  },
+  {
+   "id": 25,
+   "category": "Flask",
+   "question": "What does the 'flash()' function do?",
+   "options": [
+    "Resets the server",
+    "Sends a temporary message to be displayed on the next page",
+    "Clears the browser cache",
+    "Deletes session data"
+   ],
+   "answer": "b",
+   "explanation": "Flashing allows you to record a message at the end of a request and access it in the next request."
+  },
+  {
+   "id": 26,
+   "category": "Flask",
+   "question": "In Jinja2, which syntax is used for comments?",
+   "options": [
+    "<!-- comment -->",
+    "# comment",
+    "{# comment #}",
+    "// comment"
+   ],
+   "answer": "c",
+   "explanation": "{# ... #} is the Jinja2 comment syntax."
+  },
+  {
+   "id": 27,
+   "category": "Flask",
+   "question": "In Jinja2, which syntax is used to print the value of a variable?",
+   "options": [
+    "{% var %}",
+    "{{ var }}",
+    "[[ var ]]",
+    "(var)"
+   ],
+   "answer": "b",
+   "explanation": "{{ ... }} is used for expressions to print to the template output."
+  },
+  {
+   "id": 28,
+   "category": "Flask",
+   "question": "In Jinja2, which syntax is used for control structures like loops?",
+   "options": [
+    "{% ... %}",
+    "{{ ... }}",
+    "{# ... #}",
+    "< ... >"
+   ],
+   "answer": "a",
+   "explanation": "\"{% ... %}\" is used for control flow statements like if and for."
+  },
+  {
+   "id": 29,
+   "category": "Flask",
+   "question": "Which Flask extension provides a simple way to create RESTful APIs?",
+   "options": [
+    "Flask-API",
+    "Flask-RESTful",
+    "Flask-Simple",
+    "Flask-Json"
+   ],
+   "answer": "b",
+   "explanation": "Flask-RESTful is a popular extension for building REST APIs."
+  },
+  {
+   "id": 30,
+   "category": "Flask",
+   "question": "Which tool is commonly used to run Flask in production?",
+   "options": [
+    "Flask run",
+    "Python app.py",
+    "Gunicorn",
+    "Node.js"
+   ],
+   "answer": "c",
+   "explanation": "Gunicorn is a Python WSGI HTTP Server for production."
+  },
+  {
+   "id": 31,
+   "category": "Pandas",
+   "question": "What is the primary data structure in Pandas for 2D data?",
+   "options": [
+    "Series",
+    "DataFrame",
+    "Panel",
+    "Array"
+   ],
+   "answer": "b",
+   "explanation": "A DataFrame is a 2-dimensional labeled data structure with columns of potentially different types."
+  },
+  {
+   "id": 32,
+   "category": "Pandas",
+   "question": "Which of the following is a 1-dimensional labeled array in Pandas?",
+   "options": [
+    "DataFrame",
+    "Series",
+    "Panel",
+    "Vector"
+   ],
+   "answer": "b",
+   "explanation": "A Series is a one-dimensional labeled array capable of holding any data type."
+  },
+  {
+   "id": 33,
+   "category": "Pandas",
+   "question": "How do you load a CSV file into a DataFrame?",
+   "options": [
+    "pd.open_csv()",
+    "pd.load_csv()",
+    "pd.read_csv()",
+    "pd.get_csv()"
+   ],
+   "answer": "c",
+   "explanation": "read_csv() is the standard Pandas function to load CSV data."
+  },
+  {
+   "id": 34,
+   "category": "Pandas",
+   "question": "Which method is used to view the first 5 rows of a DataFrame?",
+   "options": [
+    "df.show()",
+    "df.top()",
+    "df.head()",
+    "df.first()"
+   ],
+   "answer": "c",
+   "explanation": "head(n) returns the first n rows, default is 5."
+  },
+  {
+   "id": 35,
+   "category": "Pandas",
+   "question": "How do you select a single column named 'Age' from a DataFrame 'df'?",
+   "options": [
+    "df('Age')",
+    "df['Age']",
+    "df.Age",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "Columns can be accessed using bracket notation or dot notation (if the name is a valid variable name)."
+  },
+  {
+   "id": 36,
+   "category": "Pandas",
+   "question": "Which attribute gives the dimensions (rows, columns) of a DataFrame?",
+   "options": [
+    "df.size",
+    "df.shape",
+    "df.dim",
+    "df.length"
+   ],
+   "answer": "b",
+   "explanation": "df.shape returns a tuple representing the dimensionality."
+  },
+  {
+   "id": 37,
+   "category": "Pandas",
+   "question": "How do you drop a column named 'City' from 'df'?",
+   "options": [
+    "df.remove('City')",
+    "df.drop('City', axis=1)",
+    "df.delete('City')",
+    "df.discard('City')"
+   ],
+   "answer": "b",
+   "explanation": "drop() with axis=1 (or columns='City') is used to remove columns."
+  },
+  {
+   "id": 38,
+   "category": "Pandas",
+   "question": "How do you find the number of missing values in each column?",
+   "options": [
+    "df.missing()",
+    "df.isna().sum()",
+    "df.nulls()",
+    "df.empty().count()"
+   ],
+   "answer": "b",
+   "explanation": "isna() (or isnull()) returns a boolean mask, and sum() counts the True values."
+  },
+  {
+   "id": 39,
+   "category": "Pandas",
+   "question": "Which method is used to fill missing values with a specific value?",
+   "options": [
+    "df.replace_na()",
+    "df.fillna()",
+    "df.fix_nulls()",
+    "df.inpute()"
+   ],
+   "answer": "b",
+   "explanation": "fillna() is used to fill NA/NaN values using the specified method."
+  },
+  {
+   "id": 40,
+   "category": "Pandas",
+   "question": "How do you filter rows where the 'Salary' column is greater than 50000?",
+   "options": [
+    "df.filter(Salary > 50000)",
+    "df[df['Salary'] > 50000]",
+    "df.query(Salary > 50000)",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "Both boolean indexing and the query() method can be used for filtering."
+  },
+  {
+   "id": 41,
+   "category": "Pandas",
+   "question": "What does df.describe() do?",
+   "options": [
+    "Prints the DataFrame column names",
+    "Generates descriptive statistics like mean, std, etc.",
+    "Shows the data Types",
+    "Describes the index"
+   ],
+   "answer": "b",
+   "explanation": "describe() provides a summary of numeric columns (mean, count, min, max, etc.)."
+  },
+  {
+   "id": 42,
+   "category": "Pandas",
+   "question": "How do you sort a DataFrame by the 'Name' column?",
+   "options": [
+    "df.sort('Name')",
+    "df.sort_values('Name')",
+    "df.order_by('Name')",
+    "df.arrange('Name')"
+   ],
+   "answer": "b",
+   "explanation": "sort_values() is the correct method to sort by specific column(s)."
+  },
+  {
+   "id": 43,
+   "category": "Pandas",
+   "question": "Which function is used to join two DataFrames along a particular axis?",
+   "options": [
+    "pd.combine()",
+    "pd.merge()",
+    "pd.concat()",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "merge() is for database-style joins, concat() is for stacking along an axis."
+  },
+  {
+   "id": 44,
+   "category": "Pandas",
+   "question": "How do you group data by 'Department' and find the mean salary?",
+   "options": [
+    "df.groupby('Department').Salary.mean()",
+    "df.aggregate('Department').mean()",
+    "df.pivot('Department').mean()",
+    "df.split('Department').mean()"
+   ],
+   "answer": "a",
+   "explanation": "The groupby() method allows splitting the data into groups based on some criteria."
+  },
+  {
+   "id": 45,
+   "category": "Pandas",
+   "question": "What is the difference between loc and iloc?",
+   "options": [
+    "They are the same",
+    "loc is label-based, iloc is integer-position based",
+    "iloc is label-based, loc is integer-position based",
+    "loc is for columns, iloc is for rows"
+   ],
+   "answer": "b",
+   "explanation": "loc uses row/column labels; iloc uses row/column indices (0, 1, 2...)."
+  },
+  {
+   "id": 46,
+   "category": "Pandas",
+   "question": "How do you change the data type of a column to 'float'?",
+   "options": [
+    "df['col'].to_float()",
+    "df['col'].astype(float)",
+    "df['col'].convert('float')",
+    "df['col'].type = float"
+   ],
+   "answer": "b",
+   "explanation": "astype() is used to cast a pandas object to a specified dtype."
+  },
+  {
+   "id": 47,
+   "category": "Pandas",
+   "question": "How do you rename a column 'old_name' to 'new_name'?",
+   "options": [
+    "df.rename(columns={'old_name': 'new_name'})",
+    "df.change_name('old_name', 'new_name')",
+    "df.columns['old_name'] = 'new_name'",
+    "pd.rename_col(df, 'old_name', 'new_name')"
+   ],
+   "answer": "a",
+   "explanation": "The rename() method with the columns parameter takes a dictionary mapping."
+  },
+  {
+   "id": 48,
+   "category": "Pandas",
+   "question": "What does df.info() provide?",
+   "options": [
+    "Summary statistics",
+    "Non-null counts and data types",
+    "First few rows",
+    "Value counts"
+   ],
+   "answer": "b",
+   "explanation": "info() prints information about a DataFrame including the index dtype and columns, non-null values and memory usage."
+  },
+  {
+   "id": 49,
+   "category": "Pandas",
+   "question": "How do you remove duplicate rows?",
+   "options": [
+    "df.clean_duplicates()",
+    "df.drop_duplicates()",
+    "df.unique()",
+    "df.distinct()"
+   ],
+   "answer": "b",
+   "explanation": "drop_duplicates() returns DataFrame with duplicate rows removed."
+  },
+  {
+   "id": 50,
+   "category": "Pandas",
+   "question": "How do you get unique values from a column?",
+   "options": [
+    "df['col'].distinct()",
+    "df['col'].unique()",
+    "pd.unique_values(df['col'])",
+    "Both b and c"
+   ],
+   "answer": "b",
+   "explanation": "The unique() method returns the unique values in a Series."
+  },
+  {
+   "id": 51,
+   "category": "Pandas",
+   "question": "What will df.iloc[0:2, :] return?",
+   "options": [
+    "The first two rows and all columns",
+    "The first two columns and all rows",
+    "The first row and first two columns",
+    "An error"
+   ],
+   "answer": "a",
+   "explanation": "iloc indices are standard Python slicing (exclusive of end index)."
+  },
+  {
+   "id": 52,
+   "category": "Pandas",
+   "question": "How do you apply a custom function 'square' to every element in a column?",
+   "options": [
+    "df['col'].map(square)",
+    "df['col'].apply(square)",
+    "df['col'].iterate(square)",
+    "Both a and b"
+   ],
+   "answer": "d",
+   "explanation": "Both apply() and map() can be used for element-wise operations on a Series."
+  },
+  {
+   "id": 53,
+   "category": "Pandas",
+   "question": "What is a 'Pivot Table' in Pandas?",
+   "options": [
+    "A table that rotates the data",
+    "A spreadsheet-style aggregation tool",
+    "A way to visualize the index",
+    "A method to delete rows"
+   ],
+   "answer": "b",
+   "explanation": "pivot_table() creates a spreadsheet-style pivot table as a DataFrame."
+  },
+  {
+   "id": 54,
+   "category": "Pandas",
+   "question": "How do you check the data type of each column?",
+   "options": [
+    "df.types",
+    "df.dtypes",
+    "df.get_types()",
+    "df.info()"
+   ],
+   "answer": "b",
+   "explanation": "The dtypes attribute returns a Series with the data type of each column."
+  },
+  {
+   "id": 55,
+   "category": "Pandas",
+   "question": "What does 'axis=0' usually refer to in Pandas operations?",
+   "options": [
+    "Columns",
+    "Rows",
+    "Elements",
+    "Tables"
+   ],
+   "answer": "b",
+   "explanation": "axis=0 refers to the index (rows), axis=1 refers to columns."
+  },
+  {
+   "id": 56,
+   "category": "Pandas",
+   "question": "Which function allows you to read an HTML file?",
+   "options": [
+    "pd.read_html()",
+    "pd.read_web()",
+    "pd.load_html()",
+    "pd.get_html()"
+   ],
+   "answer": "a",
+   "explanation": "pd.read_html() searches for <table> tags and returns a list of DataFrame objects."
+  },
+  {
+   "id": 57,
+   "category": "Pandas",
+   "question": "How do you find the mean of each column?",
+   "options": [
+    "df.average()",
+    "df.mean()",
+    "pd.mean(df)",
+    "df.avg()"
+   ],
+   "answer": "b",
+   "explanation": "mean() returns the mean of the values for the requested axis."
+  },
+  {
+   "id": 58,
+   "category": "Pandas",
+   "question": "Which method is used to sort the index?",
+   "options": [
+    "df.sort_values()",
+    "df.sort_index()",
+    "df.order_index()",
+    "df.arrange_index()"
+   ],
+   "answer": "b",
+   "explanation": "sort_index() sorts the object by labels along an axis."
+  },
+  {
+   "id": 59,
+   "category": "Pandas",
+   "question": "What does df.isin([1, 2]) do?",
+   "options": [
+    "Checks if 1 and 2 are in the index",
+    "Returns a boolean mask where values are in the list [1, 2]",
+    "Adds 1 and 2 to the DataFrame",
+    "Filters the DataFrame for rows 1 and 2"
+   ],
+   "answer": "b",
+   "explanation": "isin() returns a boolean DataFrame showing whether each element in the DataFrame is contained in the passed sequence."
+  },
+  {
+   "id": 60,
+   "category": "Pandas",
+   "question": "How do you drop rows with any missing values?",
+   "options": [
+    "df.dropna()",
+    "df.drop_na()",
+    "df.remove_nulls()",
+    "df.clean()"
+   ],
+   "answer": "a",
+   "explanation": "dropna() removes missing values."
+  },
+  {
+   "id": 61,
+   "category": "Pandas",
+   "question": "Which parameter in dropna() allows you to drop columns instead of rows?",
+   "options": [
+    "axis='columns'",
+    "axis=1",
+    "Both a and b",
+    "None of the above"
+   ],
+   "answer": "c",
+   "explanation": "Setting axis to 1 or 'columns' will drop columns with missing values."
+  },
+  {
+   "id": 62,
+   "category": "Pandas",
+   "question": "What is 'Chaining' in Pandas?",
+   "options": [
+    "Locking the data",
+    "Calling multiple methods in a single line",
+    "Linking DataFrames together",
+    "Encrypted data storage"
+   ],
+   "answer": "b",
+   "explanation": "Method chaining allows you to apply multiple operations sequentially (e.g., df.drop().sort().head())."
+  },
+  {
+   "id": 63,
+   "category": "Pandas",
+   "question": "How do you get the number of rows and columns as a tuple?",
+   "options": [
+    "df.size",
+    "df.dim",
+    "df.shape",
+    "df.columns"
+   ],
+   "answer": "c",
+   "explanation": "shape returns (rows, columns)."
+  },
+  {
+   "id": 64,
+   "category": "Pandas",
+   "question": "What does df.memory_usage() return?",
+   "options": [
+    "Total RAM available",
+    "Memory used by each column in bytes",
+    "Storage size on disk",
+    "None of the above"
+   ],
+   "answer": "b",
+   "explanation": "memory_usage() returns a Series with the memory usage of each column."
+  },
+  {
+   "id": 65,
+   "category": "Pandas",
+   "question": "Which function is used to convert strings or other types to datetime objects?",
+   "options": [
+    "pd.to_date()",
+    "pd.to_datetime()",
+    "pd.as_datetime()",
+    "df.convert_time()"
+   ],
+   "answer": "b",
+   "explanation": "pd.to_datetime() is the standard conversion function."
+  },
+  {
+   "id": 66,
+   "category": "Pandas",
+   "question": "How do you create a frequency table of two columns?",
+   "options": [
+    "pd.pivot_table()",
+    "pd.crosstab()",
+    "df.frequency()",
+    "pd.table()"
+   ],
+   "answer": "b",
+   "explanation": "crosstab() computes a simple cross-tabulation of two (or more) factors."
+  },
+  {
+   "id": 67,
+   "category": "Pandas",
+   "question": "What is the purpose of the 'inplace=True' parameter?",
+   "options": [
+    "Returns a copy",
+    "Modifies the original object directly",
+    "Speeds up the operation",
+    "Saves to disk"
+   ],
+   "answer": "b",
+   "explanation": "inplace=True performs the operation on the data in place and returns None."
+  },
+  {
+   "id": 68,
+   "category": "Pandas",
+   "question": "How do you find the sum of a column 'A'?",
+   "options": [
+    "df['A'].total()",
+    "df['A'].sum()",
+    "pd.sum(df['A'])",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "Both the Series method and the top-level Pandas/NumPy sum functions work."
+  },
+  {
+   "id": 69,
+   "category": "Pandas",
+   "question": "Which method returns the cumulative sum?",
+   "options": [
+    "df.cum_sum()",
+    "df.cumsum()",
+    "pd.cumulative_sum(df)",
+    "df.sum_all()"
+   ],
+   "answer": "b",
+   "explanation": "cumsum() returns the cumulative sum of the elements."
+  },
+  {
+   "id": 70,
+   "category": "Pandas",
+   "question": "How do you access the index labels of a DataFrame?",
+   "options": [
+    "df.labels",
+    "df.index",
+    "df.keys()",
+    "df.rows"
+   ],
+   "answer": "b",
+   "explanation": "The index attribute access the row labels."
+  },
+  {
+   "id": 71,
+   "category": "Pandas",
+   "question": "What will df.at[label, col] do?",
+   "options": [
+    "Return a subset of rows",
+    "Access a single value for a row/column label pair",
+    "Add a row",
+    "Fast integer access"
+   ],
+   "answer": "b",
+   "explanation": "at is used for fast scalar access by label."
+  },
+  {
+   "id": 72,
+   "category": "NumPy",
+   "question": "What does NumPy stand for?",
+   "options": [
+    "Number Python",
+    "Numerical Python",
+    "Null Python",
+    "New Python"
+   ],
+   "answer": "b",
+   "explanation": "NumPy is the fundamental package for scientific computing with Python."
+  },
+  {
+   "id": 73,
+   "category": "NumPy",
+   "question": "How do you create a 1D NumPy array from a Python list [1, 2, 3]?",
+   "options": [
+    "np.create_array([1, 2, 3])",
+    "np.array([1, 2, 3])",
+    "np.list_to_array([1, 2, 3])",
+    "new np.array([1, 2, 3])"
+   ],
+   "answer": "b",
+   "explanation": "np.array() is the standard way to create an ndarray from sequence-like objects."
+  },
+  {
+   "id": 74,
+   "category": "NumPy",
+   "question": "What is the purpose of np.zeros((3,4))?",
+   "options": [
+    "Creates a 3x4 array of ones",
+    "Creates a 3x4 array of zeros",
+    "Checks if an array has zeros",
+    "Deletes an array"
+   ],
+   "answer": "b",
+   "explanation": "np.zeros() returns a new array of given shape and type, filled with zeros."
+  },
+  {
+   "id": 75,
+   "category": "NumPy",
+   "question": "How do you find the shape of a NumPy array 'arr'?",
+   "options": [
+    "arr.get_shape()",
+    "arr.shape()",
+    "arr.shape",
+    "np.shape_of(arr)"
+   ],
+   "answer": "c",
+   "explanation": "shape is an attribute of ndarray, not a method."
+  },
+  {
+   "id": 76,
+   "category": "NumPy",
+   "question": "Which function is used to create an array with a range of values (similar to Python's range)?",
+   "options": [
+    "np.range()",
+    "np.arange()",
+    "np.array_range()",
+    "np.linspace()"
+   ],
+   "answer": "b",
+   "explanation": "arange() is similar to the built-in range function but returns an ndarray."
+  },
+  {
+   "id": 77,
+   "category": "NumPy",
+   "question": "What does arr.reshape(2, 3) do?",
+   "options": [
+    "Deletes two rows and three columns",
+    "Changes the shape of the array to 2 rows and 3 columns without changing data",
+    "Transposes the array",
+    "Flattens the array"
+   ],
+   "answer": "b",
+   "explanation": "reshape() gives a new shape to an array without changing its data."
+  },
+  {
+   "id": 78,
+   "category": "NumPy",
+   "question": "How do you perform element-wise addition of two arrays 'a' and 'b'?",
+   "options": [
+    "a.add(b)",
+    "a + b",
+    "np.concatenate(a, b)",
+    "None of the above"
+   ],
+   "answer": "b",
+   "explanation": "NumPy supports operator overloading for element-wise arithmetic."
+  },
+  {
+   "id": 79,
+   "category": "NumPy",
+   "question": "What is the result of np.ones((2,2)) * 5?",
+   "options": [
+    "An array of 1s",
+    "An array of 5s",
+    "An error",
+    "An array with one 5"
+   ],
+   "answer": "b",
+   "explanation": "Broadcasting applies the scalar multiplication to every element in the array."
+  },
+  {
+   "id": 80,
+   "category": "NumPy",
+   "question": "Which attribute returns the number of dimensions of an array?",
+   "options": [
+    "arr.dim",
+    "arr.ndims",
+    "arr.ndim",
+    "arr.size"
+   ],
+   "answer": "c",
+   "explanation": "ndim returns the number of array dimensions."
+  },
+  {
+   "id": 81,
+   "category": "NumPy",
+   "question": "What corresponds to 'arr.size' for an ndarray?",
+   "options": [
+    "The memory consumption",
+    "The number of dimensions",
+    "The total number of elements",
+    "The length of the first dimension"
+   ],
+   "answer": "c",
+   "explanation": "size returns the total number of elements in the array (product of shape components)."
+  },
+  {
+   "id": 82,
+   "category": "NumPy",
+   "question": "How do you transpose a NumPy array?",
+   "options": [
+    "arr.swap()",
+    "arr.transpose()",
+    "arr.T",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "Both the transpose() method and the .T attribute can be used."
+  },
+  {
+   "id": 83,
+   "category": "NumPy",
+   "question": "What is 'Vectorization' in NumPy?",
+   "options": [
+    "Converting lists to arrays",
+    "Performing operations on whole arrays without explicit loops",
+    "Creating 3D vectors",
+    "Drawing arrows"
+   ],
+   "answer": "b",
+   "explanation": "Vectorization describes the absence of explicit looping, indexing, etc., in the code; these things take place, of course, just 'behind the scenes' in optimized C and Fortran code."
+  },
+  {
+   "id": 84,
+   "category": "NumPy",
+   "question": "Which function creates an array of evenly spaced numbers over a specified interval?",
+   "options": [
+    "np.arange()",
+    "np.linspace()",
+    "np.space()",
+    "np.distribute()"
+   ],
+   "answer": "b",
+   "explanation": "linspace() returns evenly spaced numbers over a specified interval (including the stop value by default)."
+  },
+  {
+   "id": 85,
+   "category": "NumPy",
+   "question": "How do you find the mean of values in a NumPy array?",
+   "options": [
+    "arr.mean()",
+    "np.mean(arr)",
+    "both a and b",
+    "arr.avg()"
+   ],
+   "answer": "c",
+   "explanation": "mean is both an ndarray method and a top-level NumPy function."
+  },
+  {
+   "id": 86,
+   "category": "NumPy",
+   "question": "What does np.eye(3) create?",
+   "options": [
+    "A 3x3 array of zeros",
+    "A 3x3 identity matrix (1s on diagonal)",
+    "An array with 3 eyes",
+    "A matrix for image processing"
+   ],
+   "answer": "b",
+   "explanation": "eye() returns a 2D array with ones on the diagonal and zeros elsewhere."
+  },
+  {
+   "id": 87,
+   "category": "NumPy",
+   "question": "Which axis relates to columns in a 2D NumPy array?",
+   "options": [
+    "axis=0",
+    "axis=1",
+    "axis=2",
+    "None"
+   ],
+   "answer": "b",
+   "explanation": "In 2D arrays, axis 0 is rows and axis 1 is columns."
+  },
+  {
+   "id": 88,
+   "category": "NumPy",
+   "question": "How do you flatten a 2D array into 1D?",
+   "options": [
+    "arr.flatten()",
+    "arr.ravel()",
+    "arr.reshape(-1)",
+    "All of the above"
+   ],
+   "answer": "d",
+   "explanation": "All these methods can be used to convert a multi-dimensional array to 1D."
+  },
+  {
+   "id": 89,
+   "category": "NumPy",
+   "question": "What is the result of np.array([1, 2]) == np.array([1, 3])?",
+   "options": [
+    "True",
+    "False",
+    "[True, False]",
+    "An error"
+   ],
+   "answer": "c",
+   "explanation": "Element-wise comparison returns a boolean array."
+  },
+  {
+   "id": 90,
+   "category": "NumPy",
+   "question": "How do you compute the dot product of two arrays?",
+   "options": [
+    "a * b",
+    "a.dot(b)",
+    "np.dot(a, b)",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "numpy.dot() or the dot() method performs matrix multiplication/dot products."
+  },
+  {
+   "id": 91,
+   "category": "NumPy",
+   "question": "Which function is used to join a sequence of arrays along an existing axis?",
+   "options": [
+    "np.merge()",
+    "np.concatenate()",
+    "np.join()",
+    "np.group()"
+   ],
+   "answer": "b",
+   "explanation": "concatenate() joins a sequence of arrays along an existing axis."
+  },
+  {
+   "id": 92,
+   "category": "NumPy",
+   "question": "What is the default data type of a NumPy array created from integers?",
+   "options": [
+    "int16",
+    "int32 or int64 (platform dependent)",
+    "float64",
+    "object"
+   ],
+   "answer": "b",
+   "explanation": "NumPy usually defaults to the standard integer size of the OS/processor."
+  },
+  {
+   "id": 93,
+   "category": "NumPy",
+   "question": "How do you change the data type of an array?",
+   "options": [
+    "arr.astype()",
+    "arr.cast()",
+    "arr.dtype = 'new_type'",
+    "np.convert(arr)"
+   ],
+   "answer": "a",
+   "explanation": "astype() creates a copy of the array, cast to a specified type."
+  },
+  {
+   "id": 94,
+   "category": "NumPy",
+   "question": "What does np.where(condition, x, y) do?",
+   "options": [
+    "Finds the index where condition is True",
+    "Returns elements from x where condition is True, otherwise from y",
+    "Deletes elements where condition is False",
+    "Searches for a value in the array"
+   ],
+   "answer": "b",
+   "explanation": "where() is a vectorized version of the ternary expression x if condition else y."
+  },
+  {
+   "id": 95,
+   "category": "NumPy",
+   "question": "How do you find the index of the maximum value?",
+   "options": [
+    "arr.max_index()",
+    "arr.argmax()",
+    "np.max_pos(arr)",
+    "arr.index(arr.max())"
+   ],
+   "answer": "b",
+   "explanation": "argmax() returns the indices of the maximum values along an axis."
+  },
+  {
+   "id": 96,
+   "category": "NumPy",
+   "question": "What is the difference between copy() and view()?",
+   "options": [
+    "There is no difference",
+    "copy owns data, view doesn't (it's just a reference)",
+    "view owns data, copy doesn't",
+    "copy is faster"
+   ],
+   "answer": "b",
+   "explanation": "A view of the data uses the same underlying memory; changes in one affect the other. A copy is independent."
+  },
+  {
+   "id": 97,
+   "category": "NumPy",
+   "question": "How do you create an array of random floats between 0 and 1?",
+   "options": [
+    "np.rand(5)",
+    "np.random.rand(5)",
+    "np.random.random_sample(5)",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "Both rand and random_sample provide uniform random numbers."
+  },
+  {
+   "id": 98,
+   "category": "NumPy",
+   "question": "Which function computes the square root of each element?",
+   "options": [
+    "arr.sqrt()",
+    "np.sqrt(arr)",
+    "np.square_root(arr)",
+    "math.sqrt(arr)"
+   ],
+   "answer": "b",
+   "explanation": "np.sqrt is a universal function (ufunc) that operates element-wise."
+  },
+  {
+   "id": 99,
+   "category": "NumPy",
+   "question": "What does the 'out' parameter in NumPy functions do?",
+   "options": [
+    "Specifies the output file",
+    "Allows storing the result in an existing array (no new allocation)",
+    "Prints the result to console",
+    "Exits the function"
+   ],
+   "answer": "b",
+   "explanation": "The 'out' parameter allows you to perform operations in-place or into a pre-allocated buffer."
+  },
+  {
+   "id": 100,
+   "category": "NumPy",
+   "question": "How do you stack arrays vertically (row-wise)?",
+   "options": [
+    "np.hstack()",
+    "np.vstack()",
+    "np.dstack()",
+    "np.stack(axis=1)"
+   ],
+   "answer": "b",
+   "explanation": "vstack() stacks arrays in sequence vertically (row wise)."
+  },
+  {
+   "id": 101,
+   "category": "NumPy",
+   "question": "How do you stack arrays horizontally (column-wise)?",
+   "options": [
+    "np.vstack()",
+    "np.hstack()",
+    "np.column_stack()",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "hstack and column_stack perform horizontal stacking."
+  },
+  {
+   "id": 102,
+   "category": "NumPy",
+   "question": "What is the NumPy equivalent of the Python filter function?",
+   "options": [
+    "np.filter()",
+    "Boolean Indexing (arr[arr > 5])",
+    "np.extract()",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "Boolean indexing is the primary way to filter; extract() is a helper for this."
+  },
+  {
+   "id": 103,
+   "category": "NumPy",
+   "question": "How do you find unique elements in an array?",
+   "options": [
+    "arr.unique()",
+    "np.unique(arr)",
+    "np.distinct(arr)",
+    "set(arr)"
+   ],
+   "answer": "b",
+   "explanation": "np.unique() returns the sorted unique elements of an array."
+  },
+  {
+   "id": 104,
+   "category": "NumPy",
+   "question": "What does np.tile(arr, 2) do?",
+   "options": [
+    "Stacks two different arrays",
+    "Repeats the array twice as a whole blocks",
+    "Repeats each element twice",
+    "Splits the array"
+   ],
+   "answer": "b",
+   "explanation": "tile() constructs an array by repeating A the number of times given by reps."
+  },
+  {
+   "id": 105,
+   "category": "NumPy",
+   "question": "How do you repeat *elements* of an array n times?",
+   "options": [
+    "np.tile()",
+    "np.repeat()",
+    "np.multiply()",
+    "np.duplicate()"
+   ],
+   "answer": "b",
+   "explanation": "repeat() repeats elements of an array."
+  },
+  {
+   "id": 106,
+   "category": "NumPy",
+   "question": "Which function computes the inverse of a matrix?",
+   "options": [
+    "np.inv()",
+    "np.linalg.inv()",
+    "arr.inverse()",
+    "np.matrix.inverse()"
+   ],
+   "answer": "b",
+   "explanation": "The linear algebra module (linalg) contains the inv() function."
+  },
+  {
+   "id": 107,
+   "category": "NumPy",
+   "question": "What is the result of np.inf * 0?",
+   "options": [
+    "0",
+    "inf",
+    "nan",
+    "An error"
+   ],
+   "answer": "c",
+   "explanation": "Infinity times zero is undefined and results in NaN (Not a Number)."
+  },
+  {
+   "id": 108,
+   "category": "NumPy",
+   "question": "How do you calculate the standard deviation?",
+   "options": [
+    "arr.std()",
+    "np.std(arr)",
+    "Both a and b",
+    "arr.stdev()"
+   ],
+   "answer": "c",
+   "explanation": "std() is available as a method and a function."
+  },
+  {
+   "id": 109,
+   "category": "NumPy",
+   "question": "What does the 'keepdims' parameter in aggregation functions (like sum) do?",
+   "options": [
+    "Prevents data loss",
+    "Retains the dimensions of the input in the output (e.g. 1 instead of scalar)",
+    "Limits the size of the array",
+    "Keeps the original array unchanged"
+   ],
+   "answer": "b",
+   "explanation": "If set to True, the axes which are reduced are left in the result as dimensions with size one."
+  },
+  {
+   "id": 110,
+   "category": "NumPy",
+   "question": "How do you create an array of 100 values from 0 to 10 inclusively?",
+   "options": [
+    "np.arange(0, 10, 100)",
+    "np.linspace(0, 10, 100)",
+    "np.space(0, 10, 100)",
+    "np.array(0..10, 100)"
+   ],
+   "answer": "b",
+   "explanation": "linspace(start, stop, num) generates num samples."
+  },
+  {
+   "id": 111,
+   "category": "NumPy",
+   "question": "Which attribute gives the number of bytes required to store a single element?",
+   "options": [
+    "arr.bytes",
+    "arr.itemsize",
+    "arr.size",
+    "arr.nbytes"
+   ],
+   "answer": "b",
+   "explanation": "itemsize returns the length of one array element in bytes."
+  },
+  {
+   "id": 112,
+   "category": "NumPy",
+   "question": "How do you create a identity matrix of size 5?",
+   "options": [
+    "np.identity(5)",
+    "np.eye(5)",
+    "Both a and b",
+    "np.id(5)"
+   ],
+   "answer": "c",
+   "explanation": "Both identity() and eye() can create identity matrices."
+  },
+  {
+   "id": 113,
+   "category": "NumPy",
+   "question": "Which constant represents the ratio of a circle's circumference to its diameter?",
+   "options": [
+    "np.e",
+    "np.pi",
+    "np.inf",
+    "np.nan"
+   ],
+   "answer": "b",
+   "explanation": "np.pi is the NumPy constant for Pi."
+  },
+  {
+   "id": 114,
+   "category": "NumPy",
+   "question": "What does np.full((2,2), 7) do?",
+   "options": [
+    "Creates a 2x2 array of ones",
+    "Creates a 2x2 array where all elements are 7",
+    "Fills an existing array with 7",
+    "Calculates the full sum of the array"
+   ],
+   "answer": "b",
+   "explanation": "np.full() creates a new array of given shape filled with fill_value."
+  },
+  {
+   "id": 115,
+   "category": "NumPy",
+   "question": "How do you calculate the absolute value of each element?",
+   "options": [
+    "np.abs(arr)",
+    "np.absolute(arr)",
+    "Both a and b",
+    "arr.abs()"
+   ],
+   "answer": "c",
+   "explanation": "Both abs() and absolute() are available as universal functions."
+  },
+  {
+   "id": 116,
+   "category": "NumPy",
+   "question": "Which function is used to create an array with a range of values with a specific step size?",
+   "options": [
+    "np.arange()",
+    "np.linspace()",
+    "np.array()",
+    "np.range()"
+   ],
+   "answer": "a",
+   "explanation": "arange([start,] stop[, step,]) produces values with a given step."
+  },
+  {
+   "id": 117,
+   "category": "NumPy",
+   "question": "What is the result of np.array([1, 2, 3]) ** 2?",
+   "options": [
+    "[1, 4, 9]",
+    "[1, 2, 3, 1, 2, 3]",
+    "An error",
+    "[2, 4, 6]"
+   ],
+   "answer": "a",
+   "explanation": "NumPy uses ** for element-wise exponentiation."
+  },
+  {
+   "id": 118,
+   "category": "NumPy",
+   "question": "How do you join arrays along a new axis?",
+   "options": [
+    "np.concatenate()",
+    "np.stack()",
+    "np.join()",
+    "np.append()"
+   ],
+   "answer": "b",
+   "explanation": "stack() joins a sequence of arrays along a new axis."
+  },
+  {
+   "id": 119,
+   "category": "NumPy",
+   "question": "What does np.delete(arr, 1, axis=0) do?",
+   "options": [
+    "Deletes the first element",
+    "Deletes the second row",
+    "Deletes the second column",
+    "Clears the entire array"
+   ],
+   "answer": "b",
+   "explanation": "axis=0 refers to rows; index 1 is the second row."
+  },
+  {
+   "id": 120,
+   "category": "NumPy",
+   "question": "How do you find the median of an array?",
+   "options": [
+    "arr.median()",
+    "np.median(arr)",
+    "np.middle(arr)",
+    "arr.avg()"
+   ],
+   "answer": "b",
+   "explanation": "np.median() computes the median along the specified axis."
+  },
+  {
+   "id": 121,
+   "category": "NumPy",
+   "question": "What does np.isin(element, test_elements) do?",
+   "options": [
+    "Returns True if element is in test_elements",
+    "Calculates intersection",
+    "Sets values",
+    "Deletes values"
+   ],
+   "answer": "a",
+   "explanation": "isin() calculates element in test_elements, over a broad range of inputs."
+  },
+  {
+   "id": 122,
+   "category": "NumPy",
+   "question": "How do you calculate the dot product of two vectors?",
+   "options": [
+    "np.vdot(a, b)",
+    "np.dot(a, b)",
+    "a @ b",
+    "All of the above"
+   ],
+   "answer": "d",
+   "explanation": "All these can be used for dot products of 1D vectors."
+  },
+  {
+   "id": 123,
+   "category": "NumPy",
+   "question": "Which function returns the indices that would sort an array?",
+   "options": [
+    "np.sort_indices()",
+    "np.argsort()",
+    "arr.sort_positions()",
+    "np.order()"
+   ],
+   "answer": "b",
+   "explanation": "argsort() returns an indirect sort along the given axis."
+  },
+  {
+   "id": 124,
+   "category": "NumPy",
+   "question": "What corresponds to 'np.inf'?",
+   "options": [
+    "Zero",
+    "Negative Infinity",
+    "Positive Infinity",
+    "Not a Number"
+   ],
+   "answer": "c",
+   "explanation": "inf is the representation of infinity."
+  },
+  {
+   "id": 125,
+   "category": "NumPy",
+   "question": "How do you sum elements across rows in a 2D array?",
+   "options": [
+    "arr.sum(axis=0)",
+    "arr.sum(axis=1)",
+    "arr.sum()",
+    "np.add(arr)"
+   ],
+   "answer": "b",
+   "explanation": "axis=1 traverses columns, summing the rows."
+  },
+  {
+   "id": 126,
+   "category": "NumPy",
+   "question": "What function is used to clip values between a min and max?",
+   "options": [
+    "np.limit()",
+    "np.clip()",
+    "np.bound()",
+    "arr.fix()"
+   ],
+   "answer": "b",
+   "explanation": "clip() limits the values in an array."
+  },
+  {
+   "id": 127,
+   "category": "NumPy",
+   "question": "How do you get the real part of complex numbers?",
+   "options": [
+    "arr.real",
+    "np.real(arr)",
+    "Both a and b",
+    "arr.imag"
+   ],
+   "answer": "c",
+   "explanation": "Both the attribute and function return the real part."
+  },
+  {
+   "id": 128,
+   "category": "NumPy",
+   "question": "Which function computes the natural logarithm?",
+   "options": [
+    "np.log2()",
+    "np.log10()",
+    "np.log()",
+    "np.ln()"
+   ],
+   "answer": "c",
+   "explanation": "np.log() is the natural log (base e)."
+  },
+  {
+   "id": 129,
+   "category": "NumPy",
+   "question": "What does np.random.seed(42) do?",
+   "options": [
+    "Creates 42 random numbers",
+    "Ensures random results are reproducible",
+    "Deletes random data",
+    "Starts a timer"
+   ],
+   "answer": "b",
+   "explanation": "The seed() method is used to initialize the pseudo-random number generator."
+  },
+  {
+   "id": 130,
+   "category": "NumPy",
+   "question": "How do you check if any element in an array is True?",
+   "options": [
+    "np.all()",
+    "np.any()",
+    "arr.check()",
+    "np.some()"
+   ],
+   "answer": "b",
+   "explanation": "any() tests whether any element evaluates to True."
+  },
+  {
+   "id": 131,
+   "category": "NumPy",
+   "question": "How do you check if all elements in an array are True?",
+   "options": [
+    "np.any()",
+    "np.all()",
+    "arr.everything()",
+    "np.every()"
+   ],
+   "answer": "b",
+   "explanation": "all() tests whether all elements evaluate to True."
+  },
+  {
+   "id": 132,
+   "category": "NumPy",
+   "question": "What represents 'Not a Number' in NumPy?",
+   "options": [
+    "np.null",
+    "np.none",
+    "np.nan",
+    "np.empty"
+   ],
+   "answer": "c",
+   "explanation": "nan (Not a Number) is used for missing or undefined numerical data."
+  },
+  {
+   "id": 133,
+   "category": "NumPy",
+   "question": "How do you change an array's shape in-place?",
+   "options": [
+    "arr.reshape()",
+    "arr.resize()",
+    "np.resize(arr)",
+    "Both b and c"
+   ],
+   "answer": "b",
+   "explanation": "ndarray.resize() modifies the array in-place, whereas np.resize() returns a new array."
+  },
+  {
+   "id": 134,
+   "category": "NumPy",
+   "question": "Which function computes eigenvalues and eigenvectors?",
+   "options": [
+    "np.linalg.eig()",
+    "np.eigen()",
+    "np.vectors()",
+    "np.math.eig()"
+   ],
+   "answer": "a",
+   "explanation": "linalg.eig() is the standard function for eigen decomposition."
+  },
+  {
+   "id": 135,
+   "category": "NumPy",
+   "question": "How do you create an array of 5 random integers between 1 and 10?",
+   "options": [
+    "np.random.rand(1, 10, 5)",
+    "np.random.randint(1, 11, 5)",
+    "np.random.int(1, 10, 5)",
+    "np.random.choice(1, 10, 5)"
+   ],
+   "answer": "b",
+   "explanation": "randint(low, high, size) returns random integers from low (inclusive) to high (exclusive)."
+  },
+  {
+   "id": 136,
+   "category": "NumPy",
+   "question": "What is the result of np.array([1, 2]) + np.array([3])?",
+   "options": [
+    "[4, 5]",
+    "[1, 2, 3]",
+    "An error",
+    "[4, 2]"
+   ],
+   "answer": "a",
+   "explanation": "Broadcasting expands the [3] to [3, 3] to match the shape."
+  },
+  {
+   "id": 137,
+   "category": "NumPy",
+   "question": "Which attribute holds the number of bytes for the whole array?",
+   "options": [
+    "arr.bytes",
+    "arr.nbytes",
+    "arr.size",
+    "arr.memory"
+   ],
+   "answer": "b",
+   "explanation": "nbytes returns the total bytes consumed by array elements."
+  },
+  {
+   "id": 138,
+   "category": "NumPy",
+   "question": "How do you compute the cross product of two vectors?",
+   "options": [
+    "np.dot()",
+    "np.cross()",
+    "np.vdot()",
+    "a * b"
+   ],
+   "answer": "b",
+   "explanation": "np.cross() computes the vector cross product."
+  },
+  {
+   "id": 139,
+   "category": "NumPy",
+   "question": "What is the NumPy function for rounding to the nearest integer?",
+   "options": [
+    "np.floor()",
+    "np.ceil()",
+    "np.around()",
+    "All of the above"
+   ],
+   "answer": "c",
+   "explanation": "around() (or round_) rounds decimals to the nearest given number of decimals."
+  },
+  {
+   "id": 140,
+   "category": "NumPy",
+   "question": "How do you find the element-wise minimum of two arrays?",
+   "options": [
+    "np.min()",
+    "np.minimum()",
+    "np.smallest()",
+    "np.amin()"
+   ],
+   "answer": "b",
+   "explanation": "minimum() compares two arrays and returns a new array with the element-wise minima."
+  },
+  {
+   "id": 141,
+   "category": "NumPy",
+   "question": "What does np.squeeze(arr) do?",
+   "options": [
+    "Compresses the array into a zip file",
+    "Removes single-dimensional entries from the shape",
+    "Flattens the array",
+    "Resizes the array to fit in RAM"
+   ],
+   "answer": "b",
+   "explanation": "squeeze() removes axes of length 1."
+  },
+  {
+   "id": 142,
+   "category": "NumPy",
+   "question": "How do you calculate the power of x to y element-wise?",
+   "options": [
+    "np.pow(x, y)",
+    "np.power(x, y)",
+    "x ^ y",
+    "x ** y"
+   ],
+   "answer": "b",
+   "explanation": "Both np.power() and the ** operator work for element-wise power."
+  },
+  {
+   "id": 143,
+   "category": "NumPy",
+   "question": "What is 'Fancy Indexing' in NumPy?",
+   "options": [
+    "Using strings for labels",
+    "Using arrays of indices to access multiple elements at once",
+    "Using CSS selectors",
+    "Using a GUI to select elements"
+   ],
+   "answer": "b",
+   "explanation": "Fancy indexing is the term for indexing using integer or boolean arrays."
+  },
+  {
+   "id": 144,
+   "category": "NumPy",
+   "question": "How do you calculate the variance of an array?",
+   "options": [
+    "arr.var()",
+    "np.var(arr)",
+    "Both a and b",
+    "np.variance(arr)"
+   ],
+   "answer": "c",
+   "explanation": "var() computes the variance along the specified axis."
+  },
+  {
+   "id": 145,
+   "category": "NumPy",
+   "question": "Which function evaluates the trigonometric sine?",
+   "options": [
+    "np.sine()",
+    "np.sin()",
+    "math.sin()",
+    "arr.sin()"
+   ],
+   "answer": "b",
+   "explanation": "np.sin() is a universal function for sine."
+  },
+  {
+   "id": 146,
+   "category": "NumPy",
+   "question": "What is the NumPy equivalent of Python's range(5, 10)?",
+   "options": [
+    "np.arange(5, 10)",
+    "np.array(5, 10)",
+    "np.range(5, 10)",
+    "np.linspace(5, 10, 5)"
+   ],
+   "answer": "a",
+   "explanation": "arange() works like range but returns an array."
+  },
+  {
+   "id": 147,
+   "category": "NumPy",
+   "question": "How do you check if elements are close to each other (floating point comparison)?",
+   "options": [
+    "a == b",
+    "np.isclose(a, b)",
+    "np.near(a, b)",
+    "np.approx(a, b)"
+   ],
+   "answer": "b",
+   "explanation": "isclose() returns a boolean array where two arrays are element-wise equal within a tolerance."
+  },
+  {
+   "id": 148,
+   "category": "NumPy",
+   "question": "Which function computes the floor division of two arrays?",
+   "options": [
+    "np.floor_divide(a, b)",
+    "a // b",
+    "Both a and b",
+    "np.div(a, b)"
+   ],
+   "answer": "c",
+   "explanation": "Both the function and operator perform floor division."
+  },
+  {
+   "id": 149,
+   "category": "NumPy",
+   "question": "How do you find unique elements and their counts?",
+   "options": [
+    "np.unique(arr, return_counts=True)",
+    "arr.value_counts()",
+    "np.counts(arr)",
+    "np.distinct(arr)"
+   ],
+   "answer": "a",
+   "explanation": "The return_counts parameter in unique() provides frequencies."
+  },
+  {
+   "id": 150,
+   "category": "NumPy",
+   "question": "What does np.empty((2,2)) do?",
+   "options": [
+    "Creates a 2x2 array of zeros",
+    "Creates a 2x2 array of ones",
+    "Creates a 2x2 array without initializing entries (may contain random values)",
+    "Deletes a 2x2 array"
+   ],
+   "answer": "c",
+   "explanation": "empty() creates an array with uninitialized data, which is slightly faster than zeros/ones."
+  }
+ ]
+}
