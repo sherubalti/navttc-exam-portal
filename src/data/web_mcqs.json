@@ -1,1 +1,1695 @@
 
+{
+ "questions": [
+  {
+   "id": 1,
+   "category": "HTML Basics",
+   "question": "What does HTML stand for?",
+   "options": [
+    "Hyper Text Markup Language",
+    "Hyperlinks and Text Markup Language",
+    "Home Tool Markup Language",
+    "Hyper Tool Markup Language"
+   ],
+   "answer": "a",
+   "explanation": "HTML stands for Hyper Text Markup Language, the standard markup language for creating web pages."
+  },
+  {
+   "id": 2,
+   "category": "HTML Basics",
+   "question": "Who is making the Web standards?",
+   "options": [
+    "Mozilla",
+    "The World Wide Web Consortium",
+    "Google",
+    "Microsoft"
+   ],
+   "answer": "b",
+   "explanation": "The World Wide Web Consortium (W3C) develops the standards for the Web."
+  },
+  {
+   "id": 3,
+   "category": "HTML Basics",
+   "question": "Choose the correct HTML element for the largest heading:",
+   "options": [
+    "<heading>",
+    "<h6>",
+    "<h1>",
+    "<head>"
+   ],
+   "answer": "c",
+   "explanation": "<h1> defines the most important heading. <h6> defines the least important heading."
+  },
+  {
+   "id": 4,
+   "category": "HTML Basics",
+   "question": "What is the correct HTML element for inserting a line break?",
+   "options": [
+    "<br>",
+    "<lb>",
+    "<break>",
+    "<hr>"
+   ],
+   "answer": "a",
+   "explanation": "<br> is used to insert a single line break."
+  },
+  {
+   "id": 5,
+   "category": "HTML Basics",
+   "question": "What is the correct HTML for adding a background color?",
+   "options": [
+    "<body bg=\"yellow\">",
+    "<body style=\"background-color:yellow;\">",
+    "<background>yellow</background>",
+    "<body color=\"yellow\">"
+   ],
+   "answer": "b",
+   "explanation": "The style attribute specifies an inline style for an element."
+  },
+  {
+   "id": 6,
+   "category": "HTML Basics",
+   "question": "Choose the correct HTML element to define important text:",
+   "options": [
+    "<strong>",
+    "<b>",
+    "<important>",
+    "<i>"
+   ],
+   "answer": "a",
+   "explanation": "The <strong> element is used to define text with strong importance."
+  },
+  {
+   "id": 7,
+   "category": "HTML Basics",
+   "question": "Choose the correct HTML element to define emphasized text:",
+   "options": [
+    "<i>",
+    "<em>",
+    "<italic>",
+    "<emphasize>"
+   ],
+   "answer": "b",
+   "explanation": "The <em> element is used to define emphasized text."
+  },
+  {
+   "id": 8,
+   "category": "HTML Basics",
+   "question": "What is the correct HTML for creating a hyperlink?",
+   "options": [
+    "<a url=\"http://www.google.com\">Google.com</a>",
+    "<a>http://www.google.com</a>",
+    "<a href=\"http://www.google.com\">Google</a>",
+    "<a name=\"http://www.google.com\">Google.com</a>"
+   ],
+   "answer": "c",
+   "explanation": "The <a> tag defines a hyperlink, and the 'href' attribute specifies the destination address."
+  },
+  {
+   "id": 9,
+   "category": "HTML Basics",
+   "question": "Which character is used to indicate an end tag?",
+   "options": [
+    "*",
+    "/",
+    "<",
+    "^"
+   ],
+   "answer": "b",
+   "explanation": "The forward slash (/) is used to indicate the end of an HTML tag."
+  },
+  {
+   "id": 10,
+   "category": "HTML Basics",
+   "question": "How can you make a numbered list?",
+   "options": [
+    "<ul>",
+    "<ol>",
+    "<list>",
+    "<dl>"
+   ],
+   "answer": "b",
+   "explanation": "<ol> defines an ordered (numbered) list."
+  },
+  {
+   "id": 11,
+   "category": "HTML Basics",
+   "question": "How can you make a bulleted list?",
+   "options": [
+    "<ol>",
+    "<list>",
+    "<ul>",
+    "<dl>"
+   ],
+   "answer": "c",
+   "explanation": "<ul> defines an unordered (bulleted) list."
+  },
+  {
+   "id": 12,
+   "category": "HTML Basics",
+   "question": "What is the correct HTML for making a checkbox?",
+   "options": [
+    "<input type=\"checkbox\">",
+    "<checkbox>",
+    "<input type=\"check\">",
+    "<check>"
+   ],
+   "answer": "a",
+   "explanation": "<input type=\"checkbox\"> defines a checkbox."
+  },
+  {
+   "id": 13,
+   "category": "HTML Basics",
+   "question": "What is the correct HTML for making a text input field?",
+   "options": [
+    "<input type=\"textfield\">",
+    "<textinput>",
+    "<input type=\"text\">",
+    "<textfield>"
+   ],
+   "answer": "c",
+   "explanation": "<input type=\"text\"> defines a single-line text input field."
+  },
+  {
+   "id": 14,
+   "category": "HTML Basics",
+   "question": "What is the correct HTML for making a drop-down list?",
+   "options": [
+    "<input type=\"dropdown\">",
+    "<list>",
+    "<select>",
+    "<input type=\"list\">"
+   ],
+   "answer": "c",
+   "explanation": "The <select> element is used to create a drop-down list."
+  },
+  {
+   "id": 15,
+   "category": "HTML Basics",
+   "question": "What is the correct HTML for making a text area?",
+   "options": [
+    "<input type=\"textbox\">",
+    "<input type=\"textarea\">",
+    "<textarea>",
+    "<text>"
+   ],
+   "answer": "c",
+   "explanation": "The <textarea> element defines a multi-line text input control."
+  },
+  {
+   "id": 16,
+   "category": "HTML Basics",
+   "question": "What is the correct HTML for inserting an image?",
+   "options": [
+    "<img href=\"image.gif\" alt=\"MyImage\">",
+    "<img src=\"image.gif\" alt=\"MyImage\">",
+    "<image src=\"image.gif\" alt=\"MyImage\">",
+    "<img>image.gif</img>"
+   ],
+   "answer": "b",
+   "explanation": "The <img> tag is used to embed an image in an HTML page, using the 'src' attribute."
+  },
+  {
+   "id": 17,
+   "category": "HTML Basics",
+   "question": "What is the correct HTML for inserting a background image?",
+   "options": [
+    "<body style=\"background-image:url(background.gif)\">",
+    "<body bg=\"background.gif\">",
+    "<background img=\"background.gif\">",
+    "<body image=\"background.gif\">"
+   ],
+   "answer": "a",
+   "explanation": "CSS background-image property is the standard way to add background images."
+  },
+  {
+   "id": 18,
+   "category": "HTML Basics",
+   "question": "An <iframe> is used to display a web page within a web page.",
+   "options": [
+    "True",
+    "False",
+    "Only in HTML4",
+    "None of the above"
+   ],
+   "answer": "a",
+   "explanation": "An <iframe> (inline frame) is used to embed another document within the current HTML document."
+  },
+  {
+   "id": 19,
+   "category": "HTML Basics",
+   "question": "HTML comments start with <!-- and end with -->",
+   "options": [
+    "True",
+    "False",
+    "Only in CSS",
+    "None of the above"
+   ],
+   "answer": "a",
+   "explanation": "HTML comments are not displayed in the browser and use the <!-- ... --> syntax."
+  },
+  {
+   "id": 20,
+   "category": "HTML Basics",
+   "question": "Block elements are normally displayed without starting a new line.",
+   "options": [
+    "True",
+    "False",
+    "Depends on the browser",
+    "Only in HTML5"
+   ],
+   "answer": "b",
+   "explanation": "Block-level elements always start on a new line and take up the full width available."
+  },
+  {
+   "id": 21,
+   "category": "HTML Basics",
+   "question": "Which HTML element defines navigation links?",
+   "options": [
+    "<navigation>",
+    "<nav>",
+    "<links>",
+    "<navigate>"
+   ],
+   "answer": "b",
+   "explanation": "The <nav> element defines a set of navigation links."
+  },
+  {
+   "id": 22,
+   "category": "HTML Basics",
+   "question": "In HTML, which attribute is used to specify that an input field must be filled out?",
+   "options": [
+    "validate",
+    "required",
+    "placeholder",
+    "formvalidate"
+   ],
+   "answer": "b",
+   "explanation": "The 'required' attribute specifies that an input field must be filled out before submitting the form."
+  },
+  {
+   "id": 23,
+   "category": "HTML Basics",
+   "question": "Which HTML element is used to specify a footer for a document or section?",
+   "options": [
+    "<bottom>",
+    "<section>",
+    "<footer>",
+    "<foot>"
+   ],
+   "answer": "c",
+   "explanation": "The <footer> element defines a footer for a document or section."
+  },
+  {
+   "id": 24,
+   "category": "HTML Basics",
+   "question": "What is the correct HTML element for playing video files?",
+   "options": [
+    "<movie>",
+    "<video>",
+    "<media>",
+    "<play>"
+   ],
+   "answer": "b",
+   "explanation": "The <video> element is used to embed video content in a document."
+  },
+  {
+   "id": 25,
+   "category": "HTML Basics",
+   "question": "What is the correct HTML element for playing audio files?",
+   "options": [
+    "<audio>",
+    "<sound>",
+    "<music>",
+    "<mp3>"
+   ],
+   "answer": "a",
+   "explanation": "The <audio> element is used to embed sound content in a document."
+  },
+  {
+   "id": 26,
+   "category": "HTML Basics",
+   "question": "The HTML <canvas> element is used to:",
+   "options": [
+    "display database records",
+    "draw graphics, on the fly, via scripting (usually JavaScript)",
+    "create draggable elements",
+    "manipulate data in MySQL"
+   ],
+   "answer": "b",
+   "explanation": "The <canvas> element is used to draw graphics on a web page via JavaScript."
+  },
+  {
+   "id": 27,
+   "category": "HTML Basics",
+   "question": "Which HTML element is used to display a scalar measurement within a range?",
+   "options": [
+    "<range>",
+    "<measure>",
+    "<meter>",
+    "<gauge>"
+   ],
+   "answer": "c",
+   "explanation": "The <meter> element defines a scalar measurement within a known range (a gauge)."
+  },
+  {
+   "id": 28,
+   "category": "HTML Basics",
+   "question": "Which HTML element defines a title for the document?",
+   "options": [
+    "<meta>",
+    "<head>",
+    "<title>",
+    "<header>"
+   ],
+   "answer": "c",
+   "explanation": "The <title> element defines a title in the browser toolbar, provides a title for the page when it is added to favorites, and displays a title for the page in search-engine results."
+  },
+  {
+   "id": 29,
+   "category": "HTML Basics",
+   "question": "Which attribute specifies an alternate text for an image, if the image cannot be displayed?",
+   "options": [
+    "title",
+    "longdesc",
+    "src",
+    "alt"
+   ],
+   "answer": "d",
+   "explanation": "The 'alt' attribute provides an alternate text for an image."
+  },
+  {
+   "id": 30,
+   "category": "HTML Basics",
+   "question": "Which HTML element is used to specify a header for a document or section?",
+   "options": [
+    "<head>",
+    "<section>",
+    "<header>",
+    "<top>"
+   ],
+   "answer": "c",
+   "explanation": "The <header> element represents a container for introductory content or a set of navigation links."
+  },
+  {
+   "id": 31,
+   "category": "CSS Basics",
+   "question": "What does CSS stand for?",
+   "options": [
+    "Cascading Style Sheets",
+    "Creative Style Sheets",
+    "Colorful Style Sheets",
+    "Computer Style Sheets"
+   ],
+   "answer": "a",
+   "explanation": "CSS stands for Cascading Style Sheets."
+  },
+  {
+   "id": 32,
+   "category": "CSS Basics",
+   "question": "What is the correct HTML for referring to an external style sheet?",
+   "options": [
+    "<stylesheet>mystyle.css</stylesheet>",
+    "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">",
+    "<style src=\"mystyle.css\">",
+    "<link src=\"mystyle.css\">"
+   ],
+   "answer": "b",
+   "explanation": "The <link> tag is used to link to external style sheets."
+  },
+  {
+   "id": 33,
+   "category": "CSS Basics",
+   "question": "Where in an HTML document is the correct place to refer to an external style sheet?",
+   "options": [
+    "At the end of the document",
+    "In the <head> section",
+    "In the <body> section",
+    "After the <body> section"
+   ],
+   "answer": "b",
+   "explanation": "External styles are defined within the <link> element, inside the <head> section of an HTML page."
+  },
+  {
+   "id": 34,
+   "category": "CSS Basics",
+   "question": "Which HTML tag is used to define an internal style sheet?",
+   "options": [
+    "<css>",
+    "<script>",
+    "<style>",
+    "<link>"
+   ],
+   "answer": "c",
+   "explanation": "The <style> tag is used to define internal CSS."
+  },
+  {
+   "id": 35,
+   "category": "CSS Basics",
+   "question": "Which HTML attribute is used to define inline styles?",
+   "options": [
+    "font",
+    "class",
+    "styles",
+    "style"
+   ],
+   "answer": "d",
+   "explanation": "The 'style' attribute is used for inline styles."
+  },
+  {
+   "id": 36,
+   "category": "CSS Basics",
+   "question": "Which is the correct CSS syntax?",
+   "options": [
+    "body:color=black;",
+    "{body;color:black;}",
+    "body {color: black;}",
+    "{body:color=black;}"
+   ],
+   "answer": "c",
+   "explanation": "The correct format is selector { property: value; }."
+  },
+  {
+   "id": 37,
+   "category": "CSS Basics",
+   "question": "How do you insert a comment in a CSS file?",
+   "options": [
+    "// this is a comment",
+    "/* this is a comment */",
+    "' this is a comment",
+    "// this is a comment //"
+   ],
+   "answer": "b",
+   "explanation": "CSS comments start with /* and end with */."
+  },
+  {
+   "id": 38,
+   "category": "CSS Basics",
+   "question": "Which property is used to change the background color?",
+   "options": [
+    "color",
+    "bgcolor",
+    "background-color",
+    "background"
+   ],
+   "answer": "c",
+   "explanation": "The 'background-color' property specifies the background color of an element."
+  },
+  {
+   "id": 39,
+   "category": "CSS Basics",
+   "question": "How do you add a background color for all <h1> elements?",
+   "options": [
+    "all.h1 {background-color:#FFFFFF;}",
+    "h1.all {background-color:#FFFFFF;}",
+    "h1 {background-color:#FFFFFF;}",
+    "h1 {bg-color:#FFFFFF;}"
+   ],
+   "answer": "c",
+   "explanation": "Select all <h1> elements and set their 'background-color' property."
+  },
+  {
+   "id": 40,
+   "category": "CSS Basics",
+   "question": "Which CSS property is used to change the text color of an element?",
+   "options": [
+    "fgcolor",
+    "text-color",
+    "color",
+    "font-color"
+   ],
+   "answer": "c",
+   "explanation": "The 'color' property specifies the color of text."
+  },
+  {
+   "id": 41,
+   "category": "CSS Basics",
+   "question": "Which CSS property controls the text size?",
+   "options": [
+    "font-style",
+    "text-size",
+    "font-size",
+    "text-style"
+   ],
+   "answer": "c",
+   "explanation": "The 'font-size' property sets the size of the font."
+  },
+  {
+   "id": 42,
+   "category": "CSS Basics",
+   "question": "What is the correct CSS syntax for making all the <p> elements bold?",
+   "options": [
+    "p {text-size:bold;}",
+    "<p style=\"text-size:bold;\">",
+    "p {font-weight:bold;}",
+    "p {font-style:bold;}"
+   ],
+   "answer": "c",
+   "explanation": "The 'font-weight' property sets how thick or thin characters in text should be displayed."
+  },
+  {
+   "id": 43,
+   "category": "CSS Basics",
+   "question": "How do you display hyperlinks without an underline?",
+   "options": [
+    "a {text-decoration:none;}",
+    "a {underline:none;}",
+    "a {text-decoration:no-underline;}",
+    "a {decoration:no-underline;}"
+   ],
+   "answer": "a",
+   "explanation": "The 'text-decoration' property is used to add or remove decorations from text. 'none' removes the underline."
+  },
+  {
+   "id": 44,
+   "category": "CSS Basics",
+   "question": "How do you make each word in a text start with a capital letter?",
+   "options": [
+    "text-style:capitalize",
+    "text-transform:capitalize",
+    "You can't do that with CSS",
+    "transform:capitalize"
+   ],
+   "answer": "b",
+   "explanation": "The 'text-transform' property controls the capitalization of text. 'capitalize' transforms the first character of each word to uppercase."
+  },
+  {
+   "id": 45,
+   "category": "CSS Basics",
+   "question": "Which property is used to change the font of an element?",
+   "options": [
+    "font-style",
+    "font-family",
+    "font-weight",
+    "font-type"
+   ],
+   "answer": "b",
+   "explanation": "The 'font-family' property specifies the font for an element."
+  },
+  {
+   "id": 46,
+   "category": "CSS Basics",
+   "question": "How do you make the text bold?",
+   "options": [
+    "font:bold;",
+    "font-weight:bold;",
+    "style:bold;",
+    "text-decoration:bold;"
+   ],
+   "answer": "b",
+   "explanation": "'font-weight:bold' makes the text bold."
+  },
+  {
+   "id": 47,
+   "category": "CSS Basics",
+   "question": "Which property is used to create space between the element's border and inner content?",
+   "options": [
+    "spacing",
+    "margin",
+    "padding",
+    "border-spacing"
+   ],
+   "answer": "c",
+   "explanation": "Padding is the space between the content and the border."
+  },
+  {
+   "id": 48,
+   "category": "CSS Basics",
+   "question": "How do you select an element with id 'demo'?",
+   "options": [
+    ".demo",
+    "#demo",
+    "*demo",
+    "demo"
+   ],
+   "answer": "b",
+   "explanation": "The # selector is used to select an element with a specific id."
+  },
+  {
+   "id": 49,
+   "category": "CSS Basics",
+   "question": "How do you select elements with class name 'test'?",
+   "options": [
+    "test",
+    "#test",
+    ".test",
+    "*test"
+   ],
+   "answer": "c",
+   "explanation": "The . selector is used to select elements with a specific class."
+  },
+  {
+   "id": 50,
+   "category": "CSS Basics",
+   "question": "How do you select all p elements inside a div element?",
+   "options": [
+    "div p",
+    "div.p",
+    "div + p",
+    "div > p"
+   ],
+   "answer": "a",
+   "explanation": "The descendant selector (space) matches all elements that are descendants of a specified element."
+  },
+  {
+   "id": 51,
+   "category": "CSS Basics",
+   "question": "What is the default value of the position property?",
+   "options": [
+    "relative",
+    "fixed",
+    "absolute",
+    "static"
+   ],
+   "answer": "d",
+   "explanation": "The default value for the position property is 'static'."
+  },
+  {
+   "id": 52,
+   "category": "CSS Basics",
+   "question": "How do you make an element stay in the same position even if the page is scrolled?",
+   "options": [
+    "position:relative",
+    "position:static",
+    "position:fixed",
+    "position:absolute"
+   ],
+   "answer": "c",
+   "explanation": "An element with 'position: fixed' is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled."
+  },
+  {
+   "id": 53,
+   "category": "CSS Basics",
+   "question": "What is the z-index property used for?",
+   "options": [
+    "To set the zoom level of an element",
+    "To set the stack order of an element",
+    "To group elements together",
+    "To set the size of an element"
+   ],
+   "answer": "b",
+   "explanation": "The 'z-index' property specifies the stack order of an element (which element should be placed in front of, or behind, the others)."
+  },
+  {
+   "id": 54,
+   "category": "CSS Basics",
+   "question": "Which property is used to center an element horizontally if it has a fixed width?",
+   "options": [
+    "text-align:center",
+    "margin:auto",
+    "align:center",
+    "padding:auto"
+   ],
+   "answer": "b",
+   "explanation": "'margin: auto' is used to horizontally center an element within its container."
+  },
+  {
+   "id": 55,
+   "category": "CSS Basics",
+   "question": "Which value of the display property makes an element disappear from the page?",
+   "options": [
+    "hidden",
+    "none",
+    "invisible",
+    "block"
+   ],
+   "answer": "b",
+   "explanation": "'display: none' removes the element from the document flow."
+  },
+  {
+   "id": 56,
+   "category": "CSS Basics",
+   "question": "What is the difference between visibility:hidden and display:none?",
+   "options": [
+    "They are the same",
+    "visibility:hidden leaves the space, display:none removes the space",
+    "display:none leaves the space, visibility:hidden removes the space",
+    "None of the above"
+   ],
+   "answer": "b",
+   "explanation": "'visibility: hidden' hides an element, but it still takes up the same space as before. 'display: none' removes it completely from the layout."
+  },
+  {
+   "id": 57,
+   "category": "CSS Advanced",
+   "question": "Which property is used to create a flex container?",
+   "options": [
+    "display:flexbox",
+    "display:flex",
+    "flex:container",
+    "display:box"
+   ],
+   "answer": "b",
+   "explanation": "'display: flex' or 'display: inline-flex' defines a flex container."
+  },
+  {
+   "id": 58,
+   "category": "CSS Advanced",
+   "question": "In Flexbox, which property is used to align items along the main axis?",
+   "options": [
+    "align-items",
+    "justify-content",
+    "align-content",
+    "justify-items"
+   ],
+   "answer": "b",
+   "explanation": "'justify-content' aligns flex items along the main axis."
+  },
+  {
+   "id": 59,
+   "category": "CSS Advanced",
+   "question": "In Flexbox, which property is used to align items along the cross axis?",
+   "options": [
+    "justify-content",
+    "align-content",
+    "align-items",
+    "flex-direction"
+   ],
+   "answer": "c",
+   "explanation": "'align-items' defines the default behavior for how flex items are laid out along the cross axis on the current line."
+  },
+  {
+   "id": 60,
+   "category": "CSS Advanced",
+   "question": "Which property is used to change the direction of flex items?",
+   "options": [
+    "flex-direction",
+    "flex-flow",
+    "direction",
+    "flex-align"
+   ],
+   "answer": "a",
+   "explanation": "The 'flex-direction' property specifies the direction of the flexible items."
+  },
+  {
+   "id": 61,
+   "category": "CSS Advanced",
+   "question": "What is the CSS Grid property to define the number of columns?",
+   "options": [
+    "grid-template-columns",
+    "grid-columns",
+    "grid-column-count",
+    "columns"
+   ],
+   "answer": "a",
+   "explanation": "'grid-template-columns' defines the columns of the grid."
+  },
+  {
+   "id": 62,
+   "category": "CSS Advanced",
+   "question": "Which CSS property allows you to specify whether or not an element's background should be fixed or scroll with the rest of the page?",
+   "options": [
+    "background-attachment",
+    "background-position",
+    "background-repeat",
+    "background-scroll"
+   ],
+   "answer": "a",
+   "explanation": "The 'background-attachment' property sets whether a background image is fixed or scrolls with the rest of the page."
+  },
+  {
+   "id": 63,
+   "category": "CSS Advanced",
+   "question": "Which property is used to add a shadow to a box?",
+   "options": [
+    "box-shadow",
+    "shadow-box",
+    "element-shadow",
+    "shadow"
+   ],
+   "answer": "a",
+   "explanation": "The 'box-shadow' property attaches one or more shadows to an element."
+  },
+  {
+   "id": 64,
+   "category": "CSS Advanced",
+   "question": "Which property is used to add a shadow to text?",
+   "options": [
+    "text-shadow",
+    "shadow-text",
+    "font-shadow",
+    "text-style:shadow"
+   ],
+   "answer": "a",
+   "explanation": "The 'text-shadow' property adds shadow to text."
+  },
+  {
+   "id": 65,
+   "category": "CSS Advanced",
+   "question": "How do you add rounded corners to an element?",
+   "options": [
+    "border-round",
+    "corner-radius",
+    "border-radius",
+    "rounded-corner"
+   ],
+   "answer": "c",
+   "explanation": "The 'border-radius' property defines the radius of the element's corners."
+  },
+  {
+   "id": 66,
+   "category": "CSS Advanced",
+   "question": "Which property allows you to change the transition speed of an effect?",
+   "options": [
+    "transition-duration",
+    "transition-speed",
+    "duration",
+    "transition-delay"
+   ],
+   "answer": "a",
+   "explanation": "The 'transition-duration' property specifies how many seconds or milliseconds a transition effect takes to complete."
+  },
+  {
+   "id": 67,
+   "category": "Web Design",
+   "question": "What is Responsive Web Design?",
+   "options": [
+    "Using JavaScript to change content",
+    "A design that responds to the user's behavior and environment based on screen size, platform and orientation",
+    "Designing specific websites for mobile users",
+    "Fast loading websites"
+   ],
+   "answer": "b",
+   "explanation": "Responsive web design (RWD) is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes."
+  },
+  {
+   "id": 68,
+   "category": "Web Design",
+   "question": "Which CSS rule is used to apply styles based on the device width?",
+   "options": [
+    "@responsive",
+    "@media",
+    "@screen",
+    "@device"
+   ],
+   "answer": "b",
+   "explanation": "The @media rule is used in CSS to apply different styles for different media types/devices."
+  },
+  {
+   "id": 69,
+   "category": "HTML5",
+   "question": "Which HTML5 element is used to represent self-contained content, like a blog post?",
+   "options": [
+    "<section>",
+    "<article>",
+    "<content>",
+    "<div>"
+   ],
+   "answer": "b",
+   "explanation": "The <article> element specifies independent, self-contained content."
+  },
+  {
+   "id": 70,
+   "category": "HTML5",
+   "question": "Which HTML5 element is used to represent content aside from the content it is placed in (like a sidebar)?",
+   "options": [
+    "<sidebar>",
+    "<side>",
+    "<aside>",
+    "<margin>"
+   ],
+   "answer": "c",
+   "explanation": "The <aside> element defines some content aside from the content it is placed in (like a sidebar)."
+  },
+  {
+   "id": 71,
+   "category": "HTML5",
+   "question": "Which HTML5 attribute specifies where to open the linked document?",
+   "options": [
+    "location",
+    "target",
+    "href",
+    "rel"
+   ],
+   "answer": "b",
+   "explanation": "The 'target' attribute specifies where to open the linked document."
+  },
+  {
+   "id": 72,
+   "category": "HTML5",
+   "question": "In HTML5, which tag is used for drawing graphics via scripting?",
+   "options": [
+    "<graphic>",
+    "<draw>",
+    "<canvas>",
+    "<svg>"
+   ],
+   "answer": "c",
+   "explanation": "The <canvas> element is used to draw graphics on a web page via JavaScript."
+  },
+  {
+   "id": 73,
+   "category": "HTML5",
+   "question": "Which HTML5 tag is used to define a container for an external application or interactive content (a plug-in)?",
+   "options": [
+    "<applet>",
+    "<object>",
+    "<embed>",
+    "<iframe>"
+   ],
+   "answer": "c",
+   "explanation": "The <embed> element defines a container for an external application or interactive content (a plug-in)."
+  },
+  {
+   "id": 74,
+   "category": "HTML5",
+   "question": "What is the correct DOCTYPE for HTML5?",
+   "options": [
+    "<!DOCTYPE html>",
+    "<!DOCTYPE HTML5>",
+    "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0//EN\">",
+    "<html>"
+   ],
+   "answer": "a",
+   "explanation": "In HTML5, the DOCTYPE declaration is very simple: <!DOCTYPE html>."
+  },
+  {
+   "id": 75,
+   "category": "CSS3",
+   "question": "Which property is used to create a multi-column layout in CSS3?",
+   "options": [
+    "column-count",
+    "layout-columns",
+    "multi-column",
+    "columns-layout"
+   ],
+   "answer": "a",
+   "explanation": "The 'column-count' property specifies the number of columns an element should be divided into."
+  },
+  {
+   "id": 76,
+   "category": "CSS3",
+   "question": "Which CSS3 property is used to rotate an element?",
+   "options": [
+    "rotate",
+    "transform",
+    "turn",
+    "spin"
+   ],
+   "answer": "b",
+   "explanation": "The 'transform' property applies a 2D or 3D transformation to an element, including rotation."
+  },
+  {
+   "id": 77,
+   "category": "CSS3",
+   "question": "Which CSS3 property is used to scale an element (make it larger or smaller)?",
+   "options": [
+    "scale",
+    "size",
+    "transform",
+    "resize"
+   ],
+   "answer": "c",
+   "explanation": "The 'transform' property with the 'scale()' function is used to resize elements."
+  },
+  {
+   "id": 78,
+   "category": "CSS3",
+   "question": "Which property is used to specify how many times an animation should run?",
+   "options": [
+    "animation-count",
+    "animation-iteration-count",
+    "animation-repeat",
+    "animation-times"
+   ],
+   "answer": "b",
+   "explanation": "The 'animation-iteration-count' property specifies the number of times an animation should be played."
+  },
+  {
+   "id": 79,
+   "category": "CSS3",
+   "question": "Which property is used to define the animation name in CSS3?",
+   "options": [
+    "animation-id",
+    "@keyframes",
+    "animation-name",
+    "animation"
+   ],
+   "answer": "c",
+   "explanation": "The 'animation-name' property specifies a name for the @keyframes animation."
+  },
+  {
+   "id": 80,
+   "category": "CSS3",
+   "question": "What is the @keyframes rule used for?",
+   "options": [
+    "To define the style of a key",
+    "To specify the animation code",
+    "To create a new font",
+    "To define a new color variable"
+   ],
+   "answer": "b",
+   "explanation": "The @keyframes rule specifies the animation code."
+  },
+  {
+   "id": 81,
+   "category": "HTML Advanced",
+   "question": "Which attribute is used to specify that an input field is read-only?",
+   "options": [
+    "disabled",
+    "readonly",
+    "static",
+    "protected"
+   ],
+   "answer": "b",
+   "explanation": "The 'readonly' attribute specifies that an input field is read-only."
+  },
+  {
+   "id": 82,
+   "category": "HTML Advanced",
+   "question": "Which HTML element is used to group related elements in a form?",
+   "options": [
+    "<fieldset>",
+    "<group>",
+    "<optgroup>",
+    "<formgroup>"
+   ],
+   "answer": "a",
+   "explanation": "The <fieldset> element is used to group related elements in a form."
+  },
+  {
+   "id": 83,
+   "category": "HTML Advanced",
+   "question": "Which HTML element provides a caption for a <fieldset>?",
+   "options": [
+    "<caption>",
+    "<label>",
+    "<legend>",
+    "<header>"
+   ],
+   "answer": "c",
+   "explanation": "The <legend> element defines a caption for the <fieldset> element."
+  },
+  {
+   "id": 84,
+   "category": "HTML Advanced",
+   "question": "Which attribute is used to specify the relationship between the current document and the linked document?",
+   "options": [
+    "rel",
+    "href",
+    "type",
+    "target"
+   ],
+   "answer": "a",
+   "explanation": "The 'rel' attribute specifies the relationship between the current document and the linked document."
+  },
+  {
+   "id": 85,
+   "category": "HTML Advanced",
+   "question": "The <meta> tag is used for:",
+   "options": [
+    "Defining styles",
+    "Adding links",
+    "Metadata (data about data)",
+    "Executing scripts"
+   ],
+   "answer": "c",
+   "explanation": "The <meta> tag provides metadata about the HTML document."
+  },
+  {
+   "id": 86,
+   "category": "HTML Advanced",
+   "question": "Which HTML element defines a multiline input field?",
+   "options": [
+    "<input type=\"multiline\">",
+    "<textarea>",
+    "<text>",
+    "<input type=\"textarea\">"
+   ],
+   "answer": "b",
+   "explanation": "The <textarea> element defines a multi-line text input control."
+  },
+  {
+   "id": 87,
+   "category": "HTML Advanced",
+   "question": "Which element is used to group options in a drop-down list?",
+   "options": [
+    "<optgroup>",
+    "<group>",
+    "<options>",
+    "<selectgroup>"
+   ],
+   "answer": "a",
+   "explanation": "The <optgroup> is used to group related options in a drop-down list."
+  },
+  {
+   "id": 88,
+   "category": "HTML Advanced",
+   "question": "Which tag defines a table row?",
+   "options": [
+    "<td>",
+    "<th>",
+    "<tr>",
+    "<table>"
+   ],
+   "answer": "c",
+   "explanation": "The <tr> element defines a row in an HTML table."
+  },
+  {
+   "id": 89,
+   "category": "HTML Advanced",
+   "question": "Which tag defines a table header?",
+   "options": [
+    "<td>",
+    "<th>",
+    "<tr>",
+    "<head>"
+   ],
+   "answer": "b",
+   "explanation": "The <th> element defines a header cell in an HTML table."
+  },
+  {
+   "id": 90,
+   "category": "HTML Advanced",
+   "question": "Which tag defines a table cell?",
+   "options": [
+    "<td>",
+    "<th>",
+    "<tr>",
+    "<cell>"
+   ],
+   "answer": "a",
+   "explanation": "The <td> element defines a standard data cell in an HTML table."
+  },
+  {
+   "id": 91,
+   "category": "CSS Mechanics",
+   "question": "What is the correct order for the box model from inward to outward?",
+   "options": [
+    "Content, Border, Padding, Margin",
+    "Content, Padding, Border, Margin",
+    "Margin, Border, Padding, Content",
+    "Padding, Content, Border, Margin"
+   ],
+   "answer": "b",
+   "explanation": "The CSS box model consists of Content, Padding, Border, and Margin."
+  },
+  {
+   "id": 92,
+   "category": "CSS Mechanics",
+   "question": "How do you make an element invisible but still take up space?",
+   "options": [
+    "display:none",
+    "visibility:hidden",
+    "opacity:0",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "Both 'visibility:hidden' and 'opacity:0' hide the element while preserving its space in the layout."
+  },
+  {
+   "id": 93,
+   "category": "CSS Mechanics",
+   "question": "What does 'em' stand for in CSS?",
+   "options": [
+    "Extra Medium",
+    "Equal Margin",
+    "A relative unit based on the font-size of the element",
+    "A fixed unit equal to 16px"
+   ],
+   "answer": "c",
+   "explanation": "'em' is relative to the font-size of the element (2em means 2 times the current font size)."
+  },
+  {
+   "id": 94,
+   "category": "CSS Mechanics",
+   "question": "What does 'rem' stand for in CSS?",
+   "options": [
+    "Root EM (relative to <html> element font size)",
+    "Relative EM",
+    "Responsive EM",
+    "Real EM"
+   ],
+   "answer": "a",
+   "explanation": "'rem' is relative to the font-size of the root (html) element."
+  },
+  {
+   "id": 95,
+   "category": "CSS Mechanics",
+   "question": "Which unit is used for responsive layouts based on the viewport width?",
+   "options": [
+    "vh",
+    "vw",
+    "px",
+    "%"
+   ],
+   "answer": "b",
+   "explanation": "vw (viewport width) is 1% of the width of the viewport."
+  },
+  {
+   "id": 96,
+   "category": "CSS Mechanics",
+   "question": "Which unit is used for responsive layouts based on the viewport height?",
+   "options": [
+    "vh",
+    "vw",
+    "px",
+    "%"
+   ],
+   "answer": "a",
+   "explanation": "vh (viewport height) is 1% of the height of the viewport."
+  },
+  {
+   "id": 97,
+   "category": "CSS Mechanics",
+   "question": "What is the specificity of a class selector compared to an id selector?",
+   "options": [
+    "Class is higher",
+    "ID is higher",
+    "They are equal",
+    "It depends on the order"
+   ],
+   "answer": "b",
+   "explanation": "An ID selector has higher specificity than a class selector."
+  },
+  {
+   "id": 98,
+   "category": "CSS Mechanics",
+   "question": "What value of position makes an element positioned relative to its closest positioned ancestor?",
+   "options": [
+    "static",
+    "relative",
+    "absolute",
+    "fixed"
+   ],
+   "answer": "c",
+   "explanation": "An element with 'position: absolute' is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed)."
+  },
+  {
+   "id": 99,
+   "category": "CSS Mechanics",
+   "question": "Which property is used to stack elements along the z-axis?",
+   "options": [
+    "layer",
+    "stack",
+    "z-index",
+    "depth"
+   ],
+   "answer": "c",
+   "explanation": "The z-index property specifies the stack order of an element."
+  },
+  {
+   "id": 100,
+   "category": "CSS Mechanics",
+   "question": "Which selector matches every element on the page?",
+   "options": [
+    "*",
+    "body",
+    "all",
+    "html"
+   ],
+   "answer": "a",
+   "explanation": "The asterisk (*) is the universal selector in CSS."
+  },
+  {
+   "id": 101,
+   "category": "Forms",
+   "question": "Which attribute on a <form> tag specifies the HTTP method to use?",
+   "options": [
+    "action",
+    "submit",
+    "method",
+    "type"
+   ],
+   "answer": "c",
+   "explanation": "The 'method' attribute specifies the HTTP method (GET or POST) to use when submitting the form."
+  },
+  {
+   "id": 102,
+   "category": "Forms",
+   "question": "Which attribute on a <form> tag specifies where to send the form data?",
+   "options": [
+    "method",
+    "action",
+    "target",
+    "href"
+   ],
+   "answer": "b",
+   "explanation": "The 'action' attribute specifies the URL where the form data should be sent."
+  },
+  {
+   "id": 103,
+   "category": "Forms",
+   "question": "Which input type is used for hidden data?",
+   "options": [
+    "type=\"invisible\"",
+    "type=\"hidden\"",
+    "type=\"secret\"",
+    "type=\"none\""
+   ],
+   "answer": "b",
+   "explanation": "<input type=\"hidden\"> is used for data that should not be shown to the user."
+  },
+  {
+   "id": 104,
+   "category": "Forms",
+   "question": "Which attribute specifies a hint that describes the expected value of an input field?",
+   "options": [
+    "value",
+    "hint",
+    "placeholder",
+    "title"
+   ],
+   "answer": "c",
+   "explanation": "The 'placeholder' attribute specifies a short hint that describes the expected value."
+  },
+  {
+   "id": 105,
+   "category": "Forms",
+   "question": "Which attribute is used to group radio buttons together so only one can be selected?",
+   "options": [
+    "id",
+    "class",
+    "name",
+    "value"
+   ],
+   "answer": "c",
+   "explanation": "Radio buttons with the same 'name' attribute value belong to the same group."
+  },
+  {
+   "id": 106,
+   "category": "Forms",
+   "question": "Which HTML element is used to link a label with an input field?",
+   "options": [
+    "<title>",
+    "<label>",
+    "<caption",
+    "<text>"
+   ],
+   "answer": "b",
+   "explanation": "The <label> tag defines a label for several elements."
+  },
+  {
+   "id": 107,
+   "category": "Forms",
+   "question": "Which attribute of the <label> tag allows it to link to an input's ID?",
+   "options": [
+    "to",
+    "link",
+    "for",
+    "target"
+   ],
+   "answer": "c",
+   "explanation": "The 'for' attribute of the <label> tag should be equal to the 'id' attribute of the related element to bind them together."
+  },
+  {
+   "id": 108,
+   "category": "Forms",
+   "question": "Which HTML input type provides a slider control?",
+   "options": [
+    "<input type=\"slider\">",
+    "<input type=\"scroll\">",
+    "<input type=\"range\">",
+    "<input type=\"bar\">"
+   ],
+   "answer": "c",
+   "explanation": "<input type=\"range\"> defines a range (slider) control."
+  },
+  {
+   "id": 109,
+   "category": "Forms",
+   "question": "Which HTML input type allows the user to select multiple files?",
+   "options": [
+    "<input type=\"file\" multiple>",
+    "<input type=\"files\">",
+    "<input type=\"file-list\">",
+    "None of the above"
+   ],
+   "answer": "a",
+   "explanation": "The 'multiple' attribute allows the user to select more than one value."
+  },
+  {
+   "id": 110,
+   "category": "Forms",
+   "question": "Which attribute specifies that an input field should automatically get focus when the page loads?",
+   "options": [
+    "focus",
+    "autofocus",
+    "start",
+    "auto"
+   ],
+   "answer": "b",
+   "explanation": "The 'autofocus' attribute specifies that an element should automatically get focus when the page loads."
+  },
+  {
+   "id": 111,
+   "category": "CSS Selectors",
+   "question": "What does a > b select?",
+   "options": [
+    "All b elements anywhere inside a",
+    "All b elements that are direct children of a",
+    "The first b element inside a",
+    "The b element immediately after a"
+   ],
+   "answer": "b",
+   "explanation": "The child selector (>) selects all elements that are children of a specified element."
+  },
+  {
+   "id": 112,
+   "category": "CSS Selectors",
+   "question": "What does a + b select?",
+   "options": [
+    "All b elements after a",
+    "All b elements inside a",
+    "The b element that is placed immediately after a",
+    "Both a and b elements"
+   ],
+   "answer": "c",
+   "explanation": "The adjacent sibling selector (+) is used to select an element that is directly after another specific element."
+  },
+  {
+   "id": 113,
+   "category": "CSS Selectors",
+   "question": "What does a ~ b select?",
+   "options": [
+    "All b elements that are preceded by an a element",
+    "All b elements inside a",
+    "The last b element after a",
+    "The b element directly after a"
+   ],
+   "answer": "a",
+   "explanation": "The general sibling selector (~) selects all elements that are next siblings of a specified element."
+  },
+  {
+   "id": 114,
+   "category": "CSS Selectors",
+   "question": "How do you select only even numbered list items?",
+   "options": [
+    "li:even",
+    "li:nth-child(2n)",
+    "li:nth-child(even)",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "Both nth-child(2n) and nth-child(even) select even-numbered children."
+  },
+  {
+   "id": 115,
+   "category": "CSS Selectors",
+   "question": "How do you select an element when the mouse is over it?",
+   "options": [
+    ":mouse-over",
+    ":hover",
+    ":on-top",
+    ":focus"
+   ],
+   "answer": "b",
+   "explanation": "The :hover pseudo-class is used to select elements when you mouse over them."
+  },
+  {
+   "id": 116,
+   "category": "CSS Selectors",
+   "question": "Which pseudo-class is used to select an input element that has focus?",
+   "options": [
+    ":active",
+    ":focus",
+    ":focus-within",
+    ":visited"
+   ],
+   "answer": "b",
+   "explanation": "The :focus pseudo-class matches elements that have gain focus."
+  },
+  {
+   "id": 117,
+   "category": "CSS Selectors",
+   "question": "Which pseudo-class is used to select every <a> element that has been visited?",
+   "options": [
+    ":visited",
+    ":link",
+    ":active",
+    ":history"
+   ],
+   "answer": "a",
+   "explanation": "The :visited pseudo-class is used to select visited links."
+  },
+  {
+   "id": 118,
+   "category": "CSS Selectors",
+   "question": "How do you select the first child of an element?",
+   "options": [
+    ":first",
+    ":first-child",
+    ":nth-child(1)",
+    "Both b and c"
+   ],
+   "answer": "d",
+   "explanation": "Both :first-child and :nth-child(1) select the first child element."
+  },
+  {
+   "id": 119,
+   "category": "CSS Selectors",
+   "question": "How do you select an element that has no children?",
+   "options": [
+    ":no-child",
+    ":empty",
+    ":null",
+    ":blank"
+   ],
+   "answer": "b",
+   "explanation": "The :empty pseudo-class matches every element that has no children (including text nodes)."
+  },
+  {
+   "id": 120,
+   "category": "CSS Selectors",
+   "question": "How do you select all elements with a 'disabled' attribute?",
+   "options": [
+    "[disabled]",
+    ":disabled",
+    "Both a and b",
+    "None of the above"
+   ],
+   "answer": "c",
+   "explanation": "[disabled] is an attribute selector, :disabled is a pseudo-class selector. Both work for disabled elements."
+  },
+  {
+   "id": 121,
+   "category": "Advanced Layout",
+   "question": "In CSS Flexbox, what does flex-grow: 1 do?",
+   "options": [
+    "Makes the item grow to take up available space",
+    "Gives the item a fixed width of 1px",
+    "Makes the item shrink if necessary",
+    "Sets the initial size of the item"
+   ],
+   "answer": "a",
+   "explanation": "The flex-grow property specifies how much the item will grow relative to the rest of the flexible items inside the same container."
+  },
+  {
+   "id": 122,
+   "category": "Advanced Layout",
+   "question": "In CSS Flexbox, what is the shorthand property for flex-grow, flex-shrink, and flex-basis?",
+   "options": [
+    "flex-all",
+    "flex",
+    "flex-box",
+    "flex-flow"
+   ],
+   "answer": "b",
+   "explanation": "The 'flex' property is a shorthand for flex-grow, flex-shrink and flex-basis."
+  },
+  {
+   "id": 123,
+   "category": "Advanced Layout",
+   "question": "Which property is used to specify the initial size of a flex item?",
+   "options": [
+    "flex-start",
+    "flex-basis",
+    "flex-grow",
+    "flex-width"
+   ],
+   "answer": "b",
+   "explanation": "The flex-basis property specifies the initial main size of a flex item."
+  },
+  {
+   "id": 124,
+   "category": "Advanced Layout",
+   "question": "In CSS Grid, which unit represents a fraction of the available space?",
+   "options": [
+    "fr",
+    "gr",
+    "%",
+    "auto"
+   ],
+   "answer": "a",
+   "explanation": "The 'fr' unit represents a fraction of the free space in the grid container."
+  },
+  {
+   "id": 125,
+   "category": "Advanced Layout",
+   "question": "Which CSS property is used to set the gap between grid rows and columns?",
+   "options": [
+    "grid-gap",
+    "gap",
+    "spacing",
+    "Both a and b"
+   ],
+   "answer": "d",
+   "explanation": "'grid-gap' was the original property, now simplified to 'gap' in both Grid and Flexbox."
+  },
+  {
+   "id": 126,
+   "category": "Accessibility",
+   "question": "What does ARIA stand for in web development?",
+   "options": [
+    "Advanced Responsive Interface App",
+    "Accessible Rich Internet Applications",
+    "Automated Research for Internet Access",
+    "Accessible Real-time Interface Area"
+   ],
+   "answer": "b",
+   "explanation": "ARIA is a set of attributes that help make web content and web applications more accessible to people with disabilities."
+  },
+  {
+   "id": 127,
+   "category": "Accessibility",
+   "question": "Which attribute provides a text description for non-text content, such as icons?",
+   "options": [
+    "aria-label",
+    "aria-describedby",
+    "title",
+    "alt"
+   ],
+   "answer": "a",
+   "explanation": "aria-label is used to define a string that labels the current element."
+  },
+  {
+   "id": 128,
+   "category": "SEO",
+   "question": "Which tag is most important for SEO on a page?",
+   "options": [
+    "<h1>",
+    "<title>",
+    "<meta descriptions>",
+    "<strong>"
+   ],
+   "answer": "b",
+   "explanation": "The <title> tag is one of the most important on-page SEO factors."
+  },
+  {
+   "id": 129,
+   "category": "SEO",
+   "question": "What is the purpose of the canonical tag?",
+   "options": [
+    "To tell search engines which version of a URL you want to appear in search results",
+    "To prevent images from being indexed",
+    "To increase page loading speed",
+    "To define the language of the page"
+   ],
+   "answer": "a",
+   "explanation": "Canonical tags help prevent duplicate content issues by specifying the 'master' version of a page."
+  },
+  {
+   "id": 130,
+   "category": "SEO",
+   "question": "How do you specify the language of an HTML document?",
+   "options": [
+    "<html lang=\"en\">",
+    "<meta language=\"en\">",
+    "<head language=\"en\">",
+    "It is detected automatically"
+   ],
+   "answer": "a",
+   "explanation": "The 'lang' attribute on the <html> tag is used to specify the language of the document."
+  }
+ ]
+}
