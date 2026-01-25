@@ -1,5 +1,5 @@
 const examSchedule = {
- duration: 2, // minutes
+ duration: 60, // minutes
  slots: [
 
   { start: "2026-01-26T09:20", end: "2026-01-26T10:20", course: "new_ai" },
