@@ -4,4 +4,5 @@ const examSchedule = {
  duration: 60 // minutes
 };
 
+
 export default examSchedule;
