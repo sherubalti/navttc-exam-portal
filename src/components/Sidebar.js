@@ -241,4 +241,6 @@ const Sidebar = ({ currentUser, isAdmin, onLogout }) => {
   );
 };
 
+
+
 export default Sidebar;
