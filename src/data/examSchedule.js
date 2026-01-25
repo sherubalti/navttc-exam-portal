@@ -1,8 +1,15 @@
 const examSchedule = {
- startDate: "2026-01-26T09:20",
- endDate: "2026-01-26T10:20",
- duration: 60 // minutes
-};
+ duration: 2, // minutes
+ slots: [
 
+  { start: "2026-01-26T09:20", end: "2026-01-26T10:20", course: "new_ai" },
+  { start: "2026-01-26T11:00", end: "2026-01-26T11:59", course: "old_ai" },
+  { start: "2026-01-26T13:00", end: "2026-01-26T14:00", course: "web" },
+
+
+
+  { start: "2026-01-26T14:40", end: "2026-01-26T15:40", course: "new_ai" },
+ ]
+};
 
 export default examSchedule;
