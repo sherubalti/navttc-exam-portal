@@ -2,396 +2,1953 @@
   "questions": [
     {
       "id": 1,
-      "category": "Python Data Types",
-      "question": "Which data type is immutable in Python?",
-      "options": ["List", "Set", "Tuple", "Dictionary"],
-      "answer": "c",
-      "explanation": "Tuple cannot be modified after creation."
+      "category": "Python Basics",
+      "question": "What is the result of the expression 3 * (2 + 4) / 2 in Python?",
+      "options": [
+        "9.0",
+        "6.0",
+        "12.0",
+        "9"
+      ],
+      "answer": "a",
+      "explanation": "In Python 3, division (/) always returns a float. 3 * 6 / 2 = 18 / 2 = 9.0"
     },
     {
       "id": 2,
-      "category": "Python Data Types",
-      "question": "What is the output type of input()?",
-      "options": ["int", "float", "str", "bool"],
+      "category": "Python Basics",
+      "question": "Which of the following is an invalid variable name in Python?",
+      "options": [
+        "_my_var",
+        "my_var2",
+        "2my_var",
+        "myVar"
+      ],
       "answer": "c",
-      "explanation": "input() always returns a string."
+      "explanation": "Variable names cannot start with a digit."
     },
     {
       "id": 3,
-      "category": "Python Data Types",
-      "question": "Which data type stores key-value pairs?",
-      "options": ["List", "Tuple", "Set", "Dictionary"],
-      "answer": "d",
-      "explanation": "Dictionary stores data as key-value pairs."
+      "category": "Data Types",
+      "question": "What will be the output of: print(type(1/1))?",
+      "options": [
+        "<class 'int'>",
+        "<class 'float'>",
+        "<class 'double'>",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "The division operator / always returns a float in Python 3."
     },
     {
       "id": 4,
-      "category": "Python Data Types",
-      "question": "What is the data type of False?",
-      "options": ["int", "bool", "str", "float"],
+      "category": "Data Types",
+      "question": "Consider the code: x = [1, 2, 3]; y = x; y.append(4); print(x). What is the output?",
+      "options": [
+        "[1, 2, 3]",
+        "[1, 2, 3, 4]",
+        "Error",
+        "[4]"
+      ],
       "answer": "b",
-      "explanation": "False is a boolean value."
+      "explanation": "Lists are mutable and variables are references. y refers to the same object as x."
     },
     {
       "id": 5,
-      "category": "Python Data Types",
-      "question": "Which symbol creates a list?",
-      "options": ["()", "[]", "{}", "<>"],
+      "category": "Loops",
+      "question": "What is the output of the following loop?\nfor i in range(1, 10, 3):\n    print(i, end=' ')",
+      "options": [
+        "1 4 7 10",
+        "1 4 7",
+        "1 3 6 9",
+        "1 2 3"
+      ],
       "answer": "b",
-      "explanation": "Lists are created using square brackets."
+      "explanation": "range(start, stop, step) generates 1, 4, 7. 10 is excluded."
     },
-
     {
       "id": 6,
-      "category": "Python Data Types",
-      "question": "Which data type does not allow duplicate values?",
-      "options": ["List", "Tuple", "Set", "Dictionary"],
-      "answer": "c",
-      "explanation": "Set does not allow duplicate values."
+      "category": "Loops",
+      "question": "Which keyword is used to skip the current iteration of a loop?",
+      "options": [
+        "break",
+        "skip",
+        "pass",
+        "continue"
+      ],
+      "answer": "d",
+      "explanation": "The continue keyword skips the rest of the current iteration."
     },
     {
       "id": 7,
-      "category": "Python Data Types",
-      "question": "What is the type of 5?",
-      "options": ["float", "int", "str", "bool"],
+      "category": "Functions",
+      "question": "What is the output of the following code?\ndef func(a, b=[]):\n    b.append(a)\n    return b\nprint(func(1))\nprint(func(2))",
+      "options": [
+        "[1] [2]",
+        "[1] [1, 2]",
+        "[1, 2] [1, 2]",
+        "Error"
+      ],
       "answer": "b",
-      "explanation": "5 is an integer."
+      "explanation": "Default arguments are evaluated only once at definition time. The list b persists across calls."
     },
     {
       "id": 8,
-      "category": "Python Data Types",
-      "question": "Which data type is mutable?",
-      "options": ["Tuple", "String", "List", "Int"],
-      "answer": "c",
-      "explanation": "Lists can be modified."
+      "category": "Functions",
+      "question": "How do you define a function that can accept any number of positional arguments?",
+      "options": [
+        "def func(*args):",
+        "def func(**args):",
+        "def func(args...):",
+        "def func([]args):"
+      ],
+      "answer": "a",
+      "explanation": "*args allows passing a variable number of positional arguments as a tuple."
     },
     {
       "id": 9,
-      "category": "Python Data Types",
-      "question": "What is the output of type('10')?",
-      "options": ["int", "float", "str", "bool"],
+      "category": "OOPS",
+      "question": "What does the 'self' keyword represent in a Python class method?",
+      "options": [
+        "The class itself",
+        "The superclass",
+        "The current instance of the class",
+        "A private variable"
+      ],
       "answer": "c",
-      "explanation": "'10' is a string."
+      "explanation": "'self' refers to the specific instance of the class being operated on."
     },
     {
       "id": 10,
-      "category": "Python Data Types",
-      "question": "Which keyword defines a constant?",
-      "options": ["const", "final", "static", "None"],
-      "answer": "d",
-      "explanation": "Python has no constant keyword."
+      "category": "OOPS",
+      "question": "Which method is called automatically when an object is created?",
+      "options": [
+        "__new__",
+        "__init__",
+        "__start__",
+        "__create__"
+      ],
+      "answer": "b",
+      "explanation": "__init__ is the initializer method called after the instance is created."
     },
-
     {
       "id": 11,
-      "category": "Conditional Statements",
-      "question": "Which keyword is used for conditions?",
-      "options": ["for", "while", "if", "def"],
+      "category": "Time Complexity",
+      "question": "What is the time complexity of searching for an element in a sorted array using Binary Search?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(log n)",
+        "O(1)"
+      ],
       "answer": "c",
-      "explanation": "if is used for conditions."
+      "explanation": "Binary search divides the search space in half each step, leading to O(log n)."
     },
     {
       "id": 12,
-      "category": "Conditional Statements",
-      "question": "Which block executes when condition is false?",
-      "options": ["if", "elif", "else", "pass"],
+      "category": "DSA Basics",
+      "question": "Which data structure uses LIFO (Last In First Out) principle?",
+      "options": [
+        "Queue",
+        "Linked List",
+        "Stack",
+        "Binary Tree"
+      ],
       "answer": "c",
-      "explanation": "else executes when condition is false."
+      "explanation": "A Stack follows Last-In-First-Out (LIFO)."
     },
     {
       "id": 13,
-      "category": "Conditional Statements",
-      "question": "Which operator checks equality?",
-      "options": ["=", "==", "!=", "<"],
+      "category": "Python Basics",
+      "question": "What is the output of print(2 ** 3 ** 2)?",
+      "options": [
+        "64",
+        "512",
+        "Error",
+        "36"
+      ],
       "answer": "b",
-      "explanation": "== checks equality."
+      "explanation": "Exponentiation is right-associative: 2 ** (3 ** 2) = 2 ** 9 = 512."
     },
     {
       "id": 14,
-      "category": "Conditional Statements",
-      "question": "How many elif can be used?",
-      "options": ["1", "2", "Unlimited", "0"],
-      "answer": "c",
-      "explanation": "Multiple elif blocks are allowed."
+      "category": "Data Types",
+      "question": "Which of the following is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "answer": "d",
+      "explanation": "Tuples cannot be changed once created."
     },
     {
       "id": 15,
-      "category": "Conditional Statements",
-      "question": "Which operator means NOT?",
-      "options": ["!", "not", "~", "&"],
+      "category": "Loops",
+      "question": "What will 'while False: print('Hi')' output?",
+      "options": [
+        "Hi",
+        "Nothing",
+        "Error",
+        "Infinite loop"
+      ],
       "answer": "b",
-      "explanation": "not is the logical NOT operator."
+      "explanation": "Since the condition is False, the loop body never executes."
     },
-
     {
       "id": 16,
-      "category": "Conditional Statements",
-      "question": "What is output if if condition is False and no else?",
-      "options": ["Error", "0", "None", "No output"],
-      "answer": "d",
-      "explanation": "Nothing executes."
+      "category": "Functions",
+      "question": "What is the scope of a variable defined inside a function?",
+      "options": [
+        "Global",
+        "Local",
+        "Static",
+        "Protected"
+      ],
+      "answer": "b",
+      "explanation": "Variables defined inside a function are local to that function."
     },
     {
       "id": 17,
-      "category": "Conditional Statements",
-      "question": "Which operator checks greater than?",
-      "options": ["<", "<=", ">", "!="],
-      "answer": "c",
-      "explanation": "> checks greater than."
+      "category": "OOPS",
+      "question": "What is inheritance?",
+      "options": [
+        "Defining multiple functions with same name",
+        "A class acquiring properties of another class",
+        "Hiding implementation details",
+        "Creating multiple instances of a class"
+      ],
+      "answer": "b",
+      "explanation": "Inheritance allows a subclass to inherit attributes and methods from a superclass."
     },
     {
       "id": 18,
-      "category": "Conditional Statements",
-      "question": "Nested if means?",
+      "category": "Time Complexity",
+      "question": "What is the worst-case time complexity of QuickSort?",
       "options": [
-        "if inside loop",
-        "loop inside if",
-        "if inside if",
-        "elif inside else"
+        "O(n log n)",
+        "O(n^2)",
+        "O(n)",
+        "O(log n)"
       ],
-      "answer": "c",
-      "explanation": "Nested if means if inside another if."
+      "answer": "b",
+      "explanation": "In the worst case (e.g., already sorted array with poor pivot), QuickSort is O(n^2)."
     },
     {
       "id": 19,
-      "category": "Conditional Statements",
-      "question": "Which operator combines conditions?",
-      "options": ["and", "or", "Both", "None"],
-      "answer": "c",
-      "explanation": "and / or combine conditions."
+      "category": "DSA Basics",
+      "question": "What is the time complexity to insert an element at the beginning of a singly linked list?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n^2)"
+      ],
+      "answer": "a",
+      "explanation": "Inserting at the head only requires updating pointers, regardless of list size."
     },
     {
       "id": 20,
-      "category": "Conditional Statements",
-      "question": "Which keyword skips condition block?",
-      "options": ["pass", "skip", "continue", "break"],
+      "category": "Python Basics",
+      "question": "What is the output of: print(bool(0), bool(1), bool(''), bool(' '))?",
+      "options": [
+        "False True False True",
+        "False True True True",
+        "True True False True",
+        "False True False False"
+      ],
       "answer": "a",
-      "explanation": "pass does nothing."
+      "explanation": "0 and empty strings are False. 1 and non-empty strings (even with a space) are True."
     },
-
     {
       "id": 21,
-      "category": "Loops",
-      "question": "Which loop runs based on condition?",
-      "options": ["for", "while", "nested", "if"],
+      "category": "Data Types",
+      "question": "How do you create an empty set in Python?",
+      "options": [
+        "{}",
+        "set()",
+        "[]",
+        "()"
+      ],
       "answer": "b",
-      "explanation": "while loop runs on condition."
+      "explanation": "{} creates an empty dictionary. set() is used for an empty set."
     },
     {
       "id": 22,
       "category": "Loops",
-      "question": "Which loop is best when range is known?",
-      "options": ["while", "for", "do", "nested"],
+      "question": "What is the output of: \nfor i in range(3):\n    print(i)\nelse:\n    print('End')",
+      "options": [
+        "0 1 2",
+        "0 1 2 End",
+        "End",
+        "Error"
+      ],
       "answer": "b",
-      "explanation": "for loop is best when iterations are known."
+      "explanation": "The else block in a loop runs if the loop completes normally (without a break)."
     },
     {
       "id": 23,
-      "category": "Loops",
-      "question": "Which keyword exits loop?",
-      "options": ["exit", "stop", "break", "return"],
+      "category": "Functions",
+      "question": "Which keyword is used to return a generator from a function?",
+      "options": [
+        "return",
+        "emit",
+        "yield",
+        "send"
+      ],
       "answer": "c",
-      "explanation": "break exits loop."
+      "explanation": "The yield keyword produces a value and pauses the function, making it a generator."
     },
     {
       "id": 24,
-      "category": "Loops",
-      "question": "Which keyword skips current iteration?",
-      "options": ["pass", "break", "continue", "skip"],
-      "answer": "c",
-      "explanation": "continue skips iteration."
+      "category": "OOPS",
+      "question": "Which of these is NOT a pillar of OOP?",
+      "options": [
+        "Encapsulation",
+        "Polymorphism",
+        "Abstraction",
+        "Compilation"
+      ],
+      "answer": "d",
+      "explanation": "The four pillars are Encapsulation, Abstraction, Inheritance, and Polymorphism."
     },
     {
       "id": 25,
-      "category": "Loops",
-      "question": "What is infinite loop?",
+      "category": "Time Complexity",
+      "question": "What is the time complexity of accessing an element in an array by its index?",
       "options": [
-        "Loop runs once",
-        "Loop never ends",
-        "Loop with error",
-        "Loop with break"
+        "O(n)",
+        "O(log n)",
+        "O(1)",
+        "O(n^2)"
       ],
-      "answer": "b",
-      "explanation": "Infinite loop never stops."
+      "answer": "c",
+      "explanation": "Array access by index is constant time O(1)."
     },
-
     {
       "id": 26,
-      "category": "Loops",
-      "question": "Which function generates sequence?",
-      "options": ["range()", "list()", "loop()", "seq()"],
-      "answer": "a",
-      "explanation": "range() generates sequence."
+      "category": "DSA Basics",
+      "question": "Which data structure follows FIFO (First In First Out)?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Heap",
+        "Graph"
+      ],
+      "answer": "b",
+      "explanation": "A Queue follows the First-In-First-Out (FIFO) principle."
     },
     {
       "id": 27,
-      "category": "Loops",
-      "question": "Which loop can be nested?",
-      "options": ["for", "while", "both", "none"],
+      "category": "Python Basics",
+      "question": "What is the function to get the length of a list?",
+      "options": [
+        "list.size()",
+        "length(list)",
+        "len(list)",
+        "size(list)"
+      ],
       "answer": "c",
-      "explanation": "Both loops can be nested."
+      "explanation": "len() is a built-in function to get the length of sequences."
     },
     {
       "id": 28,
-      "category": "Loops",
-      "question": "What does pass do in loop?",
+      "category": "Data Types",
+      "question": "What will be the output of: print('a' + 'b')?",
       "options": [
-        "Stops loop",
-        "Skips iteration",
-        "Does nothing",
-        "Ends program"
+        "ab",
+        "a+b",
+        "Error",
+        "None"
       ],
-      "answer": "c",
-      "explanation": "pass does nothing."
+      "answer": "a",
+      "explanation": "The + operator concatenates strings."
     },
     {
       "id": 29,
       "category": "Loops",
-      "question": "Which loop checks condition first?",
-      "options": ["for", "while", "do-while", "all"],
+      "question": "How many times will 'Hello' be printed?\ni = 0\nwhile i < 3:\n    print('Hello')\n    i += 1",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "Infinite"
+      ],
       "answer": "b",
-      "explanation": "while checks condition first."
+      "explanation": "i goes from 0, 1, 2. Loop stops when i is 3."
     },
     {
       "id": 30,
-      "category": "Loops",
-      "question": "Loop inside loop is called?",
-      "options": ["Double loop", "Nested loop", "Multi loop", "Chain loop"],
-      "answer": "b",
-      "explanation": "Loop inside loop is nested loop."
+      "category": "Functions",
+      "question": "What is a recursive function?",
+      "options": [
+        "A function that calls itself",
+        "A function that has no return",
+        "A function with multiple arguments",
+        "A function defined inside another function"
+      ],
+      "answer": "a",
+      "explanation": "Recursion is when a function calls itself to solve smaller subproblems."
     },
-
     {
       "id": 31,
-      "category": "Functions",
-      "question": "Which keyword defines a function?",
-      "options": ["func", "define", "def", "function"],
-      "answer": "c",
-      "explanation": "Functions are defined using def."
+      "category": "OOPS",
+      "question": "What is Method Overriding?",
+      "options": [
+        "Using same method name with different parameters",
+        "Subclass provides specific implementation of a method defined in superclass",
+        "Defining multiple constructors",
+        "Deleting a method"
+      ],
+      "answer": "b",
+      "explanation": "Overriding allows a subclass to change the behavior of an inherited method."
     },
     {
       "id": 32,
-      "category": "Functions",
-      "question": "What does function return by default?",
-      "options": ["0", "False", "None", "Error"],
+      "category": "Time Complexity",
+      "question": "What is the Big O complexity of the following?\nfor i in range(n):\n    for j in range(n):\n        print(i, j)",
+      "options": [
+        "O(n)",
+        "O(log n)",
+        "O(n^2)",
+        "O(2n)"
+      ],
       "answer": "c",
-      "explanation": "Default return is None."
+      "explanation": "Nested loops each running n times result in O(n * n) = O(n^2)."
     },
     {
       "id": 33,
-      "category": "Functions",
-      "question": "What is function without name?",
-      "options": ["Recursive", "Anonymous", "Nested", "Built-in"],
-      "answer": "b",
-      "explanation": "Anonymous functions are lambda."
+      "category": "DSA Basics",
+      "question": "What is the complexity of searching in a Hash Table (Average case)?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n log n)"
+      ],
+      "answer": "a",
+      "explanation": "Hash tables provide average constant time O(1) for lookup."
     },
     {
       "id": 34,
-      "category": "Functions",
-      "question": "Which keyword returns value?",
-      "options": ["print", "send", "return", "yield"],
-      "answer": "c",
-      "explanation": "return sends value back."
+      "category": "Python Basics",
+      "question": "Which operator is used for floor division?",
+      "options": [
+        "/",
+        "//",
+        "%",
+        "**"
+      ],
+      "answer": "b",
+      "explanation": "// returns the largest integer less than or equal to the result."
     },
     {
       "id": 35,
-      "category": "Functions",
-      "question": "Which symbol used in lambda?",
-      "options": ["=>", ":", "lambda", "::"],
+      "category": "Data Types",
+      "question": "What is the output of print(list(range(5)))?",
+      "options": [
+        "[0, 1, 2, 3, 4, 5]",
+        "[1, 2, 3, 4, 5]",
+        "[0, 1, 2, 3, 4]",
+        "Error"
+      ],
       "answer": "c",
-      "explanation": "lambda keyword is used."
+      "explanation": "range(5) goes from 0 to 4."
     },
-
     {
       "id": 36,
-      "category": "Functions",
-      "question": "Which function calls itself?",
-      "options": ["Loop", "Nested", "Recursive", "Lambda"],
-      "answer": "c",
-      "explanation": "Recursive function calls itself."
+      "category": "Loops",
+      "question": "What is the purpose of the 'pass' statement?",
+      "options": [
+        "To exit a loop",
+        "A null operation to fulfill syntax requirements",
+        "To skip an iteration",
+        "To return a value"
+      ],
+      "answer": "b",
+      "explanation": "'pass' does nothing but is used when code is syntactically required but no action is needed."
     },
     {
       "id": 37,
       "category": "Functions",
-      "question": "Which keyword allows multiple arguments?",
-      "options": ["*args", "**kwargs", "Both", "None"],
+      "question": "What will be the output?\ndef add(a, b=5): return a + b\nprint(add(3))",
+      "options": [
+        "3",
+        "5",
+        "8",
+        "Error"
+      ],
       "answer": "c",
-      "explanation": "*args and **kwargs allow variable arguments."
+      "explanation": "3 is passed for a, b uses default 5. 3+5=8."
     },
     {
       "id": 38,
-      "category": "Functions",
-      "question": "Which function prints output?",
-      "options": ["input()", "print()", "show()", "display()"],
+      "category": "OOPS",
+      "question": "How do you access a private attribute '__name' of an object 'obj' from outside the class (Name Mangling)?",
+      "options": [
+        "obj.__name",
+        "obj._ClassName__name",
+        "obj.name",
+        "You cannot"
+      ],
       "answer": "b",
-      "explanation": "print() prints output."
+      "explanation": "Python mangles private names by adding _ClassName before the attribute name."
     },
     {
       "id": 39,
-      "category": "Functions",
-      "question": "Which function takes input?",
-      "options": ["scan()", "read()", "input()", "get()"],
-      "answer": "c",
-      "explanation": "input() takes user input."
+      "category": "Time Complexity",
+      "question": "What is the time complexity of Mergesort?",
+      "options": [
+        "O(n log n)",
+        "O(n^2)",
+        "O(n)",
+        "O(log n)"
+      ],
+      "answer": "a",
+      "explanation": "Mergesort consistently takes O(n log n) in all cases."
     },
     {
       "id": 40,
-      "category": "Functions",
-      "question": "Function inside function is called?",
-      "options": ["Recursive", "Nested", "Lambda", "Inline"],
+      "category": "DSA Basics",
+      "question": "What is a binary tree where every node has either 0 or 2 children?",
+      "options": [
+        "Complete Binary Tree",
+        "Full Binary Tree",
+        "Perfect Binary Tree",
+        "Balanced Binary Tree"
+      ],
       "answer": "b",
-      "explanation": "Function inside function is nested."
+      "explanation": "A Full Binary Tree is a tree in which every node has either 0 or 2 children."
     },
-
     {
       "id": 41,
-      "category": "Functions",
-      "question": "Which keyword pauses function?",
-      "options": ["return", "break", "yield", "pass"],
-      "answer": "c",
-      "explanation": "yield pauses function."
+      "category": "Python Basics",
+      "question": "What does the 'is' operator do?",
+      "options": [
+        "Checks for equality of values",
+        "Checks if two variables refer to the same object in memory",
+        "Checks if a variable exists",
+        "All of the above"
+      ],
+      "answer": "b",
+      "explanation": "'is' checks identity (memory address), while '==' checks equality (value)."
     },
     {
       "id": 42,
-      "category": "Functions",
-      "question": "What is built-in function?",
+      "category": "Data Types",
+      "question": "What is the output of print('Hello' * 2)?",
       "options": [
-        "User defined",
-        "Predefined",
-        "Anonymous",
-        "Recursive"
+        "HelloHello",
+        "Hello 2",
+        "Error",
+        "None"
       ],
-      "answer": "b",
-      "explanation": "Built-in functions are predefined."
+      "answer": "a",
+      "explanation": "Multiplying a string by an integer repeats the string."
     },
     {
       "id": 43,
-      "category": "Functions",
-      "question": "Which function finds length?",
-      "options": ["size()", "count()", "len()", "length()"],
-      "answer": "c",
-      "explanation": "len() returns length."
+      "category": "Loops",
+      "question": "What is an infinite loop?",
+      "options": [
+        "A loop that repeats a specific number of times",
+        "A loop that never ends",
+        "A loop that runs once",
+        "A loop with no body"
+      ],
+      "answer": "b",
+      "explanation": "An infinite loop occurs when the condition always remains true."
     },
     {
       "id": 44,
       "category": "Functions",
-      "question": "Which keyword stops function?",
-      "options": ["break", "stop", "return", "exit"],
-      "answer": "c",
-      "explanation": "return stops function execution."
+      "question": "What is a lambda function?",
+      "options": [
+        "A named function",
+        "An anonymous one-line function",
+        "A recursive function",
+        "A method of a class"
+      ],
+      "answer": "b",
+      "explanation": "Lambda functions are small, anonymous functions defined without a name."
     },
     {
       "id": 45,
-      "category": "Functions",
-      "question": "What is default parameter?",
+      "category": "OOPS",
+      "question": "What is Polymorphism?",
       "options": [
-        "Required value",
-        "Optional value",
-        "Return value",
+        "A class having many forms",
+        "Using same interface for different data types",
+        "Ability of different classes to have same method name",
+        "All of the above"
+      ],
+      "answer": "d",
+      "explanation": "Polymorphism allows different objects to be treated as instances of a common superclass, or share the same method names."
+    },
+    {
+      "id": 46,
+      "category": "Time Complexity",
+      "question": "What is the time complexity of incrementing a number represented by 'n' bits?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n^2)"
+      ],
+      "answer": "b",
+      "explanation": "In the worst case (e.g., all bits are 1), you may need to flip all n bits."
+    },
+    {
+      "id": 47,
+      "category": "DSA Basics",
+      "question": "In a Max-Heap, where is the largest element located?",
+      "options": [
+        "At a leaf node",
+        "In the middle",
+        "At the root",
+        "It depends on the insertion order"
+      ],
+      "answer": "c",
+      "explanation": "By definition, the root of a Max-Heap contains the maximum element."
+    },
+    {
+      "id": 48,
+      "category": "Python Basics",
+      "question": "What is the output of print(10 % 3)?",
+      "options": [
+        "3",
+        "1",
+        "0",
+        "3.33"
+      ],
+      "answer": "b",
+      "explanation": "The modulo operator (%) returns the remainder. 10 / 3 is 3 with remainder 1."
+    },
+    {
+      "id": 49,
+      "category": "Data Types",
+      "question": "Which of these is used to define a dictionary?",
+      "options": [
+        "[]",
+        "()",
+        "{}",
+        "<>"
+      ],
+      "answer": "c",
+      "explanation": "Curly braces are used to define dictionaries and sets."
+    },
+    {
+      "id": 50,
+      "category": "Loops",
+      "question": "What will happen if you remove 'i += 1' from: \ni = 0\nwhile i < 5:\n    print(i)?",
+      "options": [
+        "It will print 0 five times",
+        "It will run once",
+        "Infinite loop printing 0",
+        "Error"
+      ],
+      "answer": "c",
+      "explanation": "Since i stays 0, the condition '0 < 5' will always be true."
+    },
+    {
+      "id": 51,
+      "category": "Functions",
+      "question": "What does 'nonlocal' keyword do?",
+      "options": [
+        "Makes a variable global",
+        "Allows modification of a variable in an outer (but not global) scope",
+        "Defines a local variable",
+        "Deletes a variable"
+      ],
+      "answer": "b",
+      "explanation": "nonlocal is used in nested functions to refer to a variable in the nearest enclosing scope."
+    },
+    {
+      "id": 52,
+      "category": "OOPS",
+      "question": "Which decorator is used to define a static method in Python?",
+      "options": [
+        "@static",
+        "@classmethod",
+        "@staticmethod",
+        "@internal"
+      ],
+      "answer": "c",
+      "explanation": "@staticmethod defines a method that doesn't receive 'self' or 'cls' as first argument."
+    },
+    {
+      "id": 53,
+      "category": "Time Complexity",
+      "question": "What is the time complexity of the Fibonacci recursive function without memoization?\ndef fib(n):\n    if n <= 1: return n\n    return fib(n-1) + fib(n-2)",
+      "options": [
+        "O(n)",
+        "O(n^2)",
+        "O(2^n)",
+        "O(log n)"
+      ],
+      "answer": "c",
+      "explanation": "Each call branches into two more, leading to exponential O(2^n)."
+    },
+    {
+      "id": 54,
+      "category": "DSA Basics",
+      "question": "Which sorting algorithm is known as 'Divide and Conquer'?",
+      "options": [
+        "Bubble Sort",
+        "Insertion Sort",
+        "Merge Sort",
+        "Selection Sort"
+      ],
+      "answer": "c",
+      "explanation": "Merge sort divides the array, sorts halves, and merges them."
+    },
+    {
+      "id": 55,
+      "category": "Python Basics",
+      "question": "What is the output of: print('Data' > 'Science')?",
+      "options": [
+        "True",
+        "False",
+        "Error",
         "None"
       ],
       "answer": "b",
-      "explanation": "Default parameters are optional."
+      "explanation": "Strings are compared lexicographically. 'D' (68) is less than 'S' (83)."
+    },
+    {
+      "id": 56,
+      "category": "Data Types",
+      "question": "What is the output of: s = {1, 2, 2, 3}; print(len(s))?",
+      "options": [
+        "4",
+        "3",
+        "2",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "Sets only store unique elements. {1, 2, 2, 3} becomes {1, 2, 3}."
+    },
+    {
+      "id": 57,
+      "category": "Loops",
+      "question": "Which function allows iterating over a sequence and getting both the index and value?",
+      "options": [
+        "index()",
+        "enum()",
+        "enumerate()",
+        "counter()"
+      ],
+      "answer": "c",
+      "explanation": "enumerate() returns pairs of (index, item)."
+    },
+    {
+      "id": 58,
+      "category": "Functions",
+      "question": "What is the output?\nx = 10\ndef change():\n    global x\n    x = 20\nchange()\nprint(x)",
+      "options": [
+        "10",
+        "20",
+        "Error",
+        "None"
+      ],
+      "answer": "b",
+      "explanation": "The 'global' keyword allowed the function to modify the global variable x."
+    },
+    {
+      "id": 59,
+      "category": "OOPS",
+      "question": "What is Encapsulation?",
+      "options": [
+        "Wrapping data and methods into a single unit",
+        "Hiding internal state of an object",
+        "Both a and b",
+        "None"
+      ],
+      "answer": "c",
+      "explanation": "Encapsulation bundles data/methods and restricts direct access to some components."
+    },
+    {
+      "id": 60,
+      "category": "Time Complexity",
+      "question": "What is the space complexity of an iterative Factorial function?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n^2)"
+      ],
+      "answer": "a",
+      "explanation": "Iterative factorial only uses a few variables regardless of input size."
+    },
+    {
+      "id": 61,
+      "category": "DSA Basics",
+      "question": "Which of the following is a non-linear data structure?",
+      "options": [
+        "Stack",
+        "Array",
+        "Graph",
+        "Queue"
+      ],
+      "answer": "c",
+      "explanation": "Graphs and Trees are non-linear. Stacks, Arrays, and Queues are linear."
+    },
+    {
+      "id": 62,
+      "category": "Python Basics",
+      "question": "How do you start a block of code (like a loop or function) in Python?",
+      "options": [
+        "{",
+        "(",
+        ":",
+        ";"
+      ],
+      "answer": "c",
+      "explanation": "Python uses a colon (:) to start a code block, followed by indentation."
+    },
+    {
+      "id": 63,
+      "category": "Data Types",
+      "question": "What is the output of print('Python'[1:4])?",
+      "options": [
+        "Pyth",
+        "yth",
+        "ytho",
+        "ytho"
+      ],
+      "answer": "b",
+      "explanation": "Slice starts at index 1 ('y') and ends before index 4 ('h'). So 'yth'."
+    },
+    {
+      "id": 64,
+      "category": "Loops",
+      "question": "What is the output of the following?\nfor i in [1, 2, 3]:\n    if i == 2: break\n    print(i, end=' ')",
+      "options": [
+        "1 2 3",
+        "1",
+        "1 2",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "When i is 2, the break statement exits the loop."
+    },
+    {
+      "id": 65,
+      "category": "Functions",
+      "question": "What is a docstring?",
+      "options": [
+        "A string used for documentation in a class or function",
+        "A specific type of data",
+        "A comment starting with #",
+        "A function name"
+      ],
+      "answer": "a",
+      "explanation": "Docstrings (triple-quoted strings) are used to document code modules/blocks."
+    },
+    {
+      "id": 66,
+      "category": "OOPS",
+      "question": "What is an Abstract Class?",
+      "options": [
+        "A class that cannot be instantiated",
+        "A class with no methods",
+        "A class with only private attributes",
+        "A class defined in another file"
+      ],
+      "answer": "a",
+      "explanation": "Abstract classes serve as blueprints and cannot be instantiated directly."
+    },
+    {
+      "id": 67,
+      "category": "Time Complexity",
+      "question": "What is the time complexity of building a heap with 'n' elements?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(log n)",
+        "O(1)"
+      ],
+      "answer": "b",
+      "explanation": "Building a heap (heapify) can be done in O(n) time."
+    },
+    {
+      "id": 68,
+      "category": "DSA Basics",
+      "question": "Which traversal of a Binary Search Tree (BST) prints elements in sorted order?",
+      "options": [
+        "Pre-order",
+        "Post-order",
+        "In-order",
+        "Level-order"
+      ],
+      "answer": "c",
+      "explanation": "In-order traversal visits nodes in non-decreasing order for BST."
+    },
+    {
+      "id": 69,
+      "category": "Python Basics",
+      "question": "Which of these is NOT a comparison operator?",
+      "options": [
+        "!=",
+        "=",
+        "==",
+        ">="
+      ],
+      "answer": "b",
+      "explanation": "\"=\" is an assignment operator. == is the comparison operator."
+    },
+    {
+      "id": 70,
+      "category": "Data Types",
+      "question": "What is the output of: d = {'a': 1, 'b': 2}; print(d.get('c', 0))?",
+      "options": [
+        "None",
+        "Error",
+        "0",
+        "1"
+      ],
+      "answer": "c",
+      "explanation": "get(key, default) returns the default value if the key is not found."
+    },
+    {
+      "id": 71,
+      "category": "Loops",
+      "question": "Can you have a 'break' statement inside a 'for' loop?",
+      "options": [
+        "Yes",
+        "No",
+        "Only if it is nested",
+        "Only in while loops"
+      ],
+      "answer": "a",
+      "explanation": "'break' can be used in both 'for' and 'while' loops."
+    },
+    {
+      "id": 72,
+      "category": "Functions",
+      "question": "What happens if a function does not have a return statement?",
+      "options": [
+        "It returns 0",
+        "It returns None",
+        "It returns False",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "All Python functions return None by default if no return is specified."
+    },
+    {
+      "id": 73,
+      "category": "OOPS",
+      "question": "What is the result of using 'super()'?",
+      "options": [
+        "Calls the constructor of the subclass",
+        "Calls methods of the parent class",
+        "Creates a new object",
+        "Deletes an object"
+      ],
+      "answer": "b",
+      "explanation": "super() provides a way to access methods/attributes of the superclass."
+    },
+    {
+      "id": 74,
+      "category": "Time Complexity",
+      "question": "Time complexity of finding the maximum element in an unsorted array?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "answer": "c",
+      "explanation": "You must check every element at least once, so it's O(n)."
+    },
+    {
+      "id": 75,
+      "category": "DSA Basics",
+      "question": "What is the height of a balanced binary tree with 'n' nodes?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "a",
+      "explanation": "Balanced trees minimize height to logarithmic scale relative to nodes."
+    },
+    {
+      "id": 76,
+      "category": "Python Basics",
+      "question": "What is the result of print(type([]))?",
+      "options": [
+        "list",
+        "<class 'list'>",
+        "[]",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "type() returns the class of the object."
+    },
+    {
+      "id": 77,
+      "category": "Data Types",
+      "question": "Which method adds an element to the end of a list?",
+      "options": [
+        "add()",
+        "insert()",
+        "append()",
+        "extend()"
+      ],
+      "answer": "c",
+      "explanation": "append() adds a single element to the end of the list."
+    },
+    {
+      "id": 78,
+      "category": "Loops",
+      "question": "Which loop is best used when the number of iterations is known?",
+      "options": [
+        "while loop",
+        "for loop",
+        "do-while loop",
+        "All are same"
+      ],
+      "answer": "b",
+      "explanation": "'for' loops are generally used for fixed or known iterations (iterables)."
+    },
+    {
+      "id": 79,
+      "category": "Functions",
+      "question": "How do you pass a variable number of keyword arguments to a function?",
+      "options": [
+        "*args",
+        "**kwargs",
+        "variable=value",
+        "{}args"
+      ],
+      "answer": "b",
+      "explanation": "**kwargs stores keyword arguments as a dictionary."
+    },
+    {
+      "id": 80,
+      "category": "OOPS",
+      "question": "What is 'Multiple Inheritance'?",
+      "options": [
+        "One class inheriting from one parent",
+        "One class inheriting from multiple parents",
+        "One parent having multiple subclasses",
+        "A class inheriting from its own subclass"
+      ],
+      "answer": "b",
+      "explanation": "Multiple inheritance is when a class derives from more than one base class."
+    },
+    {
+      "id": 81,
+      "category": "Time Complexity",
+      "question": "Best case time complexity of Bubble Sort?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(1)",
+        "O(n^2)"
+      ],
+      "answer": "b",
+      "explanation": "If the array is already sorted and an 'optimized' bubble sort is used, it takes O(n)."
+    },
+    {
+      "id": 82,
+      "category": "DSA Basics",
+      "question": "In a linked list, what is the 'next' pointer of the last node?",
+      "options": [
+        "Self",
+        "Head node",
+        "Null/None",
+        "Previous node"
+      ],
+      "answer": "c",
+      "explanation": "The last node of a singly linked list points to Null/None."
+    },
+    {
+      "id": 83,
+      "category": "Python Basics",
+      "question": "What is the output of print(3 == 3.0)?",
+      "options": [
+        "True",
+        "False",
+        "Error",
+        "None"
+      ],
+      "answer": "a",
+      "explanation": "Python converts integers to floats for comparison. 3 == 3.0 is True."
+    },
+    {
+      "id": 84,
+      "category": "Data Types",
+      "question": "How can you remove duplicates from a list 'my_list'?",
+      "options": [
+        "list(set(my_list))",
+        "my_list.unique()",
+        "unique(my_list)",
+        "my_list.remove_duplicates()"
+      ],
+      "answer": "a",
+      "explanation": "Converting a list to a set automatically removes duplicates."
+    },
+    {
+      "id": 85,
+      "category": "Loops",
+      "question": "Output of: \nfor i in range(1, 3):\n    for j in range(1, 3):\n        print(i*j, end=' ')",
+      "options": [
+        "1 2 2 4",
+        "1 2 3",
+        "1 2 2 3",
+        "Error"
+      ],
+      "answer": "a",
+      "explanation": "Outer loop (1, 2), Inner loop (1, 2). i*j pairs: 1*1, 1*2, 2*1, 2*2."
+    },
+    {
+      "id": 86,
+      "category": "Functions",
+      "question": "What is a 'side effect' of a function?",
+      "options": [
+        "Returning a value",
+        "Modifying global state or passed arguments",
+        "Calling another function",
+        "Printing a message"
+      ],
+      "answer": "b",
+      "explanation": "A side effect is any state change outside the function's local scope."
+    },
+    {
+      "id": 87,
+      "category": "OOPS",
+      "question": "Which function is used to check if an object is an instance of a specific class?",
+      "options": [
+        "type()",
+        "check()",
+        "isinstance()",
+        "instanceof()"
+      ],
+      "answer": "c",
+      "explanation": "isinstance(object, class) returns True if the object belongs to that class."
+    },
+    {
+      "id": 88,
+      "category": "Time Complexity",
+      "question": "What does Big O actually describe?",
+      "options": [
+        "Exact time taken",
+        "Upper bound of growth rate",
+        "Lower bound of growth rate",
+        "Average performance"
+      ],
+      "answer": "b",
+      "explanation": "Big O provides an upper-bound (worst-case) asymptotic analysis."
+    },
+    {
+      "id": 89,
+      "category": "DSA Basics",
+      "question": "Which algorithm is used to find the shortest path in a weighted graph with no negative edges?",
+      "options": [
+        "Breadth First Search",
+        "Dijkstra's Algorithm",
+        "Binary Search",
+        "Kruskal's Algorithm"
+      ],
+      "answer": "b",
+      "explanation": "Dijkstra's is the standard algorithm for shortest paths in non-negative weighted graphs."
+    },
+    {
+      "id": 90,
+      "category": "Python Basics",
+      "question": "Which of these is used for multi-line comments?",
+      "options": [
+        "#",
+        "//",
+        "''' or \"\"\"",
+        "/* */"
+      ],
+      "answer": "c",
+      "explanation": "Triple quotes (''' or \"\"\") are often used for multi-line comments/docstrings."
+    },
+    {
+      "id": 91,
+      "category": "Data Types",
+      "question": "What is the output of print('abc'.upper())?",
+      "options": [
+        "ABC",
+        "Abc",
+        "abc",
+        "Error"
+      ],
+      "answer": "a",
+      "explanation": "upper() converts all characters in a string to uppercase."
+    },
+    {
+      "id": 92,
+      "category": "Loops",
+      "question": "What is the output: \nx = [0, 1, 2]\nfor x[0] in x:\n    print(x[0], end=' ')",
+      "options": [
+        "0 1 2",
+        "0 0 0",
+        "Error",
+        "1 1 2"
+      ],
+      "answer": "a",
+      "explanation": "In each step, the value of the iterable is assigned to x[0]. So it prints 0, then 1, then 2."
+    },
+    {
+      "id": 93,
+      "category": "Functions",
+      "question": "What is 'memoization'?",
+      "options": [
+        "Writing notes about code",
+        "Storing results of expensive function calls to avoid re-computation",
+        "Deleting unused variables",
+        "Increasing recursion depth"
+      ],
+      "answer": "b",
+      "explanation": "Memoization is an optimization technique used primarily to speed up recursive programs."
+    },
+    {
+      "id": 94,
+      "category": "OOPS",
+      "question": "What is 'Abstraction'?",
+      "options": [
+        "Hiding complexity and showing only relevant info",
+        "Creating multiple instances",
+        "Inheriting attributes",
+        "Merging classes"
+      ],
+      "answer": "a",
+      "explanation": "Abstraction simplifies complex reality by modeling classes appropriate to the problem."
+    },
+    {
+      "id": 95,
+      "category": "Time Complexity",
+      "question": "What is the time complexity of the Sieve of Eratosthenes algorithm for primes up to 'n'?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n log log n)",
+        "O(n^2)"
+      ],
+      "answer": "c",
+      "explanation": "The Sieve of Eratosthenes has an efficient complexity of O(n log log n)."
+    },
+    {
+      "id": 96,
+      "category": "DSA Basics",
+      "question": "What is the characteristic of a stable sorting algorithm?",
+      "options": [
+        "It uses minimal memory",
+        "It preserves relative order of equal elements",
+        "It is always O(n log n)",
+        "It works only on integers"
+      ],
+      "answer": "b",
+      "explanation": "Stability means elements with equal keys remain in their original relative order."
+    },
+    {
+      "id": 97,
+      "category": "Python Basics",
+      "question": "Which function is used to convert an object to a string?",
+      "options": [
+        "str()",
+        "string()",
+        "toString()",
+        "convert()"
+      ],
+      "answer": "a",
+      "explanation": "str() is the built-in constructor for the string class."
+    },
+    {
+      "id": 98,
+      "category": "Data Types",
+      "question": "What is the result of print(1.1 + 2.2 == 3.3)?",
+      "options": [
+        "True",
+        "False",
+        "Error",
+        "Depends on OS"
+      ],
+      "answer": "b",
+      "explanation": "Due to floating-point precision, 1.1 + 2.2 is approx 3.3000000000000003."
+    },
+    {
+      "id": 99,
+      "category": "Loops",
+      "question": "How do you break out of a nested loop?",
+      "options": [
+        "break break",
+        "return",
+        "Using a flag or throwing exception",
+        "exit"
+      ],
+      "answer": "c",
+      "explanation": "In Python, 'break' only exits the innermost loop. Flags or returns are common ways to exit multiple."
+    },
+    {
+      "id": 100,
+      "category": "Functions",
+      "question": "What is a 'pure function'?",
+      "options": [
+        "A function that has no side effects and returns the same output for the same input",
+        "A function with only one line",
+        "A function with no input",
+        "A class method"
+      ],
+      "answer": "a",
+      "explanation": "Pure functions are deterministic and do not modify external state."
+    },
+    {
+      "id": 101,
+      "category": "OOPS",
+      "question": "Which of these is used for Operator Overloading in Python?",
+      "options": [
+        "__plus__",
+        "__add__",
+        "__sum__",
+        "__op__"
+      ],
+      "answer": "b",
+      "explanation": "Special 'dunder' methods like __add__ are used to overload operators like +."
+    },
+    {
+      "id": 102,
+      "category": "Time Complexity",
+      "question": "What is the complexity of adding two n x n matrices?",
+      "options": [
+        "O(n)",
+        "O(n^2)",
+        "O(n^3)",
+        "O(log n)"
+      ],
+      "answer": "b",
+      "explanation": "Each of the n*n elements is added once."
+    },
+    {
+      "id": 103,
+      "category": "DSA Basics",
+      "question": "Which data structure is best for implementing a priority queue?",
+      "options": [
+        "Linked List",
+        "Stack",
+        "Binary Heap",
+        "Array"
+      ],
+      "answer": "c",
+      "explanation": "Binary heaps provide efficient O(log n) insertion and extraction of maximum/minimum."
+    },
+    {
+      "id": 104,
+      "category": "Python Basics",
+      "question": "Which module in Python is used for regular expressions?",
+      "options": [
+        "regex",
+        "re",
+        "scan",
+        "pattern"
+      ],
+      "answer": "b",
+      "explanation": "The 're' module provides regular expression support."
+    },
+    {
+      "id": 105,
+      "category": "Data Types",
+      "question": "What is the output of print(tuple([1, 2, 3]))?",
+      "options": [
+        "[1, 2, 3]",
+        "(1, 2, 3)",
+        "{1, 2, 3}",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "The tuple() constructor converts an iterable into a tuple."
+    },
+    {
+      "id": 106,
+      "category": "Loops",
+      "question": "What is the output of: \nfor i in range(1): print(i)\nelse: print('Done')",
+      "options": [
+        "0 Done",
+        "Done",
+        "0",
+        "1 Done"
+      ],
+      "answer": "a",
+      "explanation": "Loop runs for 0, then completes normally, executing the else block."
+    },
+    {
+      "id": 107,
+      "category": "Functions",
+      "question": "What is a closure?",
+      "options": [
+        "Ending a function",
+        "A nested function that references variables from its enclosing scope",
+        "A function that is private",
+        "A class definition"
+      ],
+      "answer": "b",
+      "explanation": "Closures 'close over' the scope in which they were created."
+    },
+    {
+      "id": 108,
+      "category": "OOPS",
+      "question": "What does @classmethod decorator do?",
+      "options": [
+        "Makes a method private",
+        "Passes the class itself ('cls') as the first argument",
+        "Hides the method",
+        "Static method equivalent"
+      ],
+      "answer": "b",
+      "explanation": "Class methods receive the class object as their first parameter."
+    },
+    {
+      "id": 109,
+      "category": "Time Complexity",
+      "question": "Complexity of deleting a node in the middle of a Singly Linked List (with pointer to head)?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n^2)"
+      ],
+      "answer": "c",
+      "explanation": "You need to traverse the list to find the node and its predecessor."
+    },
+    {
+      "id": 110,
+      "category": "DSA Basics",
+      "question": "In a post-order traversal of a tree, when is the root visited?",
+      "options": [
+        "First",
+        "Middle",
+        "Last",
+        "Depends on tree type"
+      ],
+      "answer": "c",
+      "explanation": "Left -> Right -> Root. Root is visited last."
+    },
+    {
+      "id": 111,
+      "category": "Python Basics",
+      "question": "How do you handle exceptions in Python?",
+      "options": [
+        "try...catch",
+        "if...except",
+        "try...except",
+        "do...catch"
+      ],
+      "answer": "c",
+      "explanation": "Python uses try-except blocks for error handling."
+    },
+    {
+      "id": 112,
+      "category": "Data Types",
+      "question": "What is 'Slicing'?",
+      "options": [
+        "Deleting elements",
+        "Extracting a portion of a sequence",
+        "Sorting elements",
+        "Multiplying lists"
+      ],
+      "answer": "b",
+      "explanation": "Slicing uses [start:stop:step] to extract parts of strings, lists, or tuples."
+    },
+    {
+      "id": 113,
+      "category": "Loops",
+      "question": "What will print(sum(range(4))) output?",
+      "options": [
+        "6",
+        "10",
+        "4",
+        "Error"
+      ],
+      "answer": "a",
+      "explanation": "0 + 1 + 2 + 3 = 6."
+    },
+    {
+      "id": 114,
+      "category": "Functions",
+      "question": "What is the output?\ndef scope_test():\n    def do_local():\n        spam = 'local spam'\n    spam = 'test spam'\n    do_local()\n    return spam\nprint(scope_test())",
+      "options": [
+        "local spam",
+        "test spam",
+        "Error",
+        "None"
+      ],
+      "answer": "b",
+      "explanation": "do_local's change is local to itself; it doesn't affect scope_test's spam."
+    },
+    {
+      "id": 115,
+      "category": "OOPS",
+      "question": "What is a 'MixIn' class?",
+      "options": [
+        "A class with no methods",
+        "A class intended to provide methods to other classes via multiple inheritance",
+        "A private class",
+        "A class that mixes multiple data types"
+      ],
+      "answer": "b",
+      "explanation": "Mixins are classes containing a set of methods for use by other classes."
+    },
+    {
+      "id": 116,
+      "category": "Time Complexity",
+      "question": "What is the average time complexity of finding a value in a balanced Binary Search Tree?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "answer": "b",
+      "explanation": "Balanced trees have height O(log n), which limits the search path."
+    },
+    {
+      "id": 117,
+      "category": "DSA Basics",
+      "question": "Which collision resolution technique in Hashing uses a linked list for each bucket?",
+      "options": [
+        "Open Addressing",
+        "Linear Probing",
+        "Chaining",
+        "Double Hashing"
+      ],
+      "answer": "c",
+      "explanation": "Chaining handles collisions by putting all elements hashing to the same slot into a list."
+    },
+    {
+      "id": 118,
+      "category": "Python Basics",
+      "question": "What is the result of '1' == 1?",
+      "options": [
+        "True",
+        "False",
+        "Error",
+        "None"
+      ],
+      "answer": "b",
+      "explanation": "A string and an integer are never equal in Python."
+    },
+    {
+      "id": 119,
+      "category": "Data Types",
+      "question": "Which dictionary method returns all its keys?",
+      "options": [
+        "keys()",
+        "get_keys()",
+        "list_keys()",
+        "names()"
+      ],
+      "answer": "a",
+      "explanation": "d.keys() returns a view object of all keys in the dictionary."
+    },
+    {
+      "id": 120,
+      "category": "Loops",
+      "question": "What is 'Iterable'?",
+      "options": [
+        "A loop index",
+        "Something that can be looped over (like a list or string)",
+        "A function name",
+        "A type of variable"
+      ],
+      "answer": "b",
+      "explanation": "An iterable is any object capable of returning its members one at a time."
+    },
+    {
+      "id": 121,
+      "category": "Functions",
+      "question": "What does 'map(str, [1, 2, 3])' do?",
+      "options": [
+        "Creates a string '123'",
+        "Returns an iterator that converts each int to string",
+        "Error",
+        "Prints 1 2 3"
+      ],
+      "answer": "b",
+      "explanation": "map applies the given function to every item of an iterable."
+    },
+    {
+      "id": 122,
+      "category": "OOPS",
+      "question": "What are 'dunder' methods?",
+      "options": [
+        "Dangerous methods",
+        "Double Under (e.g. __init__) methods with special meanings",
+        "Dynamic methods",
+        "Deleting methods"
+      ],
+      "answer": "b",
+      "explanation": "Dunder methods (double underscores) provide hook points for built-in behavior."
+    },
+    {
+      "id": 123,
+      "category": "Time Complexity",
+      "question": "Time complexity of finding the loop in a linked list using Floyd's Cycle-Finding Algorithm?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(n^2)",
+        "O(log n)"
+      ],
+      "answer": "b",
+      "explanation": "The 'tortoise and hare' algorithm traverses nodes linearly."
+    },
+    {
+      "id": 124,
+      "category": "DSA Basics",
+      "question": "Which algorithmic design is used for the Longest Common Subsequence problem?",
+      "options": [
+        "Greedy",
+        "Divide and Conquer",
+        "Dynamic Programming",
+        "Backtracking"
+      ],
+      "answer": "c",
+      "explanation": "LCS is a classic example of Dynamic Programming (overlapping subproblems)."
+    },
+    {
+      "id": 125,
+      "category": "Python Basics",
+      "question": "How do you check for the identity of an object?",
+      "options": [
+        "==",
+        "is",
+        "id()",
+        "Both b and c"
+      ],
+      "answer": "d",
+      "explanation": "'is' checks shortcut identity, while id() returns the memory address."
+    },
+    {
+      "id": 126,
+      "category": "Data Types",
+      "question": "What is the output of print('Hello World'.split())?",
+      "options": [
+        "['Hello', 'World']",
+        "['H', 'e', 'l', ...]",
+        "Error",
+        "['HelloWorld']"
+      ],
+      "answer": "a",
+      "explanation": "split() without arguments splits by whitespace."
+    },
+    {
+      "id": 127,
+      "category": "Loops",
+      "question": "What is the output: list(range(10, 2, -2))?",
+      "options": [
+        "[10, 8, 6, 4, 2]",
+        "[10, 8, 6, 4]",
+        "[8, 6, 4, 2]",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "Start 10, stop 2 (exclusive), step -2. So: 10, 8, 6, 4."
+    },
+    {
+      "id": 128,
+      "category": "Functions",
+      "question": "What is a decorator?",
+      "options": [
+        "A way to modify the behavior of a function or class without changing its code",
+        "A syntax error",
+        "A UI component",
+        "A variable naming convention"
+      ],
+      "answer": "a",
+      "explanation": "Decorators are functions that take another function as argument and extend its behavior."
+    },
+    {
+      "id": 129,
+      "category": "OOPS",
+      "question": "What is the 'Method Resolution Order' (MRO)?",
+      "options": [
+        "The order in which methods are written",
+        "The order in which Python searches for a method in a class hierarchy",
+        "Random order",
+        "Compiler optimization"
+      ],
+      "answer": "b",
+      "explanation": "MRO determines which method is called in multiple inheritance scenarios (C3 linearization)."
+    },
+    {
+      "id": 130,
+      "category": "Time Complexity",
+      "question": "Complexity of inserting an element into a balanced binary search tree?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "answer": "b",
+      "explanation": "Insertion requires finding the leaf, which takes logarithmic time."
+    },
+    {
+      "id": 131,
+      "category": "DSA Basics",
+      "question": "Which data structure is most efficient to check if a value exists in a large dataset if we don't need ordering?",
+      "options": [
+        "Array",
+        "Linked List",
+        "Hash Set",
+        "Binary Tree"
+      ],
+      "answer": "c",
+      "explanation": "Hash Set provides O(1) average lookup time."
+    },
+    {
+      "id": 132,
+      "category": "Python Basics",
+      "question": "Which of these allows access to OS functionality?",
+      "options": [
+        "os",
+        "sys",
+        "pathlib",
+        "All of the above"
+      ],
+      "answer": "d",
+      "explanation": "Multiple modules provide OS-related features."
+    },
+    {
+      "id": 133,
+      "category": "Data Types",
+      "question": "What is result of: x = [1, 2]; x.extend([3, 4]); print(len(x))?",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "extend() appends each element of the iterable. [1, 2, 3, 4] has length 4."
+    },
+    {
+      "id": 134,
+      "category": "Loops",
+      "question": "Can strings be looped over in Python?",
+      "options": [
+        "Yes",
+        "No",
+        "Only if converted to list",
+        "Only binary strings"
+      ],
+      "answer": "a",
+      "explanation": "Strings are iterables of their characters."
+    },
+    {
+      "id": 135,
+      "category": "Functions",
+      "question": "What is the value of 'result'?\ndef f(x): return x * 2\ndef g(x): return x + 1\nresult = f(g(5))",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "6"
+      ],
+      "answer": "c",
+      "explanation": "g(5) = 6. f(6) = 12."
+    },
+    {
+      "id": 136,
+      "category": "OOPS",
+      "question": "What does __str__ method do?",
+      "options": [
+        "Returns memory address",
+        "Returns a user-friendly string representation of the object",
+        "Deletes the object",
+        "Computes the hash"
+      ],
+      "answer": "b",
+      "explanation": "__str__ is called by print() and str() to get a readable description."
+    },
+    {
+      "id": 137,
+      "category": "Time Complexity",
+      "question": "What is the time complexity of the binary search algorithm?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "answer": "b",
+      "explanation": "Binary search is O(log n)."
+    },
+    {
+      "id": 138,
+      "category": "DSA Basics",
+      "question": "Which of these is a Greedy algorithm?",
+      "options": [
+        "Merge Sort",
+        "Prim's Algorithm",
+        "Binary Search",
+        "Fibonacci calculation"
+      ],
+      "answer": "b",
+      "explanation": "Prim's algorithm greedily chooses the smallest edge to add to the MST."
+    },
+    {
+      "id": 139,
+      "category": "Python Basics",
+      "question": "How to get user input in Python?",
+      "options": [
+        "read()",
+        "input()",
+        "scanf()",
+        "get()"
+      ],
+      "answer": "b",
+      "explanation": "input() function reads a line from stdin as a string."
+    },
+    {
+      "id": 140,
+      "category": "Data Types",
+      "question": "What type of data is: x = (1,)?",
+      "options": [
+        "int",
+        "list",
+        "tuple",
+        "Error"
+      ],
+      "answer": "c",
+      "explanation": "The trailing comma defines a single-element tuple."
+    },
+    {
+      "id": 141,
+      "category": "Loops",
+      "question": "What happens if skip 'while' condition?",
+      "options": [
+        "Error",
+        "It runs forever",
+        "It never runs",
+        "None of these"
+      ],
+      "answer": "a",
+      "explanation": "A 'while' loop requires a condition expression."
+    },
+    {
+      "id": 142,
+      "category": "Functions",
+      "question": "What is a 'Higher-Order Function'?",
+      "options": [
+        "A function that returns a boolean",
+        "A function that takes another function as an argument",
+        "A nested function",
+        "A recursive function"
+      ],
+      "answer": "b",
+      "explanation": "Higher-order functions treat functions as data."
+    },
+    {
+      "id": 143,
+      "category": "OOPS",
+      "question": "What is 'Composition' in OOPS?",
+      "options": [
+        "A class inheriting from another",
+        "A class containing an instance of another class as an attribute",
+        "Combining two variables",
+        "Deleting objects"
+      ],
+      "answer": "b",
+      "explanation": "Composition represents a 'has-a' relationship."
+    },
+    {
+      "id": 144,
+      "category": "Time Complexity",
+      "question": "Time complexity of sorting 'n' elements using Heap Sort?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n^2)",
+        "O(log n)"
+      ],
+      "answer": "b",
+      "explanation": "Heap sort consistently takes O(n log n)."
+    },
+    {
+      "id": 145,
+      "category": "DSA Basics",
+      "question": "Which data structure is used for Breadth First Search (BFS)?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Priority Queue",
+        "Tree"
+      ],
+      "answer": "b",
+      "explanation": "BFS uses a Queue to manage nodes at the current depth."
+    },
+    {
+      "id": 146,
+      "category": "Python Basics",
+      "question": "What does sys.argv contain?",
+      "options": [
+        "User inputs",
+        "Command line arguments",
+        "System variables",
+        "File names"
+      ],
+      "answer": "b",
+      "explanation": "sys.argv is a list containing the script name and command line arguments."
+    },
+    {
+      "id": 147,
+      "category": "Data Types",
+      "question": "How to combine two dictionaries in Python 3.9+?",
+      "options": [
+        "d1 + d2",
+        "d1 | d2",
+        "d1 & d2",
+        "merge(d1, d2)"
+      ],
+      "answer": "b",
+      "explanation": "The union operator | was added for dictionaries in Python 3.9."
+    },
+    {
+      "id": 148,
+      "category": "Loops",
+      "question": "What is 'List Comprehension' used for?",
+      "options": [
+        "Reading lists",
+        "Creating lists based on existing iterables concisely",
+        "Sorting lists",
+        "Printing lists"
+      ],
+      "answer": "b",
+      "explanation": "List comprehensions provide a compact way to create lists."
+    },
+    {
+      "id": 149,
+      "category": "Functions",
+      "question": "What is 'unpacking'?",
+      "options": [
+        "Deleting a list",
+        "Extracting values from an iterable into variables",
+        "Increasing variable size",
+        "None of these"
+      ],
+      "answer": "b",
+      "explanation": "E.g., x, y = [1, 2] extracts 1 to x and 2 to y."
+    },
+    {
+      "id": 150,
+      "category": "OOPS",
+      "question": "What is the purpose of __del__ method?",
+      "options": [
+        "Initialization",
+        "Destructor called when object is about to be destroyed",
+        "Deleting a file",
+        "Stopping a loop"
+      ],
+      "answer": "b",
+      "explanation": "__del__ is the destructor method."
     }
   ]
 }
