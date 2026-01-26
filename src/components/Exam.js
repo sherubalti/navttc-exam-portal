@@ -7,6 +7,7 @@ import webMcqs from '../data/web_mcqs.json';
 import oldMcqs from '../data/old_mcqs.json';
 import pythonDsaMcqs from '../data/mcqs_python_dsa.json';
 import examSchedule from '../data/examSchedule';
+import { getCurrentPKTTime } from '../utils/timeUtility';
 
 const Exam = ({ user }) => {
   const navigate = useNavigate();
@@ -20,6 +21,8 @@ const Exam = ({ user }) => {
   const [scheduleStatus, setScheduleStatus] = useState('active'); // 'active', 'upcoming', 'ended'
   const [activeSlot, setActiveSlot] = useState(null);
   const [currentSchedule, setCurrentSchedule] = useState(examSchedule);
+  const [loadingTime, setLoadingTime] = useState(true);
+  const [startTimePKT, setStartTimePKT] = useState(null);
 
   // Map exam type to data
   const mcqModules = {
@@ -39,68 +42,75 @@ const Exam = ({ user }) => {
   };
 
   useEffect(() => {
-    // Check if user has already attempted
-    const results = JSON.parse(localStorage.getItem('examResults')) || {};
-    if (results[user.email]) {
-      alert('You have already attempted the exam.');
-      navigate('/result');
-      return;
-    }
+    const checkSchedule = async () => {
+      // Check if user has already attempted
+      const results = JSON.parse(localStorage.getItem('examResults')) || {};
+      if (results[user.email]) {
+        alert('You have already attempted the exam.');
+        navigate('/result');
+        return;
+      }
 
-    // Check exam schedule from static config or localStorage
-    let schedule = examSchedule;
-    const savedSchedule = JSON.parse(localStorage.getItem('examSchedule'));
-    if (savedSchedule) {
-      schedule = savedSchedule;
-    }
-    setCurrentSchedule(schedule);
+      // Check exam schedule from static config or localStorage
+      let schedule = examSchedule;
+      const savedSchedule = JSON.parse(localStorage.getItem('examSchedule'));
+      if (savedSchedule) {
+        schedule = savedSchedule;
+      }
+      setCurrentSchedule(schedule);
 
-    if (schedule && schedule.slots) {
-      const now = new Date();
-      let currentStatus = 'upcoming';
-      let foundSlot = null;
+      if (schedule && schedule.slots) {
+        setLoadingTime(true);
+        const now = await getCurrentPKTTime();
+        setLoadingTime(false);
 
-      // Check all slots
-      const allStarts = schedule.slots.map(s => new Date(s.start));
-      const allEnds = schedule.slots.map(s => new Date(s.end));
+        let currentStatus = 'upcoming';
+        let foundSlot = null;
 
-      const earliestStart = new Date(Math.min(...allStarts));
-      const latestEnd = new Date(Math.max(...allEnds));
+        // Check all slots
+        const allStarts = schedule.slots.map(s => new Date(s.start));
+        const allEnds = schedule.slots.map(s => new Date(s.end));
 
-      if (now < earliestStart) {
-        currentStatus = 'upcoming';
-      } else if (now > latestEnd) {
-        currentStatus = 'ended';
-      } else {
-        // We are within the overall timeframe, check for an active slot
-        foundSlot = schedule.slots.find(slot => {
-          const start = new Date(slot.start);
-          const end = new Date(slot.end);
-          return now >= start && now <= end;
-        });
+        const earliestStart = new Date(Math.min(...allStarts));
+        const latestEnd = new Date(Math.max(...allEnds));
 
-        if (foundSlot) {
-          currentStatus = 'active';
-        } else {
-          // Between slots
+        if (now < earliestStart) {
           currentStatus = 'upcoming';
+        } else if (now > latestEnd) {
+          currentStatus = 'ended';
+        } else {
+          // We are within the overall timeframe, check for an active slot
+          foundSlot = schedule.slots.find(slot => {
+            const start = new Date(slot.start);
+            const end = new Date(slot.end);
+            return now >= start && now <= end;
+          });
+
+          if (foundSlot) {
+            currentStatus = 'active';
+          } else {
+            // Between slots
+            currentStatus = 'upcoming';
+          }
+        }
+
+        setScheduleStatus(currentStatus);
+        setActiveSlot(foundSlot);
+
+        if (currentStatus === 'active') {
+          const duration = schedule.duration || 60;
+          setTimeLeft(duration * 60);
+
+          // Load dynamic MCQs based on selection IN THE SLOT
+          const course = foundSlot.course || 'web';
+          const selectedMcqData = mcqModules[course] || mcqModules.web;
+          const shuffledQuestions = shuffleArray(selectedMcqData.questions);
+          setQuestions(shuffledQuestions);
         }
       }
+    };
 
-      setScheduleStatus(currentStatus);
-      setActiveSlot(foundSlot);
-
-      if (currentStatus === 'active') {
-        const duration = schedule.duration || 60;
-        setTimeLeft(duration * 60);
-
-        // Load dynamic MCQs based on selection IN THE SLOT
-        const course = foundSlot.course || 'web';
-        const selectedMcqData = mcqModules[course] || mcqModules.web;
-        const shuffledQuestions = shuffleArray(selectedMcqData.questions);
-        setQuestions(shuffledQuestions);
-      }
-    }
+    checkSchedule();
   }, [user.email, navigate]);
 
   // Tab switching detection
@@ -204,7 +214,7 @@ const Exam = ({ user }) => {
     }));
   };
 
-  const handleSubmit = useCallback(() => {
+  const handleSubmit = useCallback(async () => {
     let score = 0;
     const results = [];
 
@@ -221,6 +231,8 @@ const Exam = ({ user }) => {
       });
     });
 
+    const nowPKT = await getCurrentPKTTime();
+
     // Save result
     const examResults = JSON.parse(localStorage.getItem('examResults')) || {};
     examResults[user.email] = {
@@ -229,7 +241,9 @@ const Exam = ({ user }) => {
       score: score,
       totalQuestions: questions.length,
       percentage: Math.round((score / questions.length) * 100),
-      date: new Date().toLocaleDateString(),
+      date: nowPKT.toLocaleString('en-PK', { dateStyle: 'medium' }),
+      startTime: activeSlot ? new Date(activeSlot.start).toLocaleTimeString('en-PK', { hour: '2-digit', minute: '2-digit', hour12: true }) : 'N/A',
+      endTime: activeSlot ? new Date(activeSlot.end).toLocaleTimeString('en-PK', { hour: '2-digit', minute: '2-digit', hour12: true }) : 'N/A',
       timeTaken: formatTime(60 * 60 - timeLeft),
       details: results,
       violationCount: violationCount
@@ -252,11 +266,33 @@ const Exam = ({ user }) => {
     return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
   };
 
-  const startExam = () => {
+  const startExam = async () => {
+    setLoadingTime(true);
+    const now = await getCurrentPKTTime();
+    setLoadingTime(false);
+
+    // One last check to ensure the slot is still active
+    const isStillActive = currentSchedule.slots.some(slot => {
+      const start = new Date(slot.start);
+      const end = new Date(slot.end);
+      return now >= start && now <= end;
+    });
+
+    if (!isStillActive) {
+      alert('This exam slot has ended or is not yet active.');
+      window.location.reload();
+      return;
+    }
+
+    setStartTimePKT(now);
     setExamStarted(true);
   };
 
   // Schedule Checks
+  if (loadingTime) {
+    return <div className="container">Synchronizing Pakistan Time...</div>;
+  }
+
   if (scheduleStatus === 'upcoming') {
     return (
       <div className="container">
