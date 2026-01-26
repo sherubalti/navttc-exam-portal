@@ -8,6 +8,7 @@ const examSchedule = {
 
 
 
+  
   { start: "2026-01-26T14:40", end: "2026-01-26T15:40", course: "new_ai" },
  ]
 };
