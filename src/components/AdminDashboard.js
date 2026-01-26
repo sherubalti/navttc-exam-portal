@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { exportResultsToExcel, exportProjectsToExcel } from '../utils/exportToExcel';
 import configSchedule from '../data/examSchedule';
+import { getCurrentPKTTime, formatForDateTimeInput } from '../utils/timeUtility';
 
 const AdminDashboard = () => {
   const [students, setStudents] = useState([]);
@@ -32,24 +33,27 @@ const AdminDashboard = () => {
     setProjects(projectData);
 
     // Load schedule
-    const savedSchedule = JSON.parse(localStorage.getItem('examSchedule'));
-    if (savedSchedule) {
-      setExamSchedule(savedSchedule);
-    } else {
-      // Default to current time for start, and +1 hour for end, with a default slot
-      const now = new Date();
-      const oneHourLater = new Date(now.getTime() + 60 * 60 * 1000);
+    const loadInitialSchedule = async () => {
+      const savedSchedule = JSON.parse(localStorage.getItem('examSchedule'));
+      if (savedSchedule) {
+        setExamSchedule(savedSchedule);
+      } else {
+        // Default to current time for start, and +1 hour for end, with a default slot
+        const now = await getCurrentPKTTime();
+        const oneHourLater = new Date(now.getTime() + 60 * 60 * 1000);
 
-      // Format for datetime-local input: YYYY-MM-DDThh:mm
-      const formatForInput = (date) => {
-        return date.toISOString().slice(0, 16);
-      };
+        setExamSchedule({
+          duration: 60,
+          slots: [{
+            start: formatForDateTimeInput(now),
+            end: formatForDateTimeInput(oneHourLater),
+            course: 'web'
+          }]
+        });
+      }
+    };
 
-      setExamSchedule({
-        duration: 60,
-        slots: [{ start: formatForInput(now), end: formatForInput(oneHourLater), course: 'web' }]
-      });
-    }
+    loadInitialSchedule();
   }, []);
 
   const handleSlotChange = (index, field, value) => {
@@ -58,14 +62,17 @@ const AdminDashboard = () => {
     setExamSchedule(prev => ({ ...prev, slots: newSlots }));
   };
 
-  const addSlot = () => {
-    const now = new Date();
+  const addSlot = async () => {
+    const now = await getCurrentPKTTime();
     const oneHourLater = new Date(now.getTime() + 60 * 60 * 1000);
-    const formatForInput = (date) => date.toISOString().slice(0, 16);
 
     setExamSchedule(prev => ({
       ...prev,
-      slots: [...prev.slots, { start: formatForInput(now), end: formatForInput(oneHourLater), course: 'web' }]
+      slots: [...prev.slots, {
+        start: formatForDateTimeInput(now),
+        end: formatForDateTimeInput(oneHourLater),
+        course: 'web'
+      }]
     }));
   };
 
@@ -186,6 +193,8 @@ const AdminDashboard = () => {
                 <th>Total</th>
                 <th>Percentage</th>
                 <th>Date</th>
+                <th>Start (PKT)</th>
+                <th>End (PKT)</th>
                 <th>Time Taken</th>
               </tr>
             </thead>
@@ -198,6 +207,8 @@ const AdminDashboard = () => {
                   <td>{result.totalQuestions}</td>
                   <td>{result.percentage}%</td>
                   <td>{result.date}</td>
+                  <td>{result.startTime || 'N/A'}</td>
+                  <td>{result.endTime || 'N/A'}</td>
                   <td>{result.timeTaken}</td>
                 </tr>
               ))}
