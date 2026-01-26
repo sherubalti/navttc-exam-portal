@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getCurrentPKTTime } from '../utils/timeUtility';
 
 const Login = ({ onLogin, userType }) => {
   const [formData, setFormData] = useState({
@@ -50,7 +51,7 @@ const Login = ({ onLogin, userType }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
 
     setLoading(true);
@@ -59,11 +60,13 @@ const Login = ({ onLogin, userType }) => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
 
+      const nowPKT = await getCurrentPKTTime();
+
       const userData = {
         name: formData.name || 'Student User',
         email: formData.email,
         studentId: formData.studentId || `STU${Math.random().toString(36).substr(2, 9)}`,
-        loginTime: new Date().toLocaleString()
+        loginTime: nowPKT.toLocaleString('en-PK')
       };
 
       // Save to localStorage
@@ -73,13 +76,13 @@ const Login = ({ onLogin, userType }) => {
           ...userData,
           averageScore: 0,
           attempts: 0,
-          joinDate: new Date().toISOString()
+          joinDate: nowPKT.toISOString()
         };
         localStorage.setItem('students', JSON.stringify(users));
       }
 
       onLogin(userData, isAdmin);
-      
+
     } catch (error) {
       setErrors({ submit: 'Login failed. Please try again.' });
     } finally {
@@ -93,7 +96,7 @@ const Login = ({ onLogin, userType }) => {
       ...prev,
       [name]: value
     }));
-    
+
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
@@ -108,12 +111,12 @@ const Login = ({ onLogin, userType }) => {
       <div className="card" style={{ maxWidth: '500px', margin: '50px auto' }}>
         <div className="text-center mb-3">
           <h2>
-            {isRegister ? 'Student Registration' : 
-             isAdmin ? 'Admin Login' : 'Student Login'}
+            {isRegister ? 'Student Registration' :
+              isAdmin ? 'Admin Login' : 'Student Login'}
           </h2>
           <p className="text-muted">
-            {isRegister ? 'Create your account' : 
-             isAdmin ? 'Access admin dashboard' : 'Sign in to your account'}
+            {isRegister ? 'Create your account' :
+              isAdmin ? 'Access admin dashboard' : 'Sign in to your account'}
           </p>
         </div>
 
@@ -195,8 +198,8 @@ const Login = ({ onLogin, userType }) => {
             </div>
           )}
 
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             className="btn btn-primary w-100"
             disabled={loading}
           >
