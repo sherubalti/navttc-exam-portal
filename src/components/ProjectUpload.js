@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getCurrentPKTTime } from '../utils/timeUtility';
 
 const ProjectUpload = ({ user }) => {
   const [title, setTitle] = useState('');
@@ -10,16 +11,17 @@ const ProjectUpload = ({ user }) => {
     setFile(e.target.files[0]);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!file) {
       alert('Please select a file');
       return;
     }
 
     const projects = JSON.parse(localStorage.getItem('studentProjects')) || [];
-    
+    const nowPKT = await getCurrentPKTTime();
+
     const newProject = {
       studentName: user.name,
       email: user.email,
@@ -27,7 +29,7 @@ const ProjectUpload = ({ user }) => {
       description: description,
       fileName: file.name,
       fileSize: formatFileSize(file.size),
-      submissionDate: new Date().toLocaleDateString(),
+      submissionDate: nowPKT.toLocaleString('en-PK', { dateStyle: 'medium' }),
       status: 'Submitted'
     };
 
@@ -35,7 +37,7 @@ const ProjectUpload = ({ user }) => {
     localStorage.setItem('studentProjects', JSON.stringify(projects));
 
     setSuccess('Project submitted successfully!');
-    
+
     // Reset form
     setTitle('');
     setDescription('');
@@ -54,7 +56,7 @@ const ProjectUpload = ({ user }) => {
     <div className="container">
       <div className="card">
         <h2>Upload Final Project</h2>
-        
+
         {success && (
           <div style={{ color: 'green', marginBottom: '20px', padding: '10px', background: '#d4edda', borderRadius: '4px' }}>
             {success}
